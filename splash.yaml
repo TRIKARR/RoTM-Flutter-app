@@ -1,0 +1,7 @@
+flutter_native_splash:
+  color: "#ffffff"
+  color_dark: "#000000"
+  image: lib/assets/images/logo.png 
+  android: true
+  ios: true
+  # Path: splash.yaml
