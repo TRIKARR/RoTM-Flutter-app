@@ -45,14 +45,19 @@ class Page2 extends StatelessWidget {
                 width: 400,
               ),
             ),
-            Text("Interactive desktop robot to help you",
-                style: GoogleFonts.getFont(
-                  'Orbitron',
-                  fontSize: 15,
-                  color: const Color.fromARGB(255, 51, 1, 117),
-                  fontWeight: FontWeight.bold,
-                )
-              )
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Center(
+                child: Text("Interact with Rotm using application commands",
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.getFont(
+                      'Orbitron',
+                      fontSize: 25,
+                      color: const Color.fromARGB(255, 51, 1, 117),
+                      fontWeight: FontWeight.bold,
+                    )),
+              ),
+            )
           ],
         ),
       ),

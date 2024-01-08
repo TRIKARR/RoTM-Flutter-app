@@ -44,13 +44,16 @@ class Page3 extends StatelessWidget {
                 width: 500,
               ),
             ),
-            Text("Get a weekly report of your health",
-                style: GoogleFonts.getFont(
-                  'Orbitron',
-                  fontSize: 15,
-                  color: const Color.fromARGB(255, 51, 1, 117),
-                  fontWeight: FontWeight.bold,
-                )),
+            Center(
+              child: Text("Get a weekly report of your overall health",
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.getFont(
+                    'Orbitron',
+                    fontSize: 25,
+                    color: const Color.fromARGB(255, 51, 1, 117),
+                    fontWeight: FontWeight.bold,
+                  )),
+            ),
           ],
         ),
       ),

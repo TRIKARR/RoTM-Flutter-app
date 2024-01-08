@@ -44,13 +44,20 @@ class Page1 extends StatelessWidget {
                 width: 500,
               ),
             ),
-            Text("Overall health of the user",
-                style: GoogleFonts.getFont(
-                  'Orbitron',
-                  fontSize: 15,
-                  color: const Color.fromARGB(255, 51, 1, 117),
-                  fontWeight: FontWeight.bold,
-                )), //Include fonts and all
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Center(
+                child: Text(
+                    "We believe in overall well-being and health status of the user",
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.getFont(
+                      'Orbitron',
+                      fontSize: 20,
+                      color: Color.fromARGB(255, 51, 1, 117),
+                      fontWeight: FontWeight.bold,
+                    )),
+              ),
+            ), //Include fonts and all
           ],
         ),
       ),
