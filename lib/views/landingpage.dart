@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rotm/views/dashboard.dart';
+import 'package:rotm/views/auth/auth_page.dart';
 import 'package:rotm/views/intropages/intropage1.dart';
 import 'package:rotm/views/intropages/intropage2.dart';
 import 'package:rotm/views/intropages/intropage3.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-// Add the assets according to the content provided
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
 
@@ -49,7 +48,7 @@ class _LandingPageState extends State<LandingPage> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const UserDashBoard())),
+                                            const UserAuthPage())),
                               },
                           child: const Text("Done"))
                       : GestureDetector(

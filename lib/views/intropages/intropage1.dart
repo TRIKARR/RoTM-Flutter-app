@@ -53,7 +53,7 @@ class Page1 extends StatelessWidget {
                     style: GoogleFonts.getFont(
                       'Orbitron',
                       fontSize: 20,
-                      color: Color.fromARGB(255, 51, 1, 117),
+                      color: const Color.fromARGB(255, 51, 1, 117),
                       fontWeight: FontWeight.bold,
                     )),
               ),
