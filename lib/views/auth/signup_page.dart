@@ -1,12 +1,31 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:rotm/assets/constants.dart';
-import 'package:rotm/views/auth/auth_page.dart';
+import 'package:http/http.dart' as http;
 
 class SignUpPage extends StatelessWidget {
-  const SignUpPage({super.key});
+  TextEditingController emailController = TextEditingController();
+  TextEditingController brotmIdController = TextEditingController();
+  TextEditingController brotmPasswordController = TextEditingController();
+  TextEditingController confirmBrotmPasswordController =
+      TextEditingController();
+  void postRequest() async {
+    var url = Uri.parse('http://192.168.0.241:3000/signup');
+    var data = {
+      "Email": emailController.text,
+      "Username": brotmIdController.text,
+      "Password": brotmPasswordController.text,
+      "ConfirmPassword": confirmBrotmPasswordController.text,
+    };
+    var response = await http.post(url, body: data);
+    // ignore: avoid_print
+    print(response.body.toString());
+  }
 
+  SignUpPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,6 +61,7 @@ class SignUpPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 10, right: 10),
                   child: TextField(
+                    controller: emailController,
                     style: GoogleFonts.getFont(
                       'Orbitron',
                       fontSize: 18,
@@ -68,6 +88,7 @@ class SignUpPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 10, right: 10),
                   child: TextField(
+                    controller: brotmIdController,
                     style: GoogleFonts.getFont(
                       'Orbitron',
                       fontSize: 18,
@@ -94,6 +115,7 @@ class SignUpPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 10, right: 10),
                   child: TextField(
+                    controller: brotmPasswordController,
                     obscureText: true,
                     style: GoogleFonts.getFont(
                       'Orbitron',
@@ -121,6 +143,7 @@ class SignUpPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 10, right: 10),
                   child: TextField(
+                    controller: confirmBrotmPasswordController,
                     obscureText: true,
                     style: GoogleFonts.getFont(
                       'Orbitron',
@@ -157,7 +180,9 @@ class SignUpPage extends StatelessWidget {
                             ),
                             side: BorderSide(color: Colors.black)),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        postRequest();
+                      },
                       child: const Text(
                         "PROCEED",
                         style: TextStyle(
