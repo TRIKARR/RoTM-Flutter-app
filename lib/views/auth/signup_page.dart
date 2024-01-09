@@ -43,9 +43,9 @@ class SignUpPage extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 10.0),
+                  padding: const EdgeInsets.only(top: 40.0),
                   child: Lottie.asset("lib/assets/others/Robot.json",
-                      height: 400, width: 400),
+                      height: 300, width: 300),
                 ),
                 Text("BRoTM SignUp",
                     textAlign: TextAlign.center,
@@ -181,7 +181,64 @@ class SignUpPage extends StatelessWidget {
                             side: BorderSide(color: Colors.black)),
                       ),
                       onPressed: () {
-                        postRequest();
+                        if (emailController.text.isNotEmpty &&
+                            brotmIdController.text.isNotEmpty &&
+                            brotmPasswordController.text.isNotEmpty &&
+                            confirmBrotmPasswordController.text.isNotEmpty) {
+                          postRequest();
+
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Center(
+                                child: Text('New BRoTM Registered',
+                                    style: GoogleFonts.getFont(
+                                      'Orbitron',
+                                      fontSize: 18,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                    )),
+                              ),
+                              duration: const Duration(seconds: 2),
+                              backgroundColor:
+                                  const Color.fromARGB(255, 255, 255, 255),
+                              behavior: SnackBarBehavior
+                                  .floating, // Set the behavior to floating
+                              margin: const EdgeInsets.all(
+                                  10), // Adjust margin as needed
+                              padding: const EdgeInsets.all(
+                                  15), // Adjust padding as needed
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(
+                                    10), // Optional: Add rounded corners
+                              ),
+                            ),
+                          );
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            content: Center(
+                              child: Text('Fill Content Properly',
+                                  style: GoogleFonts.getFont(
+                                    'Orbitron',
+                                    fontSize: 18,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  )),
+                            ),
+                            duration: const Duration(seconds: 2),
+                            backgroundColor:
+                                const Color.fromARGB(255, 255, 255, 255),
+                            behavior: SnackBarBehavior
+                                .floating, // Set the behavior to floating
+                            margin: const EdgeInsets.all(
+                                10), // Adjust margin as needed
+                            padding: const EdgeInsets.all(
+                                15), // Adjust padding as needed
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                  10), // Optional: Add rounded corners
+                            ),
+                          ));
+                        }
                       },
                       child: const Text(
                         "PROCEED",
