@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 import 'package:rotm/assets/constants.dart';
 import 'package:rotm/views/auth/auth_page.dart';
 
@@ -23,23 +23,11 @@ class SignUpPage extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(top: 60.0),
-                  child:
-                      Image(image: AssetImage("lib/assets/images/login.png")),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10.0),
+                  child: Lottie.asset("lib/assets/others/Robot.json",
+                      height: 400, width: 400),
                 ),
-
-                // Text("Welcome Back BRoTM",
-                //     textAlign: TextAlign.center,
-                //     style: GoogleFonts.getFont(
-                //       'Orbitron',
-                //       fontSize: 25,
-                //       color: const Color.fromARGB(255, 51, 1, 117),
-                //       fontWeight: FontWeight.bold,
-                //     )),
-                // const SizedBox(
-                //   height: 10,
-                // ),
                 Text("BRoTM SignUp",
                     textAlign: TextAlign.center,
                     style: GoogleFonts.getFont(
@@ -179,60 +167,6 @@ class SignUpPage extends StatelessWidget {
                         ),
                       )),
                 ),
-
-                const SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  children: [
-                    const Expanded(
-                        child: Divider(
-                      color: Colors.black,
-                    )),
-                    Text("Alrady a BRoTM ?",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.getFont(
-                          'Orbitron',
-                          fontSize: 15,
-                          color: const Color.fromARGB(255, 51, 1, 117),
-                          fontWeight: FontWeight.bold,
-                        )),
-                    const Expanded(
-                        child: Divider(
-                      color: Colors.black,
-                    )),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Center(
-                  child: TextButton(
-                      style: TextButton.styleFrom(
-                        foregroundColor: Colors.black,
-                        backgroundColor:
-                            const Color.fromARGB(255, 28, 215, 194),
-                        shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(10),
-                            ),
-                            side: BorderSide(color: Colors.black)),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const UserAuthPage()),
-                        );
-                      },
-                      child: const Text(
-                        "SIGN-IN",
-                        style: TextStyle(
-                          fontFamily: 'Orbitron',
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )),
-                )
               ],
             ),
           ),
