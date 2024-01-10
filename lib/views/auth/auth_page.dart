@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 import 'package:rotm/assets/constants.dart';
 import 'package:rotm/views/auth/signup_page.dart';
 
@@ -22,14 +23,15 @@ class UserAuthPage extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(top: 60.0),
-                  child:
-                      Image(image: AssetImage("lib/assets/images/login.png")),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 0.0),
+                  child: Lottie.asset(
+                    "lib/assets/others/login.json",
+                    height: 350,
+                    width: 320,
+                  ),
                 ),
-                const SizedBox(
-                  height: 10,
-                ),
+
                 // Text("Welcome Back BRoTM",
                 //     textAlign: TextAlign.center,
                 //     style: GoogleFonts.getFont(
