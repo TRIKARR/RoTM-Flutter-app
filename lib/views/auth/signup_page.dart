@@ -216,7 +216,7 @@ class SignUpPage extends StatelessWidget {
                           Future.delayed(const Duration(seconds: 2), () {
                             Navigator.of(context).pushReplacement(
                               MaterialPageRoute(
-                                  builder: (context) => BottomNavComponent()),
+                                  builder: (context) => const BottomNavComponent()),
                             );
                           });
                         } else {
