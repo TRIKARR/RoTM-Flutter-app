@@ -31,7 +31,7 @@ class _BottomNavComponentState extends State<BottomNavComponent> {
             style: GoogleFonts.getFont(
               'Orbitron',
               fontSize: 25,
-              color: Color.fromARGB(255, 255, 255, 255),
+              color: const Color.fromARGB(255, 255, 255, 255),
               fontWeight: FontWeight.bold,
             )),
         automaticallyImplyLeading: false,
@@ -42,7 +42,7 @@ class _BottomNavComponentState extends State<BottomNavComponent> {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(90),
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: const Color.fromARGB(255, 255, 255, 255),
               ),
               height: 60,
               width: 60,
