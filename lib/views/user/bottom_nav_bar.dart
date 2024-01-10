@@ -21,17 +21,17 @@ class _BottomNavComponentState extends State<BottomNavComponent> {
         height: 70,
         items: [
           Padding(
-            padding: const EdgeInsets.all(4.0),
+            padding: const EdgeInsets.all(2.0),
             child: Image.asset("lib/assets/animated/pie-chart.gif",
                 fit: BoxFit.cover, height: 50, width: 50),
           ),
           Padding(
-            padding: const EdgeInsets.all(4.0),
+            padding: const EdgeInsets.all(2.0),
             child: Image.asset("lib/assets/animated/chatbot.gif",
                 fit: BoxFit.cover, height: 50, width: 50),
           ),
           Padding(
-            padding: const EdgeInsets.all(4.0),
+            padding: const EdgeInsets.all(2.0),
             child: Image.asset("lib/assets/animated/menu.gif",
                 fit: BoxFit.cover, height: 40, width: 40),
           ),
