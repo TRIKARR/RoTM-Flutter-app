@@ -16,6 +16,7 @@ class _BottomNavComponentState extends State<BottomNavComponent> {
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.deepPurple.shade900,
         color: Colors.cyan.shade300,
+        animationDuration: const Duration(milliseconds: 400),
         items: const [
           Icon(Icons.home),
           Icon(Icons.home),
