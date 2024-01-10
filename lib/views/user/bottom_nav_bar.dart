@@ -12,9 +12,10 @@ class _BottomNavComponentState extends State<BottomNavComponent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purple,
+      backgroundColor: Colors.deepPurple,
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.purple.shade200,
+        backgroundColor: Colors.deepPurple,
+        color: Colors.deepPurple.shade200,
         items: const [
           Icon(Icons.home),
           Icon(Icons.home),
