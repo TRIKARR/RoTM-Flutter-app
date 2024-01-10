@@ -15,13 +15,26 @@ class _BottomNavComponentState extends State<BottomNavComponent> {
       backgroundColor: Colors.deepPurple.shade900,
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.deepPurple.shade900,
-        color: Colors.cyan.shade300,
+        color: const Color.fromARGB(255, 255, 255, 255),
         animationDuration: const Duration(milliseconds: 250),
         animationCurve: Curves.easeInOut,
-        items: const [
-          Icon(Icons.home),
-          Icon(Icons.home),
-          Icon(Icons.home),
+        height: 70,
+        items: [
+          Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: Image.asset("lib/assets/animated/pie-chart.gif",
+                fit: BoxFit.cover, height: 50, width: 50),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: Image.asset("lib/assets/animated/chatbot.gif",
+                fit: BoxFit.cover, height: 50, width: 50),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: Image.asset("lib/assets/animated/menu.gif",
+                fit: BoxFit.cover, height: 40, width: 40),
+          ),
         ],
       ),
     );

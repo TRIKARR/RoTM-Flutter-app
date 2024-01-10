@@ -36,3 +36,4 @@ flutter:
   assets:
     - lib/assets/images/
     - lib/assets/others/
+    - lib/assets/animated/
