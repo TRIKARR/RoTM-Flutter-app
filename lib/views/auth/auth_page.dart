@@ -15,7 +15,7 @@ class UserAuthPage extends StatelessWidget {
           gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [g1, g2, g3, g1]),
+              colors: [g4, g3, g2, g2]),
         ),
         child: SingleChildScrollView(
           child: Padding(
@@ -280,8 +280,7 @@ class UserAuthPage extends StatelessWidget {
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
-                      )
-                    ),
+                      )),
                 )
               ],
             ),
