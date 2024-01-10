@@ -198,7 +198,7 @@ class SignUpPage extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                     )),
                               ),
-                              duration: const Duration(seconds: 2),
+                              duration: const Duration(seconds: 1),
                               backgroundColor:
                                   const Color.fromARGB(255, 255, 255, 255),
                               behavior: SnackBarBehavior
@@ -216,7 +216,8 @@ class SignUpPage extends StatelessWidget {
                           Future.delayed(const Duration(seconds: 2), () {
                             Navigator.of(context).pushReplacement(
                               MaterialPageRoute(
-                                  builder: (context) => const BottomNavComponent()),
+                                  builder: (context) =>
+                                      const BottomNavComponent()),
                             );
                           });
                         } else {
