@@ -17,6 +17,7 @@ class _BottomNavComponentState extends State<BottomNavComponent> {
         backgroundColor: Colors.deepPurple.shade900,
         color: Colors.cyan.shade300,
         animationDuration: const Duration(milliseconds: 400),
+        animationCurve: Curves.easeInOut,
         items: const [
           Icon(Icons.home),
           Icon(Icons.home),
