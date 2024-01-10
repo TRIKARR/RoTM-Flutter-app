@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:rotm/assets/constants.dart';
 import 'package:http/http.dart' as http;
+import 'package:rotm/views/user/bottom_nav_bar.dart';
 
 class SignUpPage extends StatelessWidget {
   TextEditingController emailController = TextEditingController();
@@ -212,6 +213,12 @@ class SignUpPage extends StatelessWidget {
                               ),
                             ),
                           );
+                          Future.delayed(const Duration(seconds: 2), () {
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                  builder: (context) => BottomNavComponent()),
+                            );
+                          });
                         } else {
                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                             content: Center(

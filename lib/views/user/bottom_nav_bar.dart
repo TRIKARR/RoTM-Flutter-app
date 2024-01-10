@@ -1,19 +1,19 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
-class BottomNavigationBar extends StatefulWidget {
-  const BottomNavigationBar({super.key});
+class BottomNavComponent extends StatefulWidget {
+  const BottomNavComponent({super.key});
 
   @override
-  State<BottomNavigationBar> createState() => _BottomNavigationBarState();
+  State<BottomNavComponent> createState() => _BottomNavComponentState();
 }
 
-class _BottomNavigationBarState extends State<BottomNavigationBar> {
+class _BottomNavComponentState extends State<BottomNavComponent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
-        items: [
+        items: const [
           Icon(Icons.home),
           Icon(Icons.home),
           Icon(Icons.home),
