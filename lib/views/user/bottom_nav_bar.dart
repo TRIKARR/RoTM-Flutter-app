@@ -23,12 +23,12 @@ class _BottomNavComponentState extends State<BottomNavComponent> {
           Padding(
             padding: const EdgeInsets.all(2.0),
             child: Image.asset("lib/assets/animated/pie-chart.gif",
-                fit: BoxFit.cover, height: 50, width: 50),
+                fit: BoxFit.cover, height: 40, width: 40),
           ),
           Padding(
             padding: const EdgeInsets.all(2.0),
             child: Image.asset("lib/assets/animated/chatbot.gif",
-                fit: BoxFit.cover, height: 50, width: 50),
+                fit: BoxFit.cover, height: 40, width: 40),
           ),
           Padding(
             padding: const EdgeInsets.all(2.0),
