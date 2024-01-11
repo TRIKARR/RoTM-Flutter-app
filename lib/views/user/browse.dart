@@ -12,7 +12,6 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.deepPurple.shade900,
-      body: Text("Browse Menu"),
     );
   }
 }
