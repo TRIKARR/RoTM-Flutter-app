@@ -10,7 +10,7 @@ class UserDashBoard extends StatefulWidget {
 }
 
 class _UserDashBoardState extends State<UserDashBoard> {
-  GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,7 +72,7 @@ class _UserDashBoardState extends State<UserDashBoard> {
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.only(top: 60.0),
+                padding: const EdgeInsets.only(top: 60.0),
                 child: Row(
                   children: [
                     Image.asset(

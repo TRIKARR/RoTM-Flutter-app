@@ -1,4 +1,4 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -19,7 +19,7 @@ class UserAuthPage extends StatelessWidget {
       "password": RegbrotmPasswordController.text,
     };
     var response = await http.get(url.replace(queryParameters: queryParams));
-    // ignore: avoid_print
+
     print(response.toString());
     print(queryParams.toString());
   }
