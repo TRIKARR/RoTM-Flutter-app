@@ -66,7 +66,7 @@ class _UserDashBoardState extends State<UserDashBoard> {
         body: const Column(
           children: [
             SizedBox(
-              height: 10,
+              height: 21,
             ),
             WeekDataSection()
           ],
