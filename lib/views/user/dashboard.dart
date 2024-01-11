@@ -27,13 +27,15 @@ class _UserDashBoardState extends State<UserDashBoard> {
             ),
           ),
         ),
-        title: Text("DASHBOARD",
-            style: GoogleFonts.getFont(
-              'Orbitron',
-              fontSize: 25,
-              color: const Color.fromARGB(255, 255, 255, 255),
-              fontWeight: FontWeight.bold,
-            )),
+        title: Center(
+          child: Text("DASHBOARD",
+              style: GoogleFonts.getFont(
+                'Orbitron',
+                fontSize: 25,
+                color: const Color.fromARGB(255, 255, 255, 255),
+                fontWeight: FontWeight.bold,
+              )),
+        ),
         automaticallyImplyLeading: false,
         backgroundColor: Colors.deepPurple.shade900,
         actions: [
