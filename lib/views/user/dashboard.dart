@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rotm/models/userdragablescroll.dart';
 import 'package:rotm/models/week_data.dart';
 
 class UserDashBoard extends StatefulWidget {
@@ -60,7 +61,15 @@ class _UserDashBoardState extends State<UserDashBoard> {
                     height: 60,
                     width: 60,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    showModalBottomSheet(
+                      
+                      context: context,
+                      builder: (BuildContext context) {
+                        return const UserDragScrollBottomSheet();
+                      },
+                    );
+                  },
                   color: const Color.fromARGB(255, 255, 255, 255),
                 ),
               ),
