@@ -10,9 +10,11 @@ class UserDashBoard extends StatefulWidget {
 }
 
 class _UserDashBoardState extends State<UserDashBoard> {
+  GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        key: _scaffoldKey,
         backgroundColor: Colors.deepPurple.shade900,
         appBar: AppBar(
           leading: Padding(
@@ -23,7 +25,9 @@ class _UserDashBoardState extends State<UserDashBoard> {
                 color: Colors.deepPurple.shade900,
               ),
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  _scaffoldKey.currentState?.openDrawer();
+                },
                 icon: Image.asset("lib/assets/animated/menu2.gif"),
               ),
             ),
@@ -63,6 +67,35 @@ class _UserDashBoardState extends State<UserDashBoard> {
             ),
           ],
         ),
+        drawer: Drawer(
+          backgroundColor: Colors.deepPurple.shade900,
+          child: Column(
+            children: [
+              Container(
+                padding: EdgeInsets.only(top: 60.0),
+                child: Row(
+                  children: [
+                    Image.asset(
+                      "lib/assets/images/logo.png",
+                      height: 120.0, // Adjust the height as needed
+                      width: 100.0, // Adjust the width as needed
+                    ),
+                    Text(
+                      "BRoTM",
+                      style: GoogleFonts.getFont(
+                        'Orbitron',
+                        fontSize: 45,
+                        color: const Color.fromARGB(255, 255, 255, 255),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              // Add other drawer items below if needed
+            ],
+          ),
+        ),
         body: const Column(
           children: [
             SizedBox(
@@ -73,52 +106,3 @@ class _UserDashBoardState extends State<UserDashBoard> {
         ));
   }
 }
-
-
-// appBar: AppBar(
-//         leading: Padding(
-//           padding: const EdgeInsets.only(left: 0.0),
-//           child: Container(
-//             decoration: BoxDecoration(
-//               borderRadius: BorderRadius.circular(100),
-//               color: Colors.deepPurple.shade900,
-//             ),
-//             child: IconButton(
-//               onPressed: () {},
-//               icon: Image.asset("lib/assets/animated/menu2.gif"),
-//             ),
-//           ),
-//         ),
-//         title: Text("DASHBOARD",
-//             style: GoogleFonts.getFont(
-//               'Orbitron',
-//               fontSize: 25,
-//               color: const Color.fromARGB(255, 255, 255, 255),
-//               fontWeight: FontWeight.bold,
-//             )),
-//         automaticallyImplyLeading: false,
-//         backgroundColor: Colors.deepPurple.shade900,
-//         actions: [
-//           Padding(
-//             padding: const EdgeInsets.only(right: 10.0),
-//             child: Container(
-//               decoration: BoxDecoration(
-//                 borderRadius: BorderRadius.circular(90),
-//                 color: const Color.fromARGB(255, 255, 255, 255),
-//               ),
-//               height: 60,
-//               width: 60,
-//               child: IconButton(
-//                 icon: Image.asset(
-//                   "lib/assets/animated/profile.gif",
-//                   fit: BoxFit.cover,
-//                   height: 60,
-//                   width: 60,
-//                 ),
-//                 onPressed: () {},
-//                 color: const Color.fromARGB(255, 255, 255, 255),
-//               ),
-//             ),
-//           ),
-//         ],
-//       ),

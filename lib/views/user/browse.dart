@@ -26,7 +26,7 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                 style: GoogleFonts.getFont(
                   'Orbitron',
                   fontSize: 30,
-                  color: Color.fromARGB(255, 0, 0, 0),
+                  color: const Color.fromARGB(255, 0, 0, 0),
                   fontWeight: FontWeight.bold,
                 )),
             automaticallyImplyLeading: false,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:google_fonts/google_fonts.dart';
 
 class UserInteractionMenu extends StatefulWidget {
@@ -11,6 +12,6 @@ class UserInteractionMenu extends StatefulWidget {
 class _UserInteractionMenuState extends State<UserInteractionMenu> {
   @override
   Widget build(BuildContext context) {
-    return Placeholder();
+    return const Placeholder();
   }
 }

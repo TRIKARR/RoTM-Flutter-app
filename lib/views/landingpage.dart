@@ -49,7 +49,7 @@ class _LandingPageState extends State<LandingPage> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const UserAuthPage())),
+                                            UserAuthPage())),
                               },
                           child: const Text("Done"))
                       : GestureDetector(

@@ -1,11 +1,30 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:rotm/assets/constants.dart';
 import 'package:rotm/views/auth/signup_page.dart';
+import 'package:http/http.dart' as http;
+import 'package:rotm/views/user/bottom_nav_bar.dart';
 
+// ignore: must_be_immutable
 class UserAuthPage extends StatelessWidget {
-  const UserAuthPage({super.key});
+  TextEditingController RegbrotmIdController = TextEditingController();
+  TextEditingController RegbrotmPasswordController = TextEditingController();
+  void getRequest() async {
+    var url = Uri.parse('http://192.168.0.241:3000/login');
+    var queryParams = {
+      "username": RegbrotmIdController.text,
+      "password": RegbrotmPasswordController.text,
+    };
+    var response = await http.get(url.replace(queryParameters: queryParams));
+    // ignore: avoid_print
+    print(response.toString());
+    print(queryParams.toString());
+  }
+
+  UserAuthPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,18 +50,6 @@ class UserAuthPage extends StatelessWidget {
                     width: 320,
                   ),
                 ),
-
-                // Text("Welcome Back BRoTM",
-                //     textAlign: TextAlign.center,
-                //     style: GoogleFonts.getFont(
-                //       'Orbitron',
-                //       fontSize: 25,
-                //       color: const Color.fromARGB(255, 51, 1, 117),
-                //       fontWeight: FontWeight.bold,
-                //     )),
-                // const SizedBox(
-                //   height: 10,
-                // ),
                 Text("BRoTM Login",
                     textAlign: TextAlign.center,
                     style: GoogleFonts.getFont(
@@ -57,6 +64,7 @@ class UserAuthPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 10, right: 10),
                   child: TextField(
+                    controller: RegbrotmIdController,
                     style: GoogleFonts.getFont(
                       'Orbitron',
                       fontSize: 18,
@@ -83,6 +91,7 @@ class UserAuthPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 10, right: 10),
                   child: TextField(
+                    controller: RegbrotmPasswordController,
                     obscureText: true,
                     style: GoogleFonts.getFont(
                       'Orbitron',
@@ -131,7 +140,13 @@ class UserAuthPage extends StatelessWidget {
                             ),
                             side: BorderSide(color: Colors.black)),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                              builder: (context) => const BottomNavComponent()),
+                        );
+                        getRequest();
+                      },
                       child: const Text(
                         "PROCEED",
                         style: TextStyle(
