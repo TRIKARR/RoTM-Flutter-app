@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rotm/models/week_data.dart';
 
 class UserDashBoard extends StatefulWidget {
   const UserDashBoard({super.key});
@@ -62,7 +63,7 @@ class _UserDashBoardState extends State<UserDashBoard> {
           ),
         ],
       ),
-      body: Text("Dashboard"),
+      body: WeekDataSection(),
     );
   }
 }
