@@ -62,6 +62,7 @@ class _UserDashBoardState extends State<UserDashBoard> {
           ),
         ],
       ),
+      body: Text("Dashboard"),
     );
   }
 }
