@@ -13,58 +13,64 @@ class _UserDashBoardState extends State<UserDashBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple.shade900,
-      appBar: AppBar(
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 0.0),
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100),
-              color: Colors.deepPurple.shade900,
-            ),
-            child: IconButton(
-              onPressed: () {},
-              icon: Image.asset("lib/assets/animated/menu2.gif"),
-            ),
-          ),
-        ),
-        title: Center(
-          child: Text("DASHBOARD",
-              style: GoogleFonts.getFont(
-                'Orbitron',
-                fontSize: 25,
-                color: const Color.fromARGB(255, 255, 255, 255),
-                fontWeight: FontWeight.bold,
-              )),
-        ),
-        automaticallyImplyLeading: false,
         backgroundColor: Colors.deepPurple.shade900,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 10.0),
+        appBar: AppBar(
+          leading: Padding(
+            padding: const EdgeInsets.only(left: 0.0),
             child: Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(90),
-                color: const Color.fromARGB(255, 255, 255, 255),
+                borderRadius: BorderRadius.circular(100),
+                color: Colors.deepPurple.shade900,
               ),
-              height: 60,
-              width: 60,
               child: IconButton(
-                icon: Image.asset(
-                  "lib/assets/animated/profile.gif",
-                  fit: BoxFit.cover,
-                  height: 60,
-                  width: 60,
-                ),
                 onPressed: () {},
-                color: const Color.fromARGB(255, 255, 255, 255),
+                icon: Image.asset("lib/assets/animated/menu2.gif"),
               ),
             ),
           ),
-        ],
-      ),
-      body: WeekDataSection(),
-    );
+          title: Center(
+            child: Text("DASHBOARD",
+                style: GoogleFonts.getFont(
+                  'Orbitron',
+                  fontSize: 25,
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                  fontWeight: FontWeight.bold,
+                )),
+          ),
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.deepPurple.shade900,
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 10.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(90),
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                ),
+                height: 60,
+                width: 60,
+                child: IconButton(
+                  icon: Image.asset(
+                    "lib/assets/animated/profile.gif",
+                    fit: BoxFit.cover,
+                    height: 60,
+                    width: 60,
+                  ),
+                  onPressed: () {},
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                ),
+              ),
+            ),
+          ],
+        ),
+        body: const Column(
+          children: [
+            SizedBox(
+              height: 10,
+            ),
+            WeekDataSection()
+          ],
+        ));
   }
 }
 
