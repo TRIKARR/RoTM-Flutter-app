@@ -1,6 +1,10 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rotm/views/user/browse.dart';
+import 'package:rotm/views/user/dashboard.dart';
+import 'package:rotm/views/user/rotm_interact.dart';
 
 class BottomNavComponent extends StatefulWidget {
   const BottomNavComponent({super.key});
@@ -10,16 +14,29 @@ class BottomNavComponent extends StatefulWidget {
 }
 
 class _BottomNavComponentState extends State<BottomNavComponent> {
+  int _page = 0;
+  final List<Widget> _pages = [
+    const UserDashBoard(),
+    const UserInteractionMenu(),
+    const UserBrowseMenu(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: _pages[_page],
       backgroundColor: Colors.deepPurple.shade900,
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.deepPurple.shade900,
         color: const Color.fromARGB(255, 255, 255, 255),
         animationDuration: const Duration(milliseconds: 250),
+        onTap: (index) {
+          setState(() {
+            _page = index;
+          });
+        },
         animationCurve: Curves.easeInOut,
         height: 70,
+        letIndexChange: (value) => true,
         items: [
           Padding(
             padding: const EdgeInsets.all(2.0),
