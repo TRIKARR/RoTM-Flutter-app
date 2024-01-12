@@ -63,7 +63,6 @@ class _UserDashBoardState extends State<UserDashBoard> {
                   ),
                   onPressed: () {
                     showModalBottomSheet(
-                      
                       context: context,
                       builder: (BuildContext context) {
                         return const UserDragScrollBottomSheet();
@@ -105,12 +104,40 @@ class _UserDashBoardState extends State<UserDashBoard> {
             ],
           ),
         ),
-        body: const Column(
+        body: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 21,
             ),
-            WeekDataSection()
+            WeekDataSection(),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Container(
+                      height: 200,
+                      width: 200,
+                      color: Colors.cyanAccent,
+                    ),
+                    Container(
+                      height: 200,
+                      width: 200,
+                      color: Colors.cyanAccent,
+                    ),
+                    Container(
+                      height: 200,
+                      width: 200,
+                      color: Colors.cyanAccent,
+                    ),
+                    Container(
+                      height: 200,
+                      width: 200,
+                      color: Colors.cyanAccent,
+                    )
+                  ],
+                ),
+              ),
+            ),
           ],
         ));
   }
