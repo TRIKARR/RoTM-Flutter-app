@@ -59,7 +59,7 @@ class _RadarChartExampleState extends State<RadarChartExample> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
