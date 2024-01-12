@@ -405,6 +405,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.7.3"
+  radar_chart:
+    dependency: "direct main"
+    description:
+      name: radar_chart
+      sha256: "8354cb6f4398a03aff283f7b73c8e27a406c740227e7e0ac0feefe438087fcd6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.0"
   sky_engine:
     dependency: transitive
     description: flutter

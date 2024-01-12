@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:radar_chart/radar_chart.dart';
+import 'package:rotm/models/radarchart.dart';
 
 class UserBrowseMenu extends StatefulWidget {
   const UserBrowseMenu({super.key});
@@ -22,7 +24,7 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                 "lib/assets/animated/magazine.gif",
               ),
             ),
-            title: Text("REPORT",
+            title: Text("BRoTM REPORT",
                 style: GoogleFonts.getFont(
                   'Orbitron',
                   fontSize: 30,
@@ -34,6 +36,30 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
             flexibleSpace: FlexibleSpaceBar(
               background: Container(
                 color: const Color.fromARGB(255, 255, 255, 255),
+                child: SafeArea(
+                  child: Row(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color.fromARGB(255, 255, 255, 255)),
+                        height: 340,
+                        width: 200,
+                      ),
+                      Container(
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color.fromARGB(255, 255, 255, 255)),
+                        height: 340,
+                        width: 220,
+                        child: Center(
+                          child: RadarChartExample(),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
               ),
             ),
           )
