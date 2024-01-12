@@ -110,14 +110,18 @@ class _UserDashBoardState extends State<UserDashBoard> {
               height: 21,
             ),
             WeekDataSection(),
+            // Just for testing out stuff
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    Container(
-                      height: 200,
-                      width: 200,
-                      color: Colors.cyanAccent,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: 200,
+                        width: 200,
+                        color: Colors.cyanAccent,
+                      ),
                     ),
                     Container(
                       height: 200,
