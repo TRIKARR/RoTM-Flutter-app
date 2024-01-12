@@ -44,8 +44,11 @@ class SignUpPage extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 40.0),
-                  child: Lottie.asset("lib/assets/others/Robot.json",
-                      height: 300, width: 300),
+                  child: Lottie.asset(
+                    "lib/assets/others/Robot.json",
+                    height: 300,
+                    width: 300,
+                  ),
                 ),
                 Text("BRoTM SignUp",
                     textAlign: TextAlign.center,
