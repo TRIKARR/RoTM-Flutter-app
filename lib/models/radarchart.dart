@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:radar_chart/radar_chart.dart';
 
@@ -12,16 +11,28 @@ class RadarChartExample extends StatefulWidget {
 
 class _RadarChartExampleState extends State<RadarChartExample> {
   int _length = 3;
-  List<double> values1 = [0.4, 0.8, 0.65];
-  List<double> values2 = [0.5, 0.3, 0.85];
-
+  List<double> values1 = [0.4, 0.8, 0.95];
+  List<double> values2 = [0.5, 0.7, 0.85];
+  List<double> values3 = [0.6, 0.6, 0.75];
+  List<double> values4 = [0.7, 0.5, 0.65];
+  List<double> values5 = [0.8, 0.4, 0.55];
   void _incrementCounter() {
     setState(() {
       final random = Random(12341);
       _length++;
       values1.add(random.nextDouble());
       values2.add(random.nextDouble());
+      values3.add(random.nextDouble());
+      values4.add(random.nextDouble());
+      values5.add(random.nextDouble());
     });
+  }
+
+  // Bahut Sasta Jugad hai Isko Jara bhi koi naa Chede toh better hai;
+  void initState() {
+    super.initState();
+    _incrementCounter();
+    _incrementCounter();
   }
 
   @override
@@ -51,6 +62,27 @@ class _RadarChartExampleState extends State<RadarChartExample> {
                 borderStroke: 3,
                 borderColor: Colors.blue,
                 backgroundColor: Colors.blue.withOpacity(0.4),
+              ),
+              RadarTile(
+                values: values3,
+                borderStroke: 3,
+                borderColor: Color.fromARGB(255, 104, 62, 201),
+                backgroundColor:
+                    Color.fromARGB(255, 66, 0, 136).withOpacity(0.4),
+              ),
+              RadarTile(
+                values: values4,
+                borderStroke: 3,
+                borderColor: Color.fromARGB(255, 16, 104, 23),
+                backgroundColor:
+                    Color.fromARGB(255, 9, 241, 5).withOpacity(0.4),
+              ),
+              RadarTile(
+                values: values5,
+                borderStroke: 3,
+                borderColor: const Color.fromARGB(255, 255, 59, 59),
+                backgroundColor:
+                    Color.fromARGB(255, 250, 2, 2).withOpacity(0.4),
               ),
             ],
           ),
