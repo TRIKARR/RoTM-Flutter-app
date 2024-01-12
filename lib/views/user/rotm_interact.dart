@@ -27,18 +27,18 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
                   width: 410,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color.fromARGB(255, 255, 255, 255),
+                    color: const Color.fromARGB(255, 255, 255, 255),
                   ),
                   child: Column(
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(8.0),
                         child: Text(
                           "RoTM STATS",
                           style: GoogleFonts.getFont(
                             'Orbitron',
                             fontSize: 20,
-                            color: Color.fromARGB(255, 0, 0, 0),
+                            color: const Color.fromARGB(255, 0, 0, 0),
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -46,15 +46,21 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
                       Row(
                         children: [
                           Container(
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            child: Padding(
-                              padding: EdgeInsets.all(10.0),
-                              child: Lottie.asset(
-                                "lib/assets/others/togother.json",
-                                height: 200,
-                                width: 190,
-                                fit: BoxFit.fitWidth,
-                              ),
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom: 0.0),
+                                  child: Lottie.asset(
+                                    "lib/assets/others/togother.json",
+                                    height: 200,
+                                    width: 190,
+                                    fit: BoxFit.fitWidth,
+                                  ),
+                                ),
+                                // CircularProgressIndicator(),
+                              ],
                             ),
                           ),
                         ],
