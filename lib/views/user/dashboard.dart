@@ -109,7 +109,7 @@ class _UserDashBoardState extends State<UserDashBoard> {
             const SizedBox(
               height: 21,
             ),
-            WeekDataSection(),
+            const WeekDataSection(),
             // Just for testing out stuff
             Expanded(
               child: SingleChildScrollView(
