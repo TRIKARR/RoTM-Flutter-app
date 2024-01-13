@@ -25,17 +25,14 @@ class _LevelOneSectionState extends State<LevelOneSection> {
           child: OpenContainer(
             closedColor: const Color.fromARGB(255, 255, 255, 255),
             closedBuilder: (context, action) {
-              return GestureDetector(
-                onTap: () {},
-                child: Container(
-                  height: 130,
-                  width: 130,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                  ),
-                  child: const UserHeartPulse(),
+              return Container(
+                height: 130,
+                width: 130,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color.fromARGB(255, 255, 255, 255),
                 ),
+                child: const UserHeartPulse(),
               );
             },
             openBuilder: (context, action) => const UserBloodOxygen(),
@@ -50,17 +47,14 @@ class _LevelOneSectionState extends State<LevelOneSection> {
           child: OpenContainer(
             closedColor: const Color.fromARGB(255, 142, 47, 47),
             closedBuilder: (context, action) {
-              return GestureDetector(
-                onTap: () {},
-                child: Container(
-                  height: 130,
-                  width: 130,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                  ),
-                  child: const UserSleepCycle(),
+              return Container(
+                height: 130,
+                width: 130,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color.fromARGB(255, 255, 255, 255),
                 ),
+                child: const UserSleepCycle(),
               );
             },
             openBuilder: (context, action) => const UserBloodOxygen(),
@@ -75,17 +69,14 @@ class _LevelOneSectionState extends State<LevelOneSection> {
           child: OpenContainer(
             closedColor: const Color.fromARGB(255, 142, 47, 47),
             closedBuilder: (context, action) {
-              return GestureDetector(
-                onTap: () {},
-                child: Container(
-                  height: 130,
-                  width: 130,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                  ),
-                  child: const UserBloodOxygen(),
+              return Container(
+                height: 130,
+                width: 130,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color.fromARGB(255, 255, 255, 255),
                 ),
+                child: const UserBloodOxygen(),
               );
             },
             openBuilder: (context, action) => const UserBloodOxygen(),
