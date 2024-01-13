@@ -23,7 +23,15 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
           width: 10,
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                //Temporary route
+                builder: (context) => const SectionLevelFour(),
+              ),
+            );
+          },
           child: Container(
             height: 150,
             width: (130 * 3) + 20,
@@ -63,12 +71,12 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
                         y1: 0,
                         y2: 2.5,
                         color: const Color.fromARGB(255, 24, 82, 255)
-                            .withOpacity(0.9)),
+                            .withOpacity(0.7)),
                     HorizontalRangeAnnotation(
                         y1: 2.5,
                         y2: 5,
                         color: const Color.fromARGB(255, 0, 255, 17)
-                            .withOpacity(0.9)),
+                            .withOpacity(0.7)),
                     HorizontalRangeAnnotation(
                         y1: 5,
                         y2: 7.5,
@@ -78,7 +86,7 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
                         y1: 7.5,
                         y2: 10,
                         color: const Color.fromARGB(255, 255, 24, 24)
-                            .withOpacity(0.9)),
+                            .withOpacity(1)),
                   ]),
                   lineBarsData: [
                     LineChartBarData(
