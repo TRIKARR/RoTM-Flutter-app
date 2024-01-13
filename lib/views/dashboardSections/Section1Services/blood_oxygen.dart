@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:gauge_indicator/gauge_indicator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class UserBloodOxygen extends StatefulWidget {
+  final int randomvalue = 98;
   const UserBloodOxygen({super.key});
 
   @override
@@ -57,47 +57,58 @@ class _UserBloodOxygenState extends State<UserBloodOxygen> {
         const SizedBox(
           height: 10,
         ),
-        const Center(
+        Center(
           child: AnimatedRadialGauge(
-            value: 86,
-            duration: Duration(seconds: 1),
+            value: 87,
+            duration: const Duration(seconds: 2),
             curve: Curves.elasticOut,
             radius: 50,
-            axis: GaugeAxis(
+            axis: const GaugeAxis(
               min: 0,
               max: 100,
               degrees: 180,
               style: GaugeAxisStyle(
                 thickness: 20,
-                background: Color(0xFFDFE2EC),
-                segmentSpacing: 4,
+                background: Color.fromARGB(255, 76, 0, 255),
+                segmentSpacing: 2,
+              ),
+              pointer: GaugePointer.circle(
+                radius: 8,
+                color: Color.fromARGB(255, 255, 255, 255),
+                border: GaugePointerBorder(color: Colors.black, width: 2),
               ),
               progressBar: GaugeProgressBar.rounded(
-                color: Color(0xFFB4C2F8),
+                color: Color.fromARGB(255, 255, 0, 0),
               ),
               segments: [
-                GaugeSegment(
-                  from: 0,
-                  to: 33.3,
-                  color: Color(0xFFD9DEEB),
-                  cornerRadius: Radius.zero,
-                ),
-                GaugeSegment(
-                  from: 33.3,
-                  to: 66.6,
-                  color: Color(0xFFD9DEEB),
-                  cornerRadius: Radius.zero,
-                ),
-                GaugeSegment(
-                  from: 66.6,
-                  to: 100,
-                  color: Color(0xFFD9DEEB),
-                  cornerRadius: Radius.zero,
-                ),
+                // GaugeSegment(
+                //   from: 0,
+                //   to: 94,
+                //   color: Color(0xFFB4C2F8),
+                //   cornerRadius: Radius.zero,
+                // ),
               ],
+            ),
+            builder: (context, child, value) => RadialGaugeLabel(
+              value: value,
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
+        const SizedBox(
+          height: 5,
+        ),
+        Text("NORMAL",
+            style: GoogleFonts.getFont(
+              'Orbitron',
+              fontSize: 10,
+              color: const Color.fromARGB(255, 0, 0, 0),
+              fontWeight: FontWeight.bold,
+            ))
       ],
     );
   }
