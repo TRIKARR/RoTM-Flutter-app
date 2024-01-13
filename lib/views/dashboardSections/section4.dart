@@ -29,7 +29,7 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
             width: (130 * 3) + 20,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              color: Color.fromARGB(255, 255, 255, 255),
+              color: const Color.fromARGB(255, 255, 255, 255),
             ),
             child: Padding(
               padding: const EdgeInsets.all(6.0),
@@ -39,7 +39,8 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
                   titlesData: const FlTitlesData(show: false),
                   borderData: FlBorderData(
                     show: true,
-                    border: Border.all(color: Colors.cyanAccent),
+                    border:
+                        Border.all(color: const Color.fromARGB(255, 0, 0, 0)),
                   ),
                   minX: 0,
                   maxX: 16,
@@ -56,12 +57,12 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
                         y1: 2.5,
                         y2: 5,
                         color:
-                            Color.fromARGB(255, 0, 255, 17).withOpacity(0.9)),
+                            const Color.fromARGB(255, 0, 255, 17).withOpacity(0.9)),
                     HorizontalRangeAnnotation(
                         y1: 5,
                         y2: 7.5,
                         color:
-                            Color.fromARGB(255, 231, 92, 5).withOpacity(0.9)),
+                            const Color.fromARGB(255, 231, 92, 5).withOpacity(0.9)),
                     HorizontalRangeAnnotation(
                         y1: 7.5,
                         y2: 10,
@@ -70,7 +71,7 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
                   ]),
                   lineBarsData: [
                     LineChartBarData(
-                      color: Colors.cyanAccent,
+                      color: const Color.fromARGB(255, 0, 0, 0),
                       spots: [
                         //Random values for showcase
                         const FlSpot(0, 0),
