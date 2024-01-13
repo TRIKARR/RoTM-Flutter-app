@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:gauge_indicator/gauge_indicator.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class UserSleepCycle extends StatefulWidget {
-  const UserSleepCycle({super.key});
+class UserHeartPulse extends StatefulWidget {
+  const UserHeartPulse({super.key});
 
   @override
-  State<UserSleepCycle> createState() => _UserSleepCycleState();
+  State<UserHeartPulse> createState() => _UserHeartPulseState();
 }
 
-class _UserSleepCycleState extends State<UserSleepCycle> {
+class _UserHeartPulseState extends State<UserHeartPulse> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -21,7 +21,7 @@ class _UserSleepCycleState extends State<UserSleepCycle> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 5, top: 4.0),
-              child: Image.asset("lib/assets/animated/sleep.gif",
+              child: Image.asset("lib/assets/animated/heartbeat.gif",
                   height: 40, width: 35),
             ),
             const SizedBox(
