@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:gauge_indicator/gauge_indicator.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -37,14 +39,14 @@ class _UserBloodOxygenState extends State<UserBloodOxygen> {
                       style: GoogleFonts.getFont(
                         'Orbitron',
                         fontSize: 10,
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: const Color.fromARGB(255, 0, 0, 0),
                         fontWeight: FontWeight.bold,
                       )),
                   Text("OXYGEN",
                       style: GoogleFonts.getFont(
                         'Orbitron',
                         fontSize: 10,
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: const Color.fromARGB(255, 0, 0, 0),
                         fontWeight: FontWeight.bold,
                       ))
                 ],
@@ -58,35 +60,35 @@ class _UserBloodOxygenState extends State<UserBloodOxygen> {
         const Center(
           child: AnimatedRadialGauge(
             value: 86,
-            duration: const Duration(seconds: 1),
+            duration: Duration(seconds: 1),
             curve: Curves.elasticOut,
             radius: 50,
             axis: GaugeAxis(
               min: 0,
               max: 100,
               degrees: 180,
-              style: const GaugeAxisStyle(
+              style: GaugeAxisStyle(
                 thickness: 20,
                 background: Color(0xFFDFE2EC),
                 segmentSpacing: 4,
               ),
-              progressBar: const GaugeProgressBar.rounded(
+              progressBar: GaugeProgressBar.rounded(
                 color: Color(0xFFB4C2F8),
               ),
               segments: [
-                const GaugeSegment(
+                GaugeSegment(
                   from: 0,
                   to: 33.3,
                   color: Color(0xFFD9DEEB),
                   cornerRadius: Radius.zero,
                 ),
-                const GaugeSegment(
+                GaugeSegment(
                   from: 33.3,
                   to: 66.6,
                   color: Color(0xFFD9DEEB),
                   cornerRadius: Radius.zero,
                 ),
-                const GaugeSegment(
+                GaugeSegment(
                   from: 66.6,
                   to: 100,
                   color: Color(0xFFD9DEEB),

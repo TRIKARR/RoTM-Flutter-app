@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
@@ -132,7 +134,7 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
             },
             openBuilder: (BuildContext context,
                 void Function({Object? returnValue}) action) {
-              return UserBloodOxygen();
+              return const UserBloodOxygen();
             },
           ),
         ),
