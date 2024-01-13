@@ -1,5 +1,6 @@
 // ignore_for_file: unused_import
 
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:gauge_indicator/gauge_indicator.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -53,12 +54,11 @@ class _UserHeartPulseState extends State<UserHeartPulse> {
           ],
         ),
         const SizedBox(
-          height: 10,
+          height: 5,
         ),
         Row(
           children: [
             Column(
-
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 3.0),
@@ -91,6 +91,17 @@ class _UserHeartPulseState extends State<UserHeartPulse> {
                       )),
                 ),
               ],
+            ),
+            const SizedBox(
+              width: 4,
+            ),
+            Container(
+              height: 70,
+              width: 60,
+              color: const Color.fromARGB(255, 255, 0, 166),
+              child: BarChart(
+                BarChartData(),
+              ),
             ),
           ],
         ),
