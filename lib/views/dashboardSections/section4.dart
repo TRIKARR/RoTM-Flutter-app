@@ -32,14 +32,14 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
           child: OpenContainer(
             //Important grey colour
             // closedColor: const Color.fromARGB(255, 59, 53, 53),
-            closedColor: Color.fromARGB(255, 255, 255, 255),
+            closedColor: const Color.fromARGB(255, 255, 255, 255),
             closedBuilder: (BuildContext context, void Function() action) {
               return Container(
                 height: 150,
                 width: (130 * 3) + 20,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100),
-                  color: Color.fromARGB(255, 255, 255, 255),
+                  color: const Color.fromARGB(255, 255, 255, 255),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(6.0),

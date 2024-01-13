@@ -22,7 +22,7 @@ class _UserHeartPulseState extends State<UserHeartPulse> {
             Padding(
               padding: const EdgeInsets.only(left: 5, top: 4.0),
               child: Image.asset("lib/assets/animated/heartbeat.gif",
-                  height: 40, width: 35),
+                  height: 40, width: 45),
             ),
             const SizedBox(
               width: 5,
@@ -31,14 +31,14 @@ class _UserHeartPulseState extends State<UserHeartPulse> {
               padding: const EdgeInsets.only(top: 8.0),
               child: Column(
                 children: [
-                  Text("SLEEP",
+                  Text("HEART",
                       style: GoogleFonts.getFont(
                         'Orbitron',
                         fontSize: 10,
                         color: const Color.fromARGB(255, 0, 0, 0),
                         fontWeight: FontWeight.bold,
                       )),
-                  Text("CYCLE",
+                  Text("PULSE",
                       style: GoogleFonts.getFont(
                         'Orbitron',
                         fontSize: 10,

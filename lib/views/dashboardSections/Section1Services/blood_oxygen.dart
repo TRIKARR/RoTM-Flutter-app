@@ -26,7 +26,7 @@ class _UserBloodOxygenState extends State<UserBloodOxygen> {
             Padding(
               padding: const EdgeInsets.only(left: 5, top: 4.0),
               child: Image.asset("lib/assets/animated/blood-vessel.gif",
-                  height: 40, width: 35),
+                  height: 40, width: 45),
             ),
             const SizedBox(
               width: 5,

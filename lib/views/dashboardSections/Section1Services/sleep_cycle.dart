@@ -22,7 +22,7 @@ class _UserSleepCycleState extends State<UserSleepCycle> {
             Padding(
               padding: const EdgeInsets.only(left: 5, top: 4.0),
               child: Image.asset("lib/assets/animated/sleep.gif",
-                  height: 40, width: 35),
+                  height: 40, width: 45),
             ),
             const SizedBox(
               width: 5,
