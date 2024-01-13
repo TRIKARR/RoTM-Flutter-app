@@ -20,6 +20,7 @@ dependencies:
   curved_navigation_bar: ^1.0.3
   percent_indicator: ^4.2.3
   radar_chart: ^2.1.0
+  fl_chart: ^0.66.0
   
 
 dev_dependencies:

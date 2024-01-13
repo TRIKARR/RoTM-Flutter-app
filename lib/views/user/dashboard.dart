@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rotm/models/userdragablescroll.dart';
 import 'package:rotm/models/week_data.dart';
+import 'package:rotm/views/dashboardSections/section1.dart';
+import 'package:rotm/views/dashboardSections/section2.dart';
+import 'package:rotm/views/dashboardSections/section3.dart';
+import 'package:rotm/views/dashboardSections/section4.dart';
 
 class UserDashBoard extends StatefulWidget {
   const UserDashBoard({super.key});
@@ -104,40 +108,30 @@ class _UserDashBoardState extends State<UserDashBoard> {
             ],
           ),
         ),
-        body: Column(
+        body: const Column(
           children: [
-            const SizedBox(
+            SizedBox(
               height: 21,
             ),
-            const WeekDataSection(),
+            WeekDataSection(),
             // Just for testing out stuff
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        height: 200,
-                        width: 200,
-                        color: Colors.cyanAccent,
-                      ),
+                    LevelOneSection(),
+                    SizedBox(
+                      height: 10,
                     ),
-                    Container(
-                      height: 200,
-                      width: 200,
-                      color: Colors.cyanAccent,
+                    SectionLevelTwo(),
+                    SizedBox(
+                      height: 10,
                     ),
-                    Container(
-                      height: 200,
-                      width: 200,
-                      color: Colors.cyanAccent,
+                    SectionLevelThree(),
+                    SizedBox(
+                      height: 10,
                     ),
-                    Container(
-                      height: 200,
-                      width: 200,
-                      color: Colors.cyanAccent,
-                    )
+                    SectionLevelFour(),
                   ],
                 ),
               ),
