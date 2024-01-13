@@ -43,9 +43,7 @@ class _LevelOneSectionState extends State<LevelOneSection> {
         const SizedBox(
           width: 10,
         ),
-        GestureDetector(
-          onTap: () {},
-          child: Container(
+        Container(
             height: 130,
             width: 130,
             decoration: BoxDecoration(
@@ -53,7 +51,6 @@ class _LevelOneSectionState extends State<LevelOneSection> {
               color: const Color.fromARGB(255, 255, 255, 255),
             ),
           ),
-        ),
       ],
     );
   }

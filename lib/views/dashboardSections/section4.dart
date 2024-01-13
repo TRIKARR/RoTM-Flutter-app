@@ -26,6 +26,8 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
         ),
         GestureDetector(
           child: OpenContainer(
+            //Important grey colour
+            // closedColor: const Color.fromARGB(255, 59, 53, 53),
             closedColor: const Color.fromARGB(255, 59, 53, 53),
             closedBuilder: (BuildContext context, void Function() action) {
               return Container(
@@ -42,7 +44,7 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
                       lineTouchData: const LineTouchData(
                         enabled: true,
                         touchTooltipData: LineTouchTooltipData(
-                          tooltipBgColor: Colors.transparent,
+                          tooltipBgColor: Color.fromARGB(255, 255, 255, 255),
                         ),
                       ),
                       gridData: const FlGridData(
@@ -66,13 +68,13 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
                         HorizontalRangeAnnotation(
                             y1: 0,
                             y2: 2.5,
-                            color: const Color.fromARGB(255, 24, 82, 255)
-                                .withOpacity(0.7)),
+                            color: const Color.fromARGB(255, 28, 251, 255)
+                                .withOpacity(0.9)),
                         HorizontalRangeAnnotation(
                             y1: 2.5,
                             y2: 5,
                             color: const Color.fromARGB(255, 0, 255, 17)
-                                .withOpacity(0.7)),
+                                .withOpacity(0.9)),
                         HorizontalRangeAnnotation(
                             y1: 5,
                             y2: 7.5,
@@ -82,7 +84,7 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
                             y1: 7.5,
                             y2: 10,
                             color: const Color.fromARGB(255, 255, 24, 24)
-                                .withOpacity(1)),
+                                .withOpacity(0.9)),
                       ]),
                       lineBarsData: [
                         LineChartBarData(

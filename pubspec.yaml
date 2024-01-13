@@ -22,6 +22,7 @@ dependencies:
   radar_chart: ^2.1.0
   fl_chart: ^0.66.0
   animations: ^2.0.11
+  syncfusion_flutter_charts: ^24.1.45+2
   
 
 dev_dependencies:
