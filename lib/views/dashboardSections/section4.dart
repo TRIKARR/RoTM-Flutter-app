@@ -29,7 +29,7 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
             width: (130 * 3) + 20,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              color: const Color.fromARGB(255, 255, 255, 255),
+              color: const Color.fromARGB(255, 59, 53, 53),
             ),
             child: Padding(
               padding: const EdgeInsets.all(6.0),
@@ -56,13 +56,13 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
                     HorizontalRangeAnnotation(
                         y1: 2.5,
                         y2: 5,
-                        color:
-                            const Color.fromARGB(255, 0, 255, 17).withOpacity(0.9)),
+                        color: const Color.fromARGB(255, 0, 255, 17)
+                            .withOpacity(0.9)),
                     HorizontalRangeAnnotation(
                         y1: 5,
                         y2: 7.5,
-                        color:
-                            const Color.fromARGB(255, 231, 92, 5).withOpacity(0.9)),
+                        color: const Color.fromARGB(255, 231, 92, 5)
+                            .withOpacity(0.9)),
                     HorizontalRangeAnnotation(
                         y1: 7.5,
                         y2: 10,
