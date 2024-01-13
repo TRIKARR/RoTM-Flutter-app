@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rotm/models/userdragablescroll.dart';
@@ -115,25 +117,28 @@ class _UserDashBoardState extends State<UserDashBoard> {
             ),
             WeekDataSection(),
             // Just for testing out stuff
+            SizedBox(
+              height: 4,
+            ),
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
                   children: [
                     SectionLevelFour(),
                     SizedBox(
-                      height: 10,
+                      height: 15,
                     ),
                     LevelOneSection(),
                     SizedBox(
-                      height: 10,
+                      height: 15,
                     ),
                     SectionLevelTwo(),
                     SizedBox(
-                      height: 10,
+                      height: 15,
                     ),
                     SectionLevelThree(),
                     SizedBox(
-                      height: 10,
+                      height: 1,
                     ),
                   ],
                 ),
