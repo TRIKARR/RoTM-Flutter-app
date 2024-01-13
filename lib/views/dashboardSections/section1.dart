@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rotm/views/dashboardSections/Section1Services/blood_oxygen.dart';
 
 class LevelOneSection extends StatefulWidget {
   const LevelOneSection({super.key});
@@ -50,6 +51,7 @@ class _LevelOneSectionState extends State<LevelOneSection> {
               borderRadius: BorderRadius.circular(20),
               color: const Color.fromARGB(255, 255, 255, 255),
             ),
+            child: UserBloodOxygen(),
           ),
       ],
     );
