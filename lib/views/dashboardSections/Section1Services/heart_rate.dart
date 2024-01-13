@@ -103,7 +103,11 @@ class _UserHeartPulseState extends State<UserHeartPulse> {
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(5),
                         color: const Color.fromARGB(255, 247, 0, 0),
                       ),
                       height: 17.5,
@@ -111,7 +115,11 @@ class _UserHeartPulseState extends State<UserHeartPulse> {
                     ),
                     Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(5),
                         color: const Color.fromARGB(255, 4, 255, 0),
                       ),
                       height: 17.5,
@@ -119,7 +127,11 @@ class _UserHeartPulseState extends State<UserHeartPulse> {
                     ),
                     Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(5),
                         color: const Color.fromARGB(255, 0, 149, 255),
                       ),
                       height: 17.5,
@@ -127,7 +139,11 @@ class _UserHeartPulseState extends State<UserHeartPulse> {
                     ),
                     Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(5),
                         color: const Color.fromARGB(255, 170, 0, 255),
                       ),
                       height: 17.5,
