@@ -1,3 +1,4 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
 class SectionLevelFour extends StatefulWidget {
@@ -24,6 +25,11 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
               borderRadius: BorderRadius.circular(20),
               color: const Color.fromARGB(255, 255, 255, 255),
             ),
+            child: LineChart(LineChartData(minX: 10, minY: 10, lineBarsData: [
+              LineChartBarData(
+                spots: [],
+              )
+            ])),
           ),
         ),
       ],
