@@ -119,6 +119,10 @@ class _UserDashBoardState extends State<UserDashBoard> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
+                    SectionLevelFour(),
+                    SizedBox(
+                      height: 10,
+                    ),
                     LevelOneSection(),
                     SizedBox(
                       height: 10,
@@ -131,7 +135,6 @@ class _UserDashBoardState extends State<UserDashBoard> {
                     SizedBox(
                       height: 10,
                     ),
-                    SectionLevelFour(),
                   ],
                 ),
               ),

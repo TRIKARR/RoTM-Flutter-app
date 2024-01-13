@@ -15,12 +15,15 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
         const SizedBox(
           width: 10,
         ),
-        Container(
-          height: 130,
-          width: (130 * 3) + 20,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: const Color.fromARGB(255, 255, 255, 255),
+        GestureDetector(
+          onTap: () {},
+          child: Container(
+            height: 150,
+            width: (130 * 3) + 20,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: const Color.fromARGB(255, 255, 255, 255),
+            ),
           ),
         ),
       ],
