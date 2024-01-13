@@ -35,7 +35,18 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
               padding: const EdgeInsets.all(6.0),
               child: LineChart(
                 LineChartData(
-                  gridData: const FlGridData(show: true),
+                  lineTouchData: const LineTouchData(
+                    enabled: true,
+                    touchTooltipData: LineTouchTooltipData(
+                      tooltipBgColor: Colors.transparent,
+                    ),
+                  ),
+                  gridData: const FlGridData(
+                    show: true,
+                    drawVerticalLine: true,
+                    drawHorizontalLine: true,
+                  ),
+                  // will work on FLtiles data later
                   titlesData: const FlTitlesData(show: false),
                   borderData: FlBorderData(
                     show: true,
