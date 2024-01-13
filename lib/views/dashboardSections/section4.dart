@@ -32,7 +32,7 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
                 height: 150,
                 width: (130 * 3) + 20,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(100),
                   color: const Color.fromARGB(255, 59, 53, 53),
                 ),
                 child: Padding(
@@ -134,7 +134,7 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
                       style: GoogleFonts.getFont(
                         'Orbitron',
                         fontSize: 25,
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: const Color.fromARGB(255, 0, 0, 0),
                         fontWeight: FontWeight.bold,
                       )),
                   leading: IconButton(
@@ -148,7 +148,6 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
                   child: SectionLevelFour(),
                 ),
               );
-              ;
             },
           ),
         ),
