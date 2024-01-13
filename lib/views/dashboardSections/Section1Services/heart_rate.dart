@@ -96,13 +96,45 @@ class _UserHeartPulseState extends State<UserHeartPulse> {
               width: 4,
             ),
             Container(
-              height: 70,
-              width: 60,
-              color: const Color.fromARGB(255, 255, 0, 166),
-              child: BarChart(
-                BarChartData(),
-              ),
-            ),
+                height: 70,
+                width: 60,
+                color: const Color.fromARGB(255, 255, 255, 255),
+                child: Column(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color.fromARGB(255, 247, 0, 0),
+                      ),
+                      height: 17.5,
+                      width: 60,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color.fromARGB(255, 4, 255, 0),
+                      ),
+                      height: 17.5,
+                      width: 60,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color.fromARGB(255, 0, 149, 255),
+                      ),
+                      height: 17.5,
+                      width: 60,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color.fromARGB(255, 170, 0, 255),
+                      ),
+                      height: 17.5,
+                      width: 60,
+                    ),
+                  ],
+                )),
           ],
         ),
       ],
