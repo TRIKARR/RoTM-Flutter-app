@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gauge_indicator/gauge_indicator.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class UserBloodOxygen extends StatefulWidget {
   const UserBloodOxygen({super.key});
@@ -15,19 +18,83 @@ class _UserBloodOxygenState extends State<UserBloodOxygen> {
       children: [
         Row(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset("lib/assets/animated/blood-vessel.gif",
-                  height: 35, width: 35),
+            const SizedBox(
+              width: 10,
             ),
-            Text("BLOOD OXYGEN",
-                style: GoogleFonts.getFont(
-                  'Orbitron',
-                  fontSize: 9,
-                  color: const Color.fromARGB(255, 0, 0, 0),
-                  fontWeight: FontWeight.bold,
-                )),
+            Padding(
+              padding: const EdgeInsets.only(left: 5, top: 4.0),
+              child: Image.asset("lib/assets/animated/blood-vessel.gif",
+                  height: 40, width: 35),
+            ),
+            const SizedBox(
+              width: 5,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: Column(
+                children: [
+                  Text("BLOOD",
+                      style: GoogleFonts.getFont(
+                        'Orbitron',
+                        fontSize: 10,
+                        color: Color.fromARGB(255, 0, 0, 0),
+                        fontWeight: FontWeight.bold,
+                      )),
+                  Text("OXYGEN",
+                      style: GoogleFonts.getFont(
+                        'Orbitron',
+                        fontSize: 10,
+                        color: Color.fromARGB(255, 0, 0, 0),
+                        fontWeight: FontWeight.bold,
+                      ))
+                ],
+              ),
+            ),
           ],
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        const Center(
+          child: AnimatedRadialGauge(
+            value: 86,
+            duration: const Duration(seconds: 1),
+            curve: Curves.elasticOut,
+            radius: 50,
+            axis: GaugeAxis(
+              min: 0,
+              max: 100,
+              degrees: 180,
+              style: const GaugeAxisStyle(
+                thickness: 20,
+                background: Color(0xFFDFE2EC),
+                segmentSpacing: 4,
+              ),
+              progressBar: const GaugeProgressBar.rounded(
+                color: Color(0xFFB4C2F8),
+              ),
+              segments: [
+                const GaugeSegment(
+                  from: 0,
+                  to: 33.3,
+                  color: Color(0xFFD9DEEB),
+                  cornerRadius: Radius.zero,
+                ),
+                const GaugeSegment(
+                  from: 33.3,
+                  to: 66.6,
+                  color: Color(0xFFD9DEEB),
+                  cornerRadius: Radius.zero,
+                ),
+                const GaugeSegment(
+                  from: 66.6,
+                  to: 100,
+                  color: Color(0xFFD9DEEB),
+                  cornerRadius: Radius.zero,
+                ),
+              ],
+            ),
+          ),
         ),
       ],
     );

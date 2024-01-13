@@ -45,14 +45,14 @@ class _LevelOneSectionState extends State<LevelOneSection> {
           width: 10,
         ),
         Container(
-            height: 130,
-            width: 130,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: const Color.fromARGB(255, 255, 255, 255),
-            ),
-            child: const UserBloodOxygen(),
+          height: 130,
+          width: 130,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Color.fromARGB(255, 255, 255, 255),
           ),
+          child: const UserBloodOxygen(),
+        ),
       ],
     );
   }
