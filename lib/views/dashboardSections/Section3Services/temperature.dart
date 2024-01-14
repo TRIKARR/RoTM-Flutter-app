@@ -46,41 +46,53 @@ class _UserTemperatureState extends State<UserTemperature> {
             ),
           ],
         ),
-        Text("AVERAGE",
-            style: GoogleFonts.getFont(
-              'Orbitron',
-              fontSize: 15,
-              color: const Color.fromARGB(255, 0, 0, 0),
-              fontWeight: FontWeight.bold,
-            )),
-        Text("25",
-            style: GoogleFonts.getFont(
-              'Orbitron',
-              fontSize: 25,
-              color: const Color.fromARGB(255, 0, 0, 0),
-              fontWeight: FontWeight.bold,
-            )),
         Row(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 8.0),
-              child: Text("MIN:X",
-                  style: GoogleFonts.getFont(
-                    'Orbitron',
-                    fontSize: 15,
-                    color: const Color.fromARGB(255, 0, 0, 0),
-                    fontWeight: FontWeight.bold,
-                  )),
+            const SizedBox(
+              width: 5,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 15.0),
-              child: Text("MAX:X",
-                  style: GoogleFonts.getFont(
-                    'Orbitron',
-                    fontSize: 15,
-                    color: const Color.fromARGB(255, 0, 0, 0),
-                    fontWeight: FontWeight.bold,
-                  )),
+            const Column(
+              children: [
+                Center(
+                    child: Text("32",
+                        style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromARGB(255, 0, 0, 0)))),
+                Text("°C",
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 0, 0, 0))),
+              ],
+            ),
+            Column(
+              children: [
+                Image.asset("lib/assets/images/thermometer.png",
+                    height: 55, width: 45)
+              ],
+            ),
+            const Column(
+              children: [
+                Center(
+                    child: Text("40°C",
+                        style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.red))),
+                Center(
+                    child: Text("35°C",
+                        style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.orange))),
+                Center(
+                    child: Text("30°C",
+                        style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromARGB(255, 0, 115, 215)))),
+              ],
             ),
           ],
         )

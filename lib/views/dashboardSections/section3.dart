@@ -39,17 +39,23 @@ class _SectionLevelThreeState extends State<SectionLevelThree> {
         const SizedBox(
           width: 10,
         ),
-        GestureDetector(
-          onTap: () {
-            // Navigation to a Page
-          },
-          child: Container(
-            height: 130,
-            width: (130 * 2) + 10,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: const Color.fromARGB(255, 255, 255, 255),
-            ),
+        ClipRRect(
+          //Important Woidget
+          borderRadius: BorderRadius.circular(20),
+          child: OpenContainer(
+            closedColor: const Color.fromARGB(255, 255, 255, 255),
+            closedBuilder: (context, action) {
+              return Container(
+                height: 130,
+                width: (130 * 2) + 10,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                ),
+                child: const UserTemperature(),
+              );
+            },
+            openBuilder: (context, action) => const UserTemperature(),
           ),
         ),
       ],
