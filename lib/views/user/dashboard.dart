@@ -129,26 +129,38 @@ class _UserDashBoardState extends State<UserDashBoard> {
               height: 4,
             ),
             Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    SectionLevelFour(),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    LevelOneSection(),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    SectionLevelTwo(),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    SectionLevelThree(),
-                    SizedBox(
-                      height: 1,
-                    ),
-                  ],
+              child: Padding(
+                padding: EdgeInsets.only(right: 8.0),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: SectionLevelFour(),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: LevelOneSection()),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: SectionLevelTwo()),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: SectionLevelThree()),
+                      SizedBox(
+                        height: 1,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
