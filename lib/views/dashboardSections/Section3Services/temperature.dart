@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class UserRespirationRate extends StatefulWidget {
-  const UserRespirationRate({super.key});
+class UserTemperature extends StatefulWidget {
+  const UserTemperature({super.key});
 
   @override
-  State<UserRespirationRate> createState() => _UserRespirationRateState();
+  State<UserTemperature> createState() => _UserTemperatureState();
 }
 
-class _UserRespirationRateState extends State<UserRespirationRate> {
+class _UserTemperatureState extends State<UserTemperature> {
   @override
   Widget build(BuildContext context) {
     return Column(

@@ -1,4 +1,6 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:rotm/views/dashboardSections/Section3Services/temperature.dart';
 
 class SectionLevelThree extends StatefulWidget {
   const SectionLevelThree({super.key});
@@ -15,15 +17,23 @@ class _SectionLevelThreeState extends State<SectionLevelThree> {
         const SizedBox(
           width: 10,
         ),
-        GestureDetector(
-          onTap: () {},
-          child: Container(
-            height: 130,
-            width: 130,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: const Color.fromARGB(255, 255, 255, 255),
-            ),
+        ClipRRect(
+          //Important Woidget
+          borderRadius: BorderRadius.circular(20),
+          child: OpenContainer(
+            closedColor: const Color.fromARGB(255, 255, 255, 255),
+            closedBuilder: (context, action) {
+              return Container(
+                height: 130,
+                width: 130,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                ),
+                child: const UserTemperature(),
+              );
+            },
+            openBuilder: (context, action) => const UserTemperature(),
           ),
         ),
         const SizedBox(
