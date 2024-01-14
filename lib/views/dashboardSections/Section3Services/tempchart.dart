@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fl_chart/fl_chart.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class UserTemperatureGraph extends StatefulWidget {
-  const UserTemperatureGraph({super.key});
+  const UserTemperatureGraph({Key? key}) : super(key: key);
 
   @override
   State<UserTemperatureGraph> createState() => _UserTemperatureGraphState();
@@ -18,13 +19,13 @@ class _UserTemperatureGraphState extends State<UserTemperatureGraph> {
             Padding(
               padding: const EdgeInsets.only(left: 5, top: 0),
               child: Image.asset("lib/assets/images/rate.gif",
-                  height: 45, width: 40),
+                  height: 40, width: 40),
             ),
             const SizedBox(
               width: 5,
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 8.0),
+              padding: const EdgeInsets.only(top: 0.0),
               child: Column(
                 children: [
                   Text("TEMPERATURE TREND",
@@ -39,28 +40,34 @@ class _UserTemperatureGraphState extends State<UserTemperatureGraph> {
             ),
           ],
         ),
-        const Row(
+        const SizedBox(height: 5),
+        Row(
           children: [
+            // Add the ScatterChart inside a Container with constraints
             SizedBox(
-              width: 5,
-            ),
-            Column(
-              children: [
-                Center(
-                    child: Text("32",
-                        style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 0, 0, 0)))),
-                Text("°C",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 0, 0, 0))),
-              ],
+              width: 270, // Set the desired width
+              height: 85, // Set the desired height
+              child: ScatterChart(
+                ScatterChartData(
+                  minX: 0,
+                  minY: 0,
+                  maxX: 5,
+                  maxY: 10,
+                  backgroundColor: Colors.black,
+                  scatterSpots: [
+                    ScatterSpot(1, 3),
+                    ScatterSpot(2, 6),
+                    ScatterSpot(3, 2),
+                    ScatterSpot(4, 5),
+                  ],
+                  titlesData: const FlTitlesData(show: false),
+                  borderData: FlBorderData(show: true),
+                  gridData: const FlGridData(show: true),
+                ),
+              ),
             ),
           ],
-        )
+        ),
       ],
     );
   }
