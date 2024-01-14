@@ -1,5 +1,5 @@
 // ignore_for_file: unused_import
-
+import 'dart:io' show Platform;
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
@@ -35,8 +35,8 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
             closedColor: const Color.fromARGB(255, 255, 255, 255),
             closedBuilder: (BuildContext context, void Function() action) {
               return Container(
-                height: 150,
-                width: (130 * 3) + 20,
+                height: Platform.isAndroid ? 130 : 150,
+                width: Platform.isAndroid ? 345 : ((130 * 3) + 20),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100),
                   color: const Color.fromARGB(255, 255, 255, 255),

@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rotm/views/user/browse.dart';
 import 'package:rotm/views/user/dashboard.dart';
 import 'package:rotm/views/user/rotm_interact.dart';
+import 'dart:io' show Platform;
 
 class BottomNavComponent extends StatefulWidget {
   const BottomNavComponent({super.key});
@@ -14,6 +15,7 @@ class BottomNavComponent extends StatefulWidget {
 }
 
 class _BottomNavComponentState extends State<BottomNavComponent> {
+  double height = Platform.isAndroid ? 50 : 70;
   int _page = 0;
   final List<Widget> _pages = [
     const UserDashBoard(),
@@ -35,7 +37,7 @@ class _BottomNavComponentState extends State<BottomNavComponent> {
           });
         },
         animationCurve: Curves.easeInOut,
-        height: 70,
+        height: height,
         letIndexChange: (value) => true,
         items: [
           Padding(

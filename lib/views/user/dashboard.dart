@@ -10,6 +10,7 @@ import 'package:rotm/views/dashboardSections/section1.dart';
 import 'package:rotm/views/dashboardSections/section2.dart';
 import 'package:rotm/views/dashboardSections/section3.dart';
 import 'package:rotm/views/dashboardSections/section4.dart';
+import 'dart:io' show Platform;
 
 class UserDashBoard extends StatefulWidget {
   const UserDashBoard({super.key});
@@ -19,6 +20,11 @@ class UserDashBoard extends StatefulWidget {
 }
 
 class _UserDashBoardState extends State<UserDashBoard> {
+  final double fheigh = Platform.isAndroid ? 10.0 : 21;
+  double sheigh = Platform.isAndroid ? 1.0 : 4;
+  double theigh = Platform.isAndroid ? 5.0 : 15;
+  double frheigh = Platform.isAndroid ? 5.0 : 15;
+  double ftheigh = Platform.isAndroid ? 5.0 : 15;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
