@@ -20,7 +20,7 @@ class _UserRespirationRateState extends State<UserRespirationRate> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 5, top: 0),
-              child: Image.asset("lib/assets/images/rate.gif",
+              child: Image.asset("lib/assets/animated/lungs.gif",
                   height: 40, width: 40),
             ),
             const SizedBox(
@@ -30,7 +30,7 @@ class _UserRespirationRateState extends State<UserRespirationRate> {
               padding: const EdgeInsets.only(top: 0.0),
               child: Column(
                 children: [
-                  Text("TEMPERATURE TREND",
+                  Text("RESPIRATORY TREND",
                       style: GoogleFonts.getFont(
                         'Orbitron',
                         fontSize: 15,
@@ -49,22 +49,61 @@ class _UserRespirationRateState extends State<UserRespirationRate> {
             SizedBox(
               width: 270, // Set the desired width
               height: 85, // Set the desired height
-              child: ScatterChart(
-                ScatterChartData(
-                  minX: 0,
+              child: BarChart(
+                BarChartData(
                   minY: 0,
-                  maxX: 5,
                   maxY: 10,
                   backgroundColor: Colors.black,
-                  scatterSpots: [
-                    ScatterSpot(1, 3),
-                    ScatterSpot(2, 6),
-                    ScatterSpot(3, 2),
-                    ScatterSpot(4, 5),
-                  ],
                   titlesData: const FlTitlesData(show: false),
                   borderData: FlBorderData(show: true),
                   gridData: const FlGridData(show: true),
+                  barGroups: [
+                    BarChartGroupData(x: 0, barsSpace: 4, barRods: [
+                      BarChartRodData(
+                        toY: 3, // Your data point
+                        color: Colors.blue, // All bars have the color blue
+                      ),
+                    ]),
+                    BarChartGroupData(x: 1, barsSpace: 4, barRods: [
+                      BarChartRodData(
+                        toY: 6,
+                        color: const Color.fromARGB(255, 212, 0, 0),
+                      ),
+                    ]),
+                    BarChartGroupData(x: 2, barsSpace: 4, barRods: [
+                      BarChartRodData(
+                        toY: 2,
+                        color: const Color.fromARGB(255, 8, 233, 0),
+                      ),
+                    ]),
+                    BarChartGroupData(
+                      x: 3,
+                      barsSpace: 4,
+                      barRods: [
+                        BarChartRodData(
+                          toY: 9,
+                          color: const Color.fromARGB(255, 255, 14, 255),
+                        ),
+                      ],
+                    ),
+                  ],
+                  extraLinesData: ExtraLinesData(
+                    horizontalLines: [
+                      HorizontalLine(
+                        label: HorizontalLineLabel(
+                          show: true,
+                          labelResolver: (line) => 'Average',
+                          style: const TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontSize: 10,
+                          ),
+                        ),
+                        y: 5,
+                        color: const Color.fromARGB(255, 255, 255, 255),
+                        strokeWidth: 2,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
