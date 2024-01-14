@@ -1,5 +1,6 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:rotm/views/dashboardSections/Section3Services/tempchart.dart';
 import 'package:rotm/views/dashboardSections/Section3Services/temperature.dart';
 
 class SectionLevelThree extends StatefulWidget {
@@ -52,10 +53,10 @@ class _SectionLevelThreeState extends State<SectionLevelThree> {
                   borderRadius: BorderRadius.circular(20),
                   color: const Color.fromARGB(255, 255, 255, 255),
                 ),
-                child: const UserTemperature(),
+                child: const UserTemperatureGraph(),
               );
             },
-            openBuilder: (context, action) => const UserTemperature(),
+            openBuilder: (context, action) => const UserTemperatureGraph(),
           ),
         ),
       ],
