@@ -47,17 +47,22 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
                       Row(
                         children: [
                           Container(
+                            height: 245,
                             color: const Color.fromARGB(255, 255, 255, 255),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(bottom: 0.0),
-                                  child: Lottie.asset(
-                                    "lib/assets/others/togother.json",
-                                    height: 200,
-                                    width: 190,
-                                    fit: BoxFit.fitWidth,
+                                Container(
+                                  color: Colors.amber,
+                                  height: 150,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(bottom: 0.0),
+                                    child: Lottie.asset(
+                                      "lib/assets/others/togother.json",
+                                      height: 200,
+                                      width: 190,
+                                      fit: BoxFit.fitWidth,
+                                    ),
                                   ),
                                 ),
                                 Padding(
@@ -66,7 +71,7 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
                                     "BOND LEVEL: X",
                                     style: GoogleFonts.getFont(
                                       'Orbitron',
-                                      fontSize: 12,
+                                      fontSize: 15,
                                       color: const Color.fromARGB(255, 0, 0, 0),
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -93,15 +98,11 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
                             ),
                           ),
                           Container(
-                            color: Colors.cyan,
-                            height: 230,
+                            color: const Color.fromARGB(255, 20, 24, 24),
+                            height: 245,
                             width: 195,
                             child: const Column(
-                              children: [
-                                SizedBox(
-                                  height: 8,
-                                )
-                              ],
+                              children: [],
                             ),
                           )
                         ],
@@ -118,10 +119,7 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
   }
 }
 
-
 //Random array data
-// natures = ["Hardy", "Lonely", "Adamant", "Naughty", "Brave", "Bold", "Docile", "Impish", "Lax", "Relaxed", 
-//  "Modest", "Mild", "Bashful", "Rash", "Quiet", "Calm", "Gentle", "Careful", "Quirky", "Sassy", 
+// natures = ["Hardy", "Lonely", "Adamant", "Naughty", "Brave", "Bold", "Docile", "Impish", "Lax", "Relaxed",
+//  "Modest", "Mild", "Bashful", "Rash", "Quiet", "Calm", "Gentle", "Careful", "Quirky", "Sassy",
 //  "Timid", "Hasty", "Jolly", "Naive", "Serious"]
-
-
