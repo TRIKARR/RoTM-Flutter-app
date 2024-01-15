@@ -22,13 +22,13 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Card(
-                elevation: 40,
+                elevation: 90,
                 child: Container(
                   height: 295,
                   width: 410,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(255, 171, 120, 174),
+                    borderRadius: BorderRadius.circular(8),
+                    color: const Color.fromARGB(255, 255, 255, 255),
                   ),
                   child: Column(
                     children: [
@@ -47,14 +47,28 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
                       Row(
                         children: [
                           Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Colors.black,
+                                width:
+                                    1, // Adjust the width of the border as needed
+                              ),
+                              color: Colors.cyanAccent,
+                            ),
                             height: 245,
-                            color: const Color.fromARGB(255, 255, 255, 255),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
-                                  color: Colors.amber,
-                                  height: 150,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: Colors.black,
+                                      width:
+                                          1, // Adjust the width of the border as needed
+                                    ),
+                                    color: Colors.amber,
+                                  ),
+                                  height: 162,
                                   child: Padding(
                                     padding: const EdgeInsets.only(bottom: 0.0),
                                     child: Lottie.asset(
@@ -152,14 +166,32 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
                                 Row(
                                   children: [
                                     Container(
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Colors.black,
+                                          width:
+                                              1.0, // Adjust the width of the border as needed
+                                        ),
+                                        color: const Color.fromARGB(
+                                            255, 9, 255, 140),
+                                      ),
                                       height: 82,
                                       width: 195,
-                                      color: const Color.fromARGB(
-                                          255, 9, 255, 140),
                                       child: Row(
                                         children: [
-                                          Image.asset(
-                                              "lib/assets/images/logician.png"),
+                                          Container(
+                                            decoration: BoxDecoration(
+                                              border: Border.all(
+                                                color: Colors.black,
+                                                width:
+                                                    1.0, // Adjust the width of the border as needed
+                                              ),
+                                              color: const Color.fromARGB(
+                                                  255, 9, 255, 140),
+                                            ),
+                                            child: Image.asset(
+                                                "lib/assets/images/logician.png"),
+                                          ),
                                           const Column(
                                             children: [
                                               Center(
@@ -184,10 +216,17 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
                                 Row(
                                   children: [
                                     Container(
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Colors.black,
+                                          width:
+                                              1.0, // Adjust the width of the border as needed
+                                        ),
+                                        color: const Color.fromARGB(
+                                            255, 255, 255, 255),
+                                      ),
                                       height: 82,
                                       width: 195,
-                                      color: const Color.fromARGB(
-                                          255, 21, 236, 255),
                                       child: Row(
                                         children: [
                                           const SizedBox(
@@ -212,9 +251,18 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
                                           const SizedBox(
                                             width: 33.5,
                                           ),
-                                          Image.asset(
-                                            "lib/assets/animated/smile.gif",
-                                            width: 86.58,
+                                          Container(
+                                            decoration: BoxDecoration(
+                                              border: Border.all(
+                                                color: const Color.fromARGB(
+                                                    255, 255, 255, 255),
+                                                width:
+                                                    2.0, // Adjust the width of the border as needed
+                                              ),
+                                            ),
+                                            child: Image.asset(
+                                              "lib/assets/animated/smile.gif",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -224,10 +272,64 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
                                 Row(
                                   children: [
                                     Container(
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Colors.black,
+                                          width:
+                                              0.0, // Adjust the width of the border as needed
+                                        ),
+                                        color: const Color.fromARGB(
+                                            255, 255, 0, 0),
+                                      ),
                                       height: 81,
                                       width: 195,
-                                      color:
-                                          const Color.fromARGB(255, 255, 0, 0),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                            color: Colors.black,
+                                            width:
+                                                0.0, // Adjust the width of the border as needed
+                                          ),
+                                          color: Colors.redAccent,
+                                        ),
+                                        height: 82,
+                                        width: 195,
+                                        child: Row(
+                                          children: [
+                                            Container(
+                                              decoration: BoxDecoration(
+                                                border: Border.all(
+                                                  color: Colors.black,
+                                                  width:
+                                                      1.0, // Adjust the width of the border as needed
+                                                ),
+                                                color: const Color.fromARGB(
+                                                    255, 9, 255, 140),
+                                              ),
+                                              child: Image.asset(
+                                                  "lib/assets/images/logician.png"),
+                                            ),
+                                            const Column(
+                                              children: [
+                                                Center(
+                                                  child: Text("PERSONALITY"),
+                                                ),
+                                                Center(
+                                                  child: Text("PERSONALITY"),
+                                                ),
+                                                Center(
+                                                  child: Text("PERSONALITY"),
+                                                ),
+                                                Center(
+                                                  child: Text("PERSONALITY"),
+                                                )
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      //   color:
+                                      //       const Color.fromARGB(255, 255, 0, 0),
                                     ),
                                   ],
                                 )
