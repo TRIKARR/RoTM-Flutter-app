@@ -4,6 +4,7 @@ import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rotm/views/DashboardExtend/mental_Health_graph.dart';
 import 'package:rotm/views/dashboardSections/Section1Services/blood_oxygen.dart';
 
 class SectionLevelFour extends StatefulWidget {
@@ -27,115 +28,115 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
         const SizedBox(
           width: 10,
         ),
-        GestureDetector(
-          child: OpenContainer(
-            //Important grey colour
-            // closedColor: const Color.fromARGB(255, 59, 53, 53),
-            closedColor: const Color.fromARGB(255, 255, 255, 255),
-            closedBuilder: (BuildContext context, void Function() action) {
-              return Container(
-                height: Platform.isAndroid ? 130 : 150,
-                width: Platform.isAndroid ? 345 : ((130 * 3) + 20),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(100),
-                  color: const Color.fromARGB(255, 255, 255, 255),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(6.0),
-                  child: LineChart(
-                    LineChartData(
-                      lineTouchData: const LineTouchData(
-                        enabled: true,
-                        touchTooltipData: LineTouchTooltipData(
-                          tooltipBgColor: Color.fromARGB(255, 255, 255, 255),
-                        ),
+        OpenContainer(
+          
+          //Important grey colour
+          // closedColor: const Color.fromARGB(255, 59, 53, 53),
+          closedColor: const Color.fromARGB(255, 255, 255, 255),
+          closedBuilder: (BuildContext context, void Function() action) {
+            return Container(
+              
+              height: Platform.isAndroid ? 130 : 150,
+              width: Platform.isAndroid ? 345 : ((130 * 3) + 20),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(100),
+                color: const Color.fromARGB(255, 255, 255, 255),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(6.0),
+                child: LineChart(
+                  LineChartData(
+                    lineTouchData: const LineTouchData(
+                      enabled: true,
+                      touchTooltipData: LineTouchTooltipData(
+                        tooltipBgColor: Color.fromARGB(255, 255, 255, 255),
                       ),
-                      gridData: const FlGridData(
-                        show: true,
-                        drawVerticalLine: true,
-                        drawHorizontalLine: true,
-                      ),
-                      // will work on FLtiles data later
-                      titlesData: const FlTitlesData(show: false),
-                      borderData: FlBorderData(
-                        show: true,
-                        border: Border.all(
-                            color: const Color.fromARGB(255, 0, 0, 0)),
-                      ),
-                      minX: 0,
-                      maxX: 16,
-                      minY: 0,
-                      maxY: 10,
-                      rangeAnnotations:
-                          RangeAnnotations(horizontalRangeAnnotations: [
-                        HorizontalRangeAnnotation(
-                            y1: 0,
-                            y2: 2.5,
-                            color: const Color.fromARGB(255, 28, 251, 255)
-                                .withOpacity(0.9)),
-                        HorizontalRangeAnnotation(
-                            y1: 2.5,
-                            y2: 5,
-                            color: const Color.fromARGB(255, 0, 255, 17)
-                                .withOpacity(0.9)),
-                        HorizontalRangeAnnotation(
-                            y1: 5,
-                            y2: 7.5,
-                            color: const Color.fromARGB(255, 231, 92, 5)
-                                .withOpacity(0.9)),
-                        HorizontalRangeAnnotation(
-                            y1: 7.5,
-                            y2: 10,
-                            color: const Color.fromARGB(255, 255, 24, 24)
-                                .withOpacity(0.9)),
-                      ]),
-                      lineBarsData: [
-                        LineChartBarData(
-                          color: const Color.fromARGB(255, 0, 0, 0),
-                          spots: [
-                            //Random values for showcase
-                            const FlSpot(0, 0),
-                            const FlSpot(1, 1),
-                            const FlSpot(2, 4),
-                            const FlSpot(3, 2),
-                            const FlSpot(4, 5),
-                            const FlSpot(5, 4),
-                            const FlSpot(6, 3),
-                            const FlSpot(7, 4),
-                            const FlSpot(8, 3),
-                            const FlSpot(9, 4),
-                            const FlSpot(10, 10),
-                            const FlSpot(11, 5),
-                            const FlSpot(12, 3),
-                            const FlSpot(13, 8),
-                            const FlSpot(14, 4),
-                            const FlSpot(15, 2),
-                            const FlSpot(16, 1),
-                          ],
-                          show: true,
-                          isCurved: true,
-                          barWidth: 2.5,
-                          belowBarData: BarAreaData(
-                            show: true,
-                          ),
-                          aboveBarData: BarAreaData(show: false),
-                          dotData: const FlDotData(show: false),
-                          shadow: const Shadow(
-                            blurRadius: 15,
-                            color: Color.fromARGB(255, 0, 0, 0),
-                          ),
-                        ),
-                      ],
                     ),
+                    gridData: const FlGridData(
+                      show: true,
+                      drawVerticalLine: true,
+                      drawHorizontalLine: true,
+                    ),
+                    // will work on FLtiles data later
+                    titlesData: const FlTitlesData(show: false),
+                    borderData: FlBorderData(
+                      show: true,
+                      border:
+                          Border.all(color: const Color.fromARGB(255, 0, 0, 0)),
+                    ),
+                    minX: 0,
+                    maxX: 16,
+                    minY: 0,
+                    maxY: 10,
+                    rangeAnnotations:
+                        RangeAnnotations(horizontalRangeAnnotations: [
+                      HorizontalRangeAnnotation(
+                          y1: 0,
+                          y2: 2.5,
+                          color: const Color.fromARGB(255, 28, 251, 255)
+                              .withOpacity(0.9)),
+                      HorizontalRangeAnnotation(
+                          y1: 2.5,
+                          y2: 5,
+                          color: const Color.fromARGB(255, 0, 255, 17)
+                              .withOpacity(0.9)),
+                      HorizontalRangeAnnotation(
+                          y1: 5,
+                          y2: 7.5,
+                          color: const Color.fromARGB(255, 231, 92, 5)
+                              .withOpacity(0.9)),
+                      HorizontalRangeAnnotation(
+                          y1: 7.5,
+                          y2: 10,
+                          color: const Color.fromARGB(255, 255, 24, 24)
+                              .withOpacity(0.9)),
+                    ]),
+                    lineBarsData: [
+                      LineChartBarData(
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                        spots: [
+                          //Random values for showcase
+                          const FlSpot(0, 0),
+                          const FlSpot(1, 1),
+                          const FlSpot(2, 4),
+                          const FlSpot(3, 2),
+                          const FlSpot(4, 5),
+                          const FlSpot(5, 4),
+                          const FlSpot(6, 3),
+                          const FlSpot(7, 4),
+                          const FlSpot(8, 3),
+                          const FlSpot(9, 4),
+                          const FlSpot(10, 10),
+                          const FlSpot(11, 5),
+                          const FlSpot(12, 3),
+                          const FlSpot(13, 8),
+                          const FlSpot(14, 4),
+                          const FlSpot(15, 2),
+                          const FlSpot(16, 1),
+                        ],
+                        show: true,
+                        isCurved: true,
+                        barWidth: 2.5,
+                        belowBarData: BarAreaData(
+                          show: true,
+                        ),
+                        aboveBarData: BarAreaData(show: false),
+                        dotData: const FlDotData(show: false),
+                        shadow: const Shadow(
+                          blurRadius: 15,
+                          color: Color.fromARGB(255, 0, 0, 0),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-              );
-            },
-            openBuilder: (BuildContext context,
-                void Function({Object? returnValue}) action) {
-              return const UserBloodOxygen();
-            },
-          ),
+              ),
+            );
+          },
+          openBuilder: (BuildContext context,
+              void Function({Object? returnValue}) action) {
+            return const ExtentedMentalHealthStats();
+          },
         ),
       ],
     );
