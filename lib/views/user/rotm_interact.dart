@@ -28,7 +28,7 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
                   width: 410,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(255, 255, 255, 255),
+                    color: const Color.fromARGB(255, 171, 120, 174),
                   ),
                   child: Column(
                     children: [
@@ -66,9 +66,55 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
                                   ),
                                 ),
                                 Padding(
+                                  padding: const EdgeInsets.only(right: 10),
+                                  child: Text(
+                                    "BRoTM NAME : NALLU",
+                                    style: GoogleFonts.getFont(
+                                      'Orbitron',
+                                      fontSize: 12,
+                                      color: const Color.fromARGB(255, 0, 0, 0),
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.only(right: 10.0),
+                                  child: SizedBox(
+                                    height: 5,
+                                    child: Text(""),
+                                  ),
+                                ),
+                                Padding(
                                   padding: const EdgeInsets.only(right: 30),
                                   child: Text(
                                     "BOND LEVEL: X",
+                                    style: GoogleFonts.getFont(
+                                      'Orbitron',
+                                      fontSize: 12,
+                                      color: const Color.fromARGB(255, 0, 0, 0),
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 10.0),
+                                  child: SizedBox(
+                                    height: 8,
+                                    child: LinearPercentIndicator(
+                                      animation: true,
+                                      width: 150,
+                                      lineHeight: 8.0,
+                                      percent: 0.4,
+                                      backgroundColor: Colors.grey.shade500,
+                                      progressColor:
+                                          const Color.fromARGB(255, 20, 0, 235),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 1),
+                                  child: Text(
+                                    "INTERACT LEVEL: X",
                                     style: GoogleFonts.getFont(
                                       'Orbitron',
                                       fontSize: 12,
@@ -141,7 +187,7 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
                                       height: 82,
                                       width: 195,
                                       color: const Color.fromARGB(
-                                          255, 0, 115, 255),
+                                          255, 21, 236, 255),
                                       child: Row(
                                         children: [
                                           const SizedBox(
@@ -178,7 +224,7 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
                                 Row(
                                   children: [
                                     Container(
-                                      height: 80,
+                                      height: 81,
                                       width: 195,
                                       color:
                                           const Color.fromARGB(255, 255, 0, 0),
