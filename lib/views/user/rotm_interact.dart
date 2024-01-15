@@ -66,19 +66,19 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 40),
+                                  padding: const EdgeInsets.only(right: 30),
                                   child: Text(
                                     "BOND LEVEL: X",
                                     style: GoogleFonts.getFont(
                                       'Orbitron',
-                                      fontSize: 15,
+                                      fontSize: 12,
                                       color: const Color.fromARGB(255, 0, 0, 0),
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 40.0),
+                                  padding: const EdgeInsets.only(right: 10.0),
                                   child: SizedBox(
                                     height: 8,
                                     child: LinearPercentIndicator(
@@ -98,11 +98,94 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
                             ),
                           ),
                           Container(
-                            color: const Color.fromARGB(255, 20, 24, 24),
+                            color: const Color.fromARGB(255, 24, 216, 216),
                             height: 245,
                             width: 195,
-                            child: const Column(
-                              children: [],
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Container(
+                                      height: 82,
+                                      width: 195,
+                                      color: const Color.fromARGB(
+                                          255, 9, 255, 140),
+                                      child: Row(
+                                        children: [
+                                          Image.asset(
+                                              "lib/assets/images/logician.png"),
+                                          const Column(
+                                            children: [
+                                              Center(
+                                                child: Text("PERSONALITY"),
+                                              ),
+                                              Center(
+                                                child: Text("PERSONALITY"),
+                                              ),
+                                              Center(
+                                                child: Text("PERSONALITY"),
+                                              ),
+                                              Center(
+                                                child: Text("PERSONALITY"),
+                                              )
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Container(
+                                      height: 82,
+                                      width: 195,
+                                      color: const Color.fromARGB(
+                                          255, 0, 115, 255),
+                                      child: Row(
+                                        children: [
+                                          const SizedBox(
+                                            width: 29.5,
+                                          ),
+                                          const Column(
+                                            children: [
+                                              Center(
+                                                child: Text("MOOD"),
+                                              ),
+                                              Center(
+                                                child: Text("MOOD"),
+                                              ),
+                                              Center(
+                                                child: Text("MOOD"),
+                                              ),
+                                              Center(
+                                                child: Text("MOOD"),
+                                              )
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            width: 33.5,
+                                          ),
+                                          Image.asset(
+                                            "lib/assets/animated/smile.gif",
+                                            width: 86.58,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Container(
+                                      height: 80,
+                                      width: 195,
+                                      color:
+                                          const Color.fromARGB(255, 255, 0, 0),
+                                    ),
+                                  ],
+                                )
+                              ],
                             ),
                           )
                         ],
@@ -118,8 +201,3 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
     );
   }
 }
-
-//Random array data
-// natures = ["Hardy", "Lonely", "Adamant", "Naughty", "Brave", "Bold", "Docile", "Impish", "Lax", "Relaxed",
-//  "Modest", "Mild", "Bashful", "Rash", "Quiet", "Calm", "Gentle", "Careful", "Quirky", "Sassy",
-//  "Timid", "Hasty", "Jolly", "Naive", "Serious"]
