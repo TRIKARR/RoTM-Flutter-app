@@ -2,6 +2,7 @@
 
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:rotm/views/DashboardExtend/respiratory_extended.dart';
 import 'package:rotm/views/auth/signup_page.dart';
 import 'package:rotm/views/dashboardSections/Section2Services/respiratoryChart.dart';
 import 'package:rotm/views/dashboardSections/Section2Services/respiratory_rate.dart';
@@ -37,7 +38,8 @@ class _SectionLevelTwoState extends State<SectionLevelTwo> {
                 child: const UserRespirationRate(),
               );
             },
-            openBuilder: (context, action) => const UserRespirationRate(),
+            openBuilder: (context, action) =>
+                const UserRespiratoryStatExtended(),
           ),
         ),
         const SizedBox(
@@ -59,7 +61,8 @@ class _SectionLevelTwoState extends State<SectionLevelTwo> {
                 child: const UserRespirationRateChart(),
               );
             },
-            openBuilder: (context, action) => const UserRespirationRateChart(),
+            openBuilder: (context, action) =>
+                const UserRespiratoryStatExtended(),
           ),
         ),
       ],

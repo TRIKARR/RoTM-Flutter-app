@@ -1,5 +1,6 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:rotm/views/DashboardExtend/heart_pulse_extend.dart';
 import 'package:rotm/views/dashboardSections/Section1Services/blood_oxygen.dart';
 import 'package:rotm/views/dashboardSections/Section1Services/heart_rate.dart';
 import 'package:rotm/views/dashboardSections/Section1Services/sleep_cycle.dart';
@@ -35,7 +36,8 @@ class _LevelOneSectionState extends State<LevelOneSection> {
                 child: const UserHeartPulse(),
               );
             },
-            openBuilder: (context, action) => const UserBloodOxygen(),
+            openBuilder: (context, action) =>
+                const UserHeartPulseStatExdended(),
           ),
         ),
         const SizedBox(

@@ -14,16 +14,16 @@ class _UserTemperatureStatExtendedState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Your App Title'),
+        title: const Text('Your App Title'),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(
                 context); // This will pop the current screen and go back.
           },
         ),
       ),
-      body: Center(
+      body: const Center(
         child: Text('Your Scaffold Body'),
       ),
     );

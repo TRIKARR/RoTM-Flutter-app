@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class ExtentedMentalHealthStats extends StatefulWidget {
@@ -12,15 +14,15 @@ class _ExtentedMentalHealthStatsState extends State<ExtentedMentalHealthStats> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Your App Title'),
+        title: const Text('Your App Title'),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context); // This will pop the current screen and go back.
           },
         ),
       ),
-      body: Center(
+      body: const Center(
         child: Text('Your Scaffold Body'),
       ),
     );

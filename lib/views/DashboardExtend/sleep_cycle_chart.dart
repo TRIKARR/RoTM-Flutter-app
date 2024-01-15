@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-class UserRespiratoryStatExtended extends StatefulWidget {
-  const UserRespiratoryStatExtended({super.key});
+class UserSleepChartExtended extends StatefulWidget {
+  const UserSleepChartExtended({super.key});
 
   @override
-  State<UserRespiratoryStatExtended> createState() =>
-      _UserRespiratoryStatExtendedState();
+  State<UserSleepChartExtended> createState() => _UserSleepChartExtendedState();
 }
 
-class _UserRespiratoryStatExtendedState
-    extends State<UserRespiratoryStatExtended> {
+class _UserSleepChartExtendedState extends State<UserSleepChartExtended> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
