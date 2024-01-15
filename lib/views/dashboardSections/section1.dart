@@ -1,6 +1,8 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:rotm/views/DashboardExtend/blood_oxygen_stat.dart';
 import 'package:rotm/views/DashboardExtend/heart_pulse_extend.dart';
+import 'package:rotm/views/DashboardExtend/sleep_cycle_chart.dart';
 import 'package:rotm/views/dashboardSections/Section1Services/blood_oxygen.dart';
 import 'package:rotm/views/dashboardSections/Section1Services/heart_rate.dart';
 import 'package:rotm/views/dashboardSections/Section1Services/sleep_cycle.dart';
@@ -59,7 +61,7 @@ class _LevelOneSectionState extends State<LevelOneSection> {
                 child: const UserSleepCycle(),
               );
             },
-            openBuilder: (context, action) => const UserBloodOxygen(),
+            openBuilder: (context, action) => const UserSleepChartExtended(),
           ),
         ),
         const SizedBox(
@@ -81,7 +83,8 @@ class _LevelOneSectionState extends State<LevelOneSection> {
                 child: const UserBloodOxygen(),
               );
             },
-            openBuilder: (context, action) => const UserBloodOxygen(),
+            openBuilder: (context, action) =>
+                const UserBloodOxygenStatExtended(),
           ),
         ),
       ],
