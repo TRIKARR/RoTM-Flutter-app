@@ -26,7 +26,7 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
             Container(
               height: 400,
               width: 400,
-              color: const Color.fromARGB(255, 77, 28, 28),
+              color: Colors.deepPurple.shade900,
               child: const InteractiveServices(),
             ),
           ],
