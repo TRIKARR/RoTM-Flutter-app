@@ -25,7 +25,7 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
               padding: const EdgeInsets.only(left: 0.5),
               child: Container(
                 height: 293,
-                width: 410,
+                width: 390,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   color: const Color.fromARGB(255, 255, 255, 255),
