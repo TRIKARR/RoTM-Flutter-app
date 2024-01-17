@@ -153,183 +153,75 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                         ],
                       ),
                     ),
-                    Container(
-                      color: const Color.fromARGB(255, 24, 216, 216),
-                      height: 245,
-                      width: 195,
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Colors.black,
-                                    width:
-                                        1.0, // Adjust the width of the border as needed
-                                  ),
-                                  color: const Color.fromARGB(255, 9, 255, 140),
-                                ),
-                                height: 82,
-                                width: 195,
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                          color: Colors.black,
-                                          width:
-                                              1.0, // Adjust the width of the border as needed
-                                        ),
-                                        color: const Color.fromARGB(
-                                            255, 9, 255, 140),
-                                      ),
-                                      child: Image.asset(
-                                          "lib/assets/images/estp-entrepreneur.png"),
-                                    ),
-                                    const Column(
-                                      children: [
-                                        Center(
-                                          child: Text("PERSONALITY"),
-                                        ),
-                                        Center(
-                                          child: Text("PERSONALITY"),
-                                        ),
-                                        Center(
-                                          child: Text("PERSONALITY"),
-                                        ),
-                                        Center(
-                                          child: Text("PERSONALITY"),
-                                        )
-                                      ],
-                                    ),
-                                  ],
-                                ),
+                    GridView.count(
+                      crossAxisCount: 2,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Colors.black,
+                                width: 4,
                               ),
-                            ],
+                              borderRadius: BorderRadius.circular(30),
+                              color: const Color.fromARGB(255, 163, 39, 39),
+                            ),
+                            height: 10,
+                            width: 10,
+                            child: const Text("1"),
                           ),
-                          Row(
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Colors.black,
-                                    width:
-                                        1.0, // Adjust the width of the border as needed
-                                  ),
-                                  color:
-                                      const Color.fromARGB(255, 255, 255, 255),
-                                ),
-                                height: 82,
-                                width: 195,
-                                child: Row(
-                                  children: [
-                                    const SizedBox(
-                                      width: 29.5,
-                                    ),
-                                    const Column(
-                                      children: [
-                                        Center(
-                                          child: Text("MOOD"),
-                                        ),
-                                        Center(
-                                          child: Text("MOOD"),
-                                        ),
-                                        Center(
-                                          child: Text("MOOD"),
-                                        ),
-                                        Center(
-                                          child: Text("MOOD"),
-                                        )
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      width: 33.5,
-                                    ),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                          color: const Color.fromARGB(
-                                              255, 255, 255, 255),
-                                          width:
-                                              2.0, // Adjust the width of the border as needed
-                                        ),
-                                      ),
-                                      child: Image.asset(
-                                        "lib/assets/animated/wink.gif",
-                                      ),
-                                    ),
-                                  ],
-                                ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Colors.black,
+                                width: 4,
                               ),
-                            ],
+                              borderRadius: BorderRadius.circular(30),
+                              color: const Color.fromARGB(255, 163, 39, 39),
+                            ),
+                            height: 10,
+                            width: 10,
+                            child: const Text("1"),
                           ),
-                          Row(
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Colors.black,
-                                    width:
-                                        0.0, // Adjust the width of the border as needed
-                                  ),
-                                  color: const Color.fromARGB(255, 255, 0, 0),
-                                ),
-                                height: 81,
-                                width: 195,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: Colors.black,
-                                      width:
-                                          0.0, // Adjust the width of the border as needed
-                                    ),
-                                    color: const Color.fromARGB(255, 255, 6, 6),
-                                  ),
-                                  height: 82,
-                                  width: 195,
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color: Colors.black,
-                                            width:
-                                                1.0, // Adjust the width of the border as needed
-                                          ),
-                                          color: const Color.fromARGB(
-                                              255, 9, 255, 140),
-                                        ),
-                                        child: Image.asset(
-                                            "lib/assets/images/estp-entrepreneur.png"),
-                                      ),
-                                      const Column(
-                                        children: [
-                                          Center(
-                                            child: Text("NATURE"),
-                                          ),
-                                          Center(
-                                            child: Text("NATURE"),
-                                          ),
-                                          Center(
-                                            child: Text("NATURE"),
-                                          ),
-                                          Center(
-                                            child: Text("NATURE"),
-                                          )
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                //   color:
-                                //       const Color.fromARGB(255, 255, 0, 0),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Colors.black,
+                                width: 4,
                               ),
-                            ],
-                          )
-                        ],
-                      ),
-                    )
+                              borderRadius: BorderRadius.circular(30),
+                              color: const Color.fromARGB(255, 163, 39, 39),
+                            ),
+                            height: 10,
+                            width: 10,
+                            child: const Text("1"),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Colors.black,
+                                width: 4,
+                              ),
+                              borderRadius: BorderRadius.circular(30),
+                              color: const Color.fromARGB(255, 163, 39, 39),
+                            ),
+                            height: 10,
+                            width: 10,
+                            child: const Text("1"),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 )
               ],
