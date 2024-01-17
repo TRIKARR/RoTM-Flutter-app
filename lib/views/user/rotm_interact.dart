@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
-import 'package:percent_indicator/percent_indicator.dart';
 import 'package:rotm/models/rotmStatCard.dart';
+import 'package:rotm/views/RotmInteractServices/services_gridview.dart';
 
 class UserInteractionMenu extends StatefulWidget {
   const UserInteractionMenu({super.key});
@@ -15,12 +14,21 @@ class UserInteractionMenu extends StatefulWidget {
 class _UserInteractionMenuState extends State<UserInteractionMenu> {
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(8.0),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
       child: SafeArea(
         child: Column(
           children: [
-            ROTMStatCard(),
+            const ROTMStatCard(),
+            const SizedBox(
+              height: 10,
+            ),
+            Container(
+              height: 400,
+              width: 400,
+              color: const Color.fromARGB(255, 77, 28, 28),
+              child: const InteractiveServices(),
+            ),
           ],
         ),
       ),
