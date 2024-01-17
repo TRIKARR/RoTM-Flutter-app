@@ -20,6 +20,7 @@ class SignUpPage extends StatelessWidget {
       "Password": brotmPasswordController.text,
       "ConfirmPassword": confirmBrotmPasswordController.text,
     };
+    //var userdata = {"hp": 100, "sc": 21, "bo": 99};
     var response = await http.post(url, body: data);
     // ignore: avoid_print
     print(response.body.toString());

@@ -1,5 +1,5 @@
 // ignore_for_file: unused_import
-
+import "package:http/http.dart" as http;
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:gauge_indicator/gauge_indicator.dart';
@@ -13,6 +13,19 @@ class UserHeartPulse extends StatefulWidget {
 }
 
 class _UserHeartPulseState extends State<UserHeartPulse> {
+  void postRequest() async {
+    var url = Uri.parse('http://192.168.0.241:3000/data');
+    var response = await http.get(url);
+    // ignore: avoid_print
+    print(response.body.toString());
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    postRequest();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
