@@ -153,75 +153,114 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                         ],
                       ),
                     ),
-                    GridView.count(
-                      crossAxisCount: 2,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Colors.black,
-                                width: 4,
+                    Container(
+                      color: const Color.fromARGB(255, 24, 216, 216),
+                      height: 245,
+                      width: 195,
+                      child: GridView.count(
+                        physics: const NeverScrollableScrollPhysics(),
+                        crossAxisCount: 2,
+                        childAspectRatio: 1.2,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(0.0),
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.black,
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(0),
+                                color: const Color.fromARGB(255, 163, 39, 39),
                               ),
-                              borderRadius: BorderRadius.circular(30),
-                              color: const Color.fromARGB(255, 163, 39, 39),
+                              child: const Text("1"),
                             ),
-                            height: 10,
-                            width: 10,
-                            child: const Text("1"),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Colors.black,
-                                width: 4,
+                          Padding(
+                            padding: const EdgeInsets.all(0.0),
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.black,
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(0),
+                                color: const Color.fromARGB(255, 163, 39, 39),
                               ),
-                              borderRadius: BorderRadius.circular(30),
-                              color: const Color.fromARGB(255, 163, 39, 39),
+                              child: const Text("1"),
                             ),
-                            height: 10,
-                            width: 10,
-                            child: const Text("1"),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Colors.black,
-                                width: 4,
+                          Padding(
+                            padding: const EdgeInsets.all(0.0),
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.black,
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(0),
+                                color: const Color.fromARGB(255, 163, 39, 39),
                               ),
-                              borderRadius: BorderRadius.circular(30),
-                              color: const Color.fromARGB(255, 163, 39, 39),
+                              child: const Text("1"),
                             ),
-                            height: 10,
-                            width: 10,
-                            child: const Text("1"),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Colors.black,
-                                width: 4,
+                          Padding(
+                            padding: const EdgeInsets.all(0.0),
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.black,
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(0),
+                                color: const Color.fromARGB(255, 163, 39, 39),
                               ),
-                              borderRadius: BorderRadius.circular(30),
-                              color: const Color.fromARGB(255, 163, 39, 39),
+                              child: const Text("1"),
                             ),
-                            height: 10,
-                            width: 10,
-                            child: const Text("1"),
                           ),
-                        ),
-                      ],
-                    ),
+                          Padding(
+                            padding: const EdgeInsets.all(0.0),
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.black,
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(0),
+                                color: const Color.fromARGB(255, 163, 39, 39),
+                              ),
+                              child: const Text("1"),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(0.0),
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.black,
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(0),
+                                color: const Color.fromARGB(255, 163, 39, 39),
+                              ),
+                              child: const Text("1"),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
                   ],
                 )
               ],
