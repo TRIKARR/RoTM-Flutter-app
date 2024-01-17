@@ -177,10 +177,13 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                       width: 1,
                                     ),
                                     borderRadius: BorderRadius.circular(0),
-                                    color:
-                                        const Color.fromARGB(255, 163, 39, 39),
+                                    color: const Color.fromARGB(
+                                        255, 255, 255, 255),
                                   ),
-                                  child: const Text("1"),
+                                  child: Image.asset(
+                                    "lib/assets/images/estp-entrepreneur.png",
+                                    width: 100,
+                                  ),
                                 ),
                               ),
                               Padding(
@@ -228,10 +231,10 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                       width: 1,
                                     ),
                                     borderRadius: BorderRadius.circular(0),
-                                    color:
-                                        const Color.fromARGB(255, 163, 39, 39),
+                                    color: const Color.fromARGB(255, 255, 255, 255),
                                   ),
-                                  child: const Text("1"),
+                                  child: Image.asset(
+                                      "lib/assets/animated/wink.gif"),
                                 ),
                               ),
                               Padding(
@@ -245,10 +248,13 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                       width: 1,
                                     ),
                                     borderRadius: BorderRadius.circular(0),
-                                    color:
-                                        const Color.fromARGB(255, 163, 39, 39),
+                                    color: const Color.fromARGB(
+                                        255, 255, 255, 255),
                                   ),
-                                  child: const Text("1"),
+                                  child: Image.asset(
+                                    "lib/assets/images/estp-entrepreneur.png",
+                                    width: 100,
+                                  ),
                                 ),
                               ),
                               Padding(
