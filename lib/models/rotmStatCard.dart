@@ -197,8 +197,7 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                       width: 1,
                                     ),
                                     borderRadius: BorderRadius.circular(0),
-                                    color: const Color.fromARGB(
-                                        255, 255, 255, 255),
+                                    color: Color.fromARGB(255, 168, 159, 159),
                                   ),
                                   child: Column(
                                     children: [
@@ -220,8 +219,8 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                         style: GoogleFonts.getFont(
                                           'Orbitron',
                                           fontSize: 16,
-                                          color: const Color.fromARGB(
-                                              255, 111, 0, 255),
+                                          color:
+                                              Color.fromARGB(255, 166, 0, 255),
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -240,8 +239,7 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                       width: 1,
                                     ),
                                     borderRadius: BorderRadius.circular(0),
-                                    color: const Color.fromARGB(
-                                        255, 255, 255, 255),
+                                    color: Color.fromARGB(255, 168, 159, 159),
                                   ),
                                   child: Column(
                                     children: [
@@ -305,7 +303,7 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                         255, 255, 255, 255),
                                   ),
                                   child: Image.asset(
-                                    "lib/assets/images/estp-entrepreneur.png",
+                                    "lib/assets/animated/eye.gif",
                                     width: 100,
                                   ),
                                 ),
@@ -321,8 +319,7 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                       width: 1,
                                     ),
                                     borderRadius: BorderRadius.circular(0),
-                                    color: const Color.fromARGB(
-                                        255, 255, 255, 255),
+                                    color: Color.fromARGB(255, 168, 159, 159),
                                   ),
                                   child: Column(
                                     children: [
