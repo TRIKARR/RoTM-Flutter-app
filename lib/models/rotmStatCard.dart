@@ -202,6 +202,9 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                   ),
                                   child: Column(
                                     children: [
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
                                       Text(
                                         "MANNER",
                                         style: GoogleFonts.getFont(
@@ -217,8 +220,8 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                         style: GoogleFonts.getFont(
                                           'Orbitron',
                                           fontSize: 16,
-                                          color:
-                                              const Color.fromARGB(255, 111, 0, 255),
+                                          color: const Color.fromARGB(
+                                              255, 111, 0, 255),
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -242,6 +245,9 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                   ),
                                   child: Column(
                                     children: [
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
                                       Text(
                                         "MOOD",
                                         style: GoogleFonts.getFont(
@@ -320,6 +326,9 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                   ),
                                   child: Column(
                                     children: [
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
                                       Text(
                                         "MODE",
                                         style: GoogleFonts.getFont(
@@ -359,3 +368,4 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
     );
   }
 }
+// Modes - Relaxed -> Mild -> Serious 
