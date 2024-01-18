@@ -26,7 +26,11 @@ class _InteractiveServicesState extends State<InteractiveServices> {
             ),
             height: 100,
             width: 100,
-            child: const Text("1"),
+            child: Image.asset(
+              "lib/assets/animated/learning-unscreen.gif",
+              height: 100,
+              width: 100,
+            ),
           ),
         ),
         Padding(
@@ -42,7 +46,11 @@ class _InteractiveServicesState extends State<InteractiveServices> {
             ),
             height: 100,
             width: 100,
-            child: const Text("1"),
+            child: Image.asset(
+              "lib/assets/animated/learning-unscreen.gif",
+              height: 100,
+              width: 100,
+            ),
           ),
         ),
         Padding(
@@ -58,7 +66,11 @@ class _InteractiveServicesState extends State<InteractiveServices> {
             ),
             height: 100,
             width: 100,
-            child: const Text("1"),
+            child: Image.asset(
+              "lib/assets/animated/learning-unscreen.gif",
+              height: 100,
+              width: 100,
+            ),
           ),
         ),
         Padding(
@@ -70,11 +82,15 @@ class _InteractiveServicesState extends State<InteractiveServices> {
                 width: 4,
               ),
               borderRadius: BorderRadius.circular(30),
-              color: const Color.fromARGB(255, 255, 242, 0),
+              color: Color.fromARGB(234, 255, 242, 0),
             ),
             height: 100,
             width: 100,
-            child: const Text("1"),
+            child: Image.asset(
+              "lib/assets/animated/learning-unscreen.gif",
+              height: 100,
+              width: 100,
+            ),
           ),
         ),
       ],
