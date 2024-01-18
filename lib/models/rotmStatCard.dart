@@ -218,7 +218,7 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                           'Orbitron',
                                           fontSize: 16,
                                           color:
-                                              Color.fromARGB(255, 111, 0, 255),
+                                              const Color.fromARGB(255, 111, 0, 255),
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),

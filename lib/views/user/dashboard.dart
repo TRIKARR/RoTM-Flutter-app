@@ -11,6 +11,7 @@ import 'package:rotm/views/dashboardSections/section2.dart';
 import 'package:rotm/views/dashboardSections/section3.dart';
 import 'package:rotm/views/dashboardSections/section4.dart';
 import 'dart:io' show Platform;
+// ignore: unused_import
 import 'package:http/http.dart' as http;
 
 class UserDashBoard extends StatefulWidget {
