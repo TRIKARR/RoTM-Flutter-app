@@ -18,7 +18,7 @@ class _InteractiveServicesState extends State<InteractiveServices> {
           child: Container(
             decoration: BoxDecoration(
               border: Border.all(
-                color: Colors.black,
+                color: const Color.fromARGB(255, 255, 255, 255),
                 width: 4,
               ),
               borderRadius: BorderRadius.circular(30),
@@ -27,7 +27,7 @@ class _InteractiveServicesState extends State<InteractiveServices> {
             height: 100,
             width: 100,
             child: Image.asset(
-              "lib/assets/animated/learning-unscreen.gif",
+              "lib/assets/animated/decision-making-unscreen.gif",
               height: 100,
               width: 100,
             ),
@@ -78,7 +78,7 @@ class _InteractiveServicesState extends State<InteractiveServices> {
           child: Container(
             decoration: BoxDecoration(
               border: Border.all(
-                color: Colors.black,
+                color: const Color.fromARGB(255, 255, 255, 255),
                 width: 4,
               ),
               borderRadius: BorderRadius.circular(30),
