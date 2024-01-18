@@ -22,7 +22,6 @@ class UserDashBoard extends StatefulWidget {
 
 class _UserDashBoardState extends State<UserDashBoard> {
   
-
   final double fheigh = Platform.isAndroid ? 10.0 : 21;
   double sheigh = Platform.isAndroid ? 1.0 : 4;
   double theigh = Platform.isAndroid ? 5.0 : 15;

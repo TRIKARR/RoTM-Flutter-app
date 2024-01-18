@@ -28,7 +28,7 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                 width: 390,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: const Color.fromARGB(255, 255, 255, 255),
+                  color: const Color.fromARGB(255, 0, 0, 0),
                 ),
                 child: Column(
                   children: [
@@ -39,7 +39,7 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                         style: GoogleFonts.getFont(
                           'Orbitron',
                           fontSize: 20,
-                          color: const Color.fromARGB(255, 0, 0, 0),
+                          color: const Color.fromARGB(255, 255, 255, 255),
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -158,7 +158,7 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                           ),
                         ),
                         Container(
-                          color: const Color.fromARGB(255, 24, 216, 216),
+                          color: const Color.fromARGB(255, 0, 0, 0),
                           height: 245,
                           width: 195,
                           child: GridView.count(
@@ -197,10 +197,33 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                       width: 1,
                                     ),
                                     borderRadius: BorderRadius.circular(0),
-                                    color:
-                                        const Color.fromARGB(255, 163, 39, 39),
+                                    color: const Color.fromARGB(
+                                        255, 255, 255, 255),
                                   ),
-                                  child: const Text("1"),
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        "MANNER",
+                                        style: GoogleFonts.getFont(
+                                          'Orbitron',
+                                          fontSize: 16,
+                                          color: const Color.fromARGB(
+                                              255, 0, 0, 0),
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      Text(
+                                        "INTJ-A",
+                                        style: GoogleFonts.getFont(
+                                          'Orbitron',
+                                          fontSize: 16,
+                                          color:
+                                              Color.fromARGB(255, 111, 0, 255),
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                               Padding(
@@ -214,10 +237,33 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                       width: 1,
                                     ),
                                     borderRadius: BorderRadius.circular(0),
-                                    color:
-                                        const Color.fromARGB(255, 163, 39, 39),
+                                    color: const Color.fromARGB(
+                                        255, 255, 255, 255),
                                   ),
-                                  child: const Text("1"),
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        "MOOD",
+                                        style: GoogleFonts.getFont(
+                                          'Orbitron',
+                                          fontSize: 20,
+                                          color: const Color.fromARGB(
+                                              255, 0, 0, 0),
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      Text(
+                                        "CHARM",
+                                        style: GoogleFonts.getFont(
+                                          'Orbitron',
+                                          fontSize: 18,
+                                          color: const Color.fromARGB(
+                                              255, 0, 47, 255),
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                               Padding(
@@ -231,7 +277,8 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                       width: 1,
                                     ),
                                     borderRadius: BorderRadius.circular(0),
-                                    color: const Color.fromARGB(255, 255, 255, 255),
+                                    color: const Color.fromARGB(
+                                        255, 255, 255, 255),
                                   ),
                                   child: Image.asset(
                                       "lib/assets/animated/wink.gif"),
@@ -268,10 +315,33 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                       width: 1,
                                     ),
                                     borderRadius: BorderRadius.circular(0),
-                                    color:
-                                        const Color.fromARGB(255, 163, 39, 39),
+                                    color: const Color.fromARGB(
+                                        255, 255, 255, 255),
                                   ),
-                                  child: const Text("1"),
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        "MODE",
+                                        style: GoogleFonts.getFont(
+                                          'Orbitron',
+                                          fontSize: 18,
+                                          color: const Color.fromARGB(
+                                              255, 0, 0, 0),
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      Text(
+                                        "RELAXED",
+                                        style: GoogleFonts.getFont(
+                                          'Orbitron',
+                                          fontSize: 15,
+                                          color: const Color.fromARGB(
+                                              255, 255, 0, 0),
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ],
