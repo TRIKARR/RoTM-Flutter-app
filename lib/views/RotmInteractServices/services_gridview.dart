@@ -42,7 +42,7 @@ class _InteractiveServicesState extends State<InteractiveServices> {
                 width: 4,
               ),
               borderRadius: BorderRadius.circular(30),
-              color: const Color.fromARGB(255, 77, 255, 0),
+              color: Color.fromARGB(255, 0, 255, 132),
             ),
             height: 100,
             width: 100,
@@ -67,7 +67,7 @@ class _InteractiveServicesState extends State<InteractiveServices> {
             height: 100,
             width: 100,
             child: Image.asset(
-              "lib/assets/animated/learning-unscreen.gif",
+              "lib/assets/animated/chat-bot-unscreen.gif",
               height: 100,
               width: 100,
             ),
@@ -87,7 +87,7 @@ class _InteractiveServicesState extends State<InteractiveServices> {
             height: 100,
             width: 100,
             child: Image.asset(
-              "lib/assets/animated/learning-unscreen.gif",
+              "lib/assets/animated/turing-test-unscreen.gif",
               height: 100,
               width: 100,
             ),
