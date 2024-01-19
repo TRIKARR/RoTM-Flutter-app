@@ -52,11 +52,11 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: const Color.fromARGB(255, 0, 0, 0)),
+                            color: const Color.fromRGBO(255, 255, 255, 1)),
                         height: 340,
                         width: 220,
-                        child: Center(
-                          child: RadarChartSample1(),
+                        child: const Center(
+                          child: RadarChartExample(),
                         ),
                       )
                     ],
