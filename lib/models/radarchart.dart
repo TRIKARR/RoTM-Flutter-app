@@ -48,7 +48,7 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                       child: AnimatedContainer(
                         duration: const Duration(milliseconds: 300),
                         margin: const EdgeInsets.symmetric(vertical: 2),
-                        height: 1,
+                        height: 9,
                         decoration: BoxDecoration(
                           color: isSelected
                               ? AppColors.pageBackground
@@ -71,7 +71,6 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                                 shape: BoxShape.circle,
                               ),
                             ),
-                            const SizedBox(width: 8),
                             AnimatedDefaultTextStyle(
                               duration: const Duration(milliseconds: 300),
                               curve: Curves.easeInToLinear,
@@ -112,8 +111,8 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                 radarBackgroundColor: Colors.transparent,
                 borderData: FlBorderData(show: false),
                 radarBorderData: const BorderSide(color: Colors.transparent),
-                titlePositionPercentageOffset: 0.2,
-                titleTextStyle: const TextStyle(color: Colors.black, fontSize: 14),
+                titleTextStyle:
+                    const TextStyle(color: Colors.black, fontSize: 14),
                 getTitle: (index, angle) {
                   final usedAngle =
                       relativeAngleMode ? angle + angleValue : angleValue;
