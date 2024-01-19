@@ -37,12 +37,12 @@ class _InteractiveServicesState extends State<InteractiveServices> {
                 Row(
                   children: [
                     const SizedBox(
-                      width: 30,
+                      width: 25,
                     ),
                     Column(
                       children: [
                         Text(
-                          "DECISION",
+                          "CLINICAL",
                           style: GoogleFonts.getFont(
                             'Orbitron',
                             fontSize: 20,
@@ -52,7 +52,7 @@ class _InteractiveServicesState extends State<InteractiveServices> {
                         ),
                         Center(
                           child: Text(
-                            "MAKING",
+                            "DIAGNOSIS",
                             style: GoogleFonts.getFont(
                               'Orbitron',
                               fontSize: 20,
