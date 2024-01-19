@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:rotm/views/RotmInteractServices/analysisUserChartHEalth.dart';
 import 'package:rotm/views/RotmInteractServices/clinical.dart';
 import 'package:rotm/views/RotmInteractServices/healthinfo.dart';
@@ -17,11 +16,11 @@ class _InteractiveServicesState extends State<InteractiveServices> {
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 2,
-      children: [
-        const DiagnosisService(),
-        const HealthInfo(),
-        const UserChatBot(),
-        const UserReportAnalysisBot(),
+      children: const [
+        DiagnosisService(),
+        HealthInfo(),
+        UserChatBot(),
+        UserReportAnalysisBot(),
       ],
     );
   }
