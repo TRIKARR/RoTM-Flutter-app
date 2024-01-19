@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:radar_chart/radar_chart.dart';
 import 'package:rotm/models/radarchart.dart';
+
 class UserBrowseMenu extends StatefulWidget {
   const UserBrowseMenu({super.key});
 
@@ -51,9 +52,12 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: const Color.fromARGB(255, 255, 255, 255)),
+                            color: const Color.fromARGB(255, 0, 0, 0)),
                         height: 340,
                         width: 220,
+                        child: Center(
+                          child: RadarChartSample1(),
+                        ),
                       )
                     ],
                   ),
