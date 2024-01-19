@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class InteractiveServices extends StatefulWidget {
   const InteractiveServices({super.key});
@@ -18,7 +19,7 @@ class _InteractiveServicesState extends State<InteractiveServices> {
           child: Container(
             decoration: BoxDecoration(
               border: Border.all(
-                color: const Color.fromARGB(255, 255, 255, 255),
+                color: const Color.fromARGB(255, 0, 0, 0),
                 width: 4,
               ),
               borderRadius: BorderRadius.circular(30),
@@ -26,10 +27,45 @@ class _InteractiveServicesState extends State<InteractiveServices> {
             ),
             height: 100,
             width: 100,
-            child: Image.asset(
-              "lib/assets/animated/decision-making-unscreen.gif",
-              height: 100,
-              width: 100,
+            child: Column(
+              children: [
+                Image.asset(
+                  "lib/assets/animated/decision-making-unscreen.gif",
+                  height: 110,
+                  width: 110,
+                ),
+                Row(
+                  children: [
+                    const SizedBox(
+                      width: 30,
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          "DECISION",
+                          style: GoogleFonts.getFont(
+                            'Orbitron',
+                            fontSize: 20,
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Center(
+                          child: Text(
+                            "MAKING",
+                            style: GoogleFonts.getFont(
+                              'Orbitron',
+                              fontSize: 20,
+                              color: const Color.fromARGB(255, 255, 255, 255),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         ),
@@ -78,7 +114,7 @@ class _InteractiveServicesState extends State<InteractiveServices> {
           child: Container(
             decoration: BoxDecoration(
               border: Border.all(
-                color: const Color.fromARGB(255, 255, 255, 255),
+                color: const Color.fromARGB(255, 0, 0, 0),
                 width: 4,
               ),
               borderRadius: BorderRadius.circular(30),
