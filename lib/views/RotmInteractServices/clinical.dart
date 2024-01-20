@@ -24,7 +24,7 @@ class DiagnosisService extends StatelessWidget {
             Image.asset(
               "lib/assets/animated/decision-making-unscreen.gif",
               height: 110,
-              width: 110,
+              width: MediaQuery.of(context).size.width,
             ),
             Row(
               children: [

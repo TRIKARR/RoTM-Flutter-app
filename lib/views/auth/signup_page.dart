@@ -3,6 +3,7 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:regexed_validator/regexed_validator.dart';
 import 'package:rotm/assets/constants.dart';
 import 'package:http/http.dart' as http;
 import 'package:rotm/views/user/bottom_nav_bar.dart';
@@ -189,6 +190,7 @@ class SignUpPage extends StatelessWidget {
                         if (emailController.text.isNotEmpty &&
                             EmailValidator.validate(emailController.text) &&
                             brotmIdController.text.isNotEmpty &&
+                            validator.password(brotmPasswordController.text) &&
                             brotmPasswordController.text.isNotEmpty &&
                             confirmBrotmPasswordController.text.isNotEmpty &&
                             (brotmPasswordController.text ==

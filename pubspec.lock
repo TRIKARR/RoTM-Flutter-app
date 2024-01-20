@@ -453,6 +453,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
+  regexed_validator:
+    dependency: "direct main"
+    description:
+      name: regexed_validator
+      sha256: "8ecbfc90927820f4fedefb094f357f8e4ba56808d8f0dcf3c6a1a262855a3872"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0+1"
   sky_engine:
     dependency: transitive
     description: flutter

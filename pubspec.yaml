@@ -26,6 +26,7 @@ dependencies:
   syncfusion_flutter_gauges: ^24.1.45
   gauge_indicator: ^0.4.3
   email_validator: ^2.1.17
+  regexed_validator: ^2.0.0+1
   
 
 dev_dependencies:

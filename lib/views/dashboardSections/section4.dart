@@ -29,15 +29,13 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
           width: 10,
         ),
         OpenContainer(
-          
           //Important grey colour
           // closedColor: const Color.fromARGB(255, 59, 53, 53),
           closedColor: const Color.fromARGB(255, 255, 255, 255),
           closedBuilder: (BuildContext context, void Function() action) {
             return Container(
-              
-              height: Platform.isAndroid ? 130 : 150,
-              width: Platform.isAndroid ? 345 : ((130 * 3) + 20),
+              height: 150,
+              width: MediaQuery.of(context).size.width - 20,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(100),
                 color: const Color.fromARGB(255, 255, 255, 255),

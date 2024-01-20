@@ -45,8 +45,8 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: const Color.fromARGB(255, 255, 255, 255)),
-                        height: 340,
-                        width: 200,
+                        height: MediaQuery.of(context).size.height - 100,
+                        width: MediaQuery.of(context).size.width - 240,
                       ),
                       Container(
                         alignment: Alignment.center,
