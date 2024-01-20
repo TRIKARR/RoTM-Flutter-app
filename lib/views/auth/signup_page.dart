@@ -1,4 +1,5 @@
 // ignore_for_file: must_be_immutable
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
@@ -186,9 +187,12 @@ class SignUpPage extends StatelessWidget {
                       ),
                       onPressed: () {
                         if (emailController.text.isNotEmpty &&
+                            EmailValidator.validate(emailController.text) &&
                             brotmIdController.text.isNotEmpty &&
                             brotmPasswordController.text.isNotEmpty &&
-                            confirmBrotmPasswordController.text.isNotEmpty) {
+                            confirmBrotmPasswordController.text.isNotEmpty &&
+                            (brotmPasswordController.text ==
+                                confirmBrotmPasswordController.text)) {
                           postRequest();
 
                           ScaffoldMessenger.of(context).showSnackBar(

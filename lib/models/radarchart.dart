@@ -9,7 +9,7 @@ class RadarChartSample1 extends StatefulWidget {
   final gridColor = AppColors.contentColorPurple.lighten(80);
   final titleColor = AppColors.contentColorPurple.lighten(80);
   final fashionColor = AppColors.contentColorRed;
-  final artColor = AppColors.contentColorCyan;
+  final artColor =AppColors.contentColorCyan;
   final boxingColor = AppColors.contentColorGreen;
   final entertainmentColor = AppColors.contentColorWhite;
   final offRoadColor = AppColors.contentColorYellow;

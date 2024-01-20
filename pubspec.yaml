@@ -25,6 +25,7 @@ dependencies:
   syncfusion_flutter_charts: ^24.1.45+2
   syncfusion_flutter_gauges: ^24.1.45
   gauge_indicator: ^0.4.3
+  email_validator: ^2.1.17
   
 
 dev_dependencies:
