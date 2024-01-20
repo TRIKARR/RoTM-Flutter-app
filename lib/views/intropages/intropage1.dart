@@ -40,7 +40,7 @@ class Page1 extends StatelessWidget {
               padding: const EdgeInsets.only(left: 10, top: 20),
               child: Lottie.asset(
                 "lib/assets/others/Animation - 1704720876228.json",
-                height: 500,
+                height: MediaQuery.of(context).size.height - 500,
                 width: 500,
               ),
             ),
