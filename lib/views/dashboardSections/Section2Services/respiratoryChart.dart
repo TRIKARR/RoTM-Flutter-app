@@ -3,6 +3,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rotm/models/userdata.dart';
 
 class UserRespirationRate extends StatefulWidget {
   const UserRespirationRate({super.key});
@@ -52,7 +53,7 @@ class _UserRespirationRateState extends State<UserRespirationRate> {
               child: BarChart(
                 BarChartData(
                   minY: 0,
-                  maxY: 10,
+                  maxY: 40,
                   backgroundColor: Colors.black,
                   titlesData: const FlTitlesData(show: false),
                   borderData: FlBorderData(show: true),
@@ -60,19 +61,19 @@ class _UserRespirationRateState extends State<UserRespirationRate> {
                   barGroups: [
                     BarChartGroupData(x: 0, barsSpace: 4, barRods: [
                       BarChartRodData(
-                        toY: 3, // Your data point
+                        toY: UserRespData[0].toDouble(), // Your data point
                         color: Colors.blue, // All bars have the color blue
                       ),
                     ]),
                     BarChartGroupData(x: 1, barsSpace: 4, barRods: [
                       BarChartRodData(
-                        toY: 6,
+                        toY: UserRespData[1].toDouble(),
                         color: const Color.fromARGB(255, 212, 0, 0),
                       ),
                     ]),
                     BarChartGroupData(x: 2, barsSpace: 4, barRods: [
                       BarChartRodData(
-                        toY: 2,
+                        toY: UserRespData[2].toDouble(),
                         color: const Color.fromARGB(255, 8, 233, 0),
                       ),
                     ]),
@@ -81,7 +82,7 @@ class _UserRespirationRateState extends State<UserRespirationRate> {
                       barsSpace: 4,
                       barRods: [
                         BarChartRodData(
-                          toY: 9,
+                          toY: UserRespData[3].toDouble(),
                           color: const Color.fromARGB(255, 255, 14, 255),
                         ),
                       ],
@@ -98,7 +99,11 @@ class _UserRespirationRateState extends State<UserRespirationRate> {
                             fontSize: 10,
                           ),
                         ),
-                        y: 5,
+                        y: (UserRespData[0].toDouble() +
+                                UserRespData[1].toDouble() +
+                                UserRespData[2].toDouble() +
+                                UserRespData[3].toDouble()) /
+                            4,
                         color: const Color.fromARGB(255, 255, 255, 255),
                         strokeWidth: 2,
                       ),

@@ -16,26 +16,7 @@ class UserTemperatureGraph extends StatefulWidget {
 }
 
 class _UserTemperatureGraphState extends State<UserTemperatureGraph> {
-  
   // ignore: non_constant_identifier_names
-  void ExtractRequest() async {
-    var url = Uri.parse('http://192.168.0.241:3000/extract');
-    var queryParams = {"id": "w2343UDZvl4zY49bV9rb"};
-    var response = await http.get(url.replace(queryParameters: queryParams));
-    var responseData =
-        jsonDecode(response.body); // Add this line to parse the JSON response
-    var tempData = responseData["temp"];
-    var respData = responseData["resp"]; // Store the "temp" array in a variable
-    print(tempData);
-    print(respData);
-    print(queryParams.toString());
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    ExtractRequest();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -82,10 +63,10 @@ class _UserTemperatureGraphState extends State<UserTemperatureGraph> {
                   maxY: 40,
                   backgroundColor: Colors.black,
                   scatterSpots: [
-                    ScatterSpot(1, 3),
-                    ScatterSpot(2, 6),
-                    ScatterSpot(3, 2),
-                    ScatterSpot(4, 30),
+                    ScatterSpot(1, UserTempData[0].toDouble()),
+                    ScatterSpot(2, UserTempData[1].toDouble()),
+                    ScatterSpot(3, UserTempData[2].toDouble()),
+                    ScatterSpot(4, UserTempData[3].toDouble()),
                   ],
                   titlesData: const FlTitlesData(show: false),
                   borderData: FlBorderData(show: true),
