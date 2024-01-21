@@ -6,7 +6,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class UserBloodOxygen extends StatefulWidget {
-  final int randomvalue = 98;
   const UserBloodOxygen({super.key});
 
   @override

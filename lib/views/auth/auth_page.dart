@@ -12,6 +12,7 @@ import 'package:rotm/views/user/bottom_nav_bar.dart';
 class UserAuthPage extends StatelessWidget {
   TextEditingController RegbrotmIdController = TextEditingController();
   TextEditingController RegbrotmPasswordController = TextEditingController();
+  var BRoTM_UserID = "";
   void getRequest() async {
     var url = Uri.parse('http://192.168.0.241:3000/login');
     var queryParams = {
@@ -19,7 +20,9 @@ class UserAuthPage extends StatelessWidget {
       "password": RegbrotmPasswordController.text,
     };
     var response = await http.get(url.replace(queryParameters: queryParams));
+    BRoTM_UserID = response.body.toString();
     print(response.body.toString());
+    print(BRoTM_UserID);
     print(queryParams.toString());
   }
 
