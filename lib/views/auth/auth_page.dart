@@ -19,8 +19,7 @@ class UserAuthPage extends StatelessWidget {
       "password": RegbrotmPasswordController.text,
     };
     var response = await http.get(url.replace(queryParameters: queryParams));
-
-    print(response.toString());
+    print(response.body.toString());
     print(queryParams.toString());
   }
 

@@ -24,7 +24,7 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
               height: 10,
             ),
             Container(
-              height: MediaQuery.of(context).size.height - 460,
+              height: MediaQuery.of(context).size.height - 480,
               width: 400,
               color: Colors.deepPurple.shade900,
               child: const InteractiveServices(),
