@@ -144,9 +144,9 @@ class _UserDashBoardState extends State<UserDashBoard> {
                       SizedBox(
                         height: 15,
                       ),
-                      // SingleChildScrollView(
-                      //     scrollDirection: Axis.horizontal,
-                      //     child: LevelOneSection()),
+                      SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: LevelOneSection()),
                       SizedBox(
                         height: 15,
                       ),
