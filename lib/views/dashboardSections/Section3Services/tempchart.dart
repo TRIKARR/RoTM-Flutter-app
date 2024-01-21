@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rotm/models/userdata.dart';
+import 'package:http/http.dart' as http;
 
 class UserTemperatureGraph extends StatefulWidget {
   const UserTemperatureGraph({Key? key}) : super(key: key);
@@ -10,6 +12,20 @@ class UserTemperatureGraph extends StatefulWidget {
 }
 
 class _UserTemperatureGraphState extends State<UserTemperatureGraph> {
+  void ExtractRequest() async {
+    var url = Uri.parse('http://192.168.0.241:3000/extract');
+    var queryParams = {"id": "YYcTH1ALVRs7l8WbUrij"};
+    var response = await http.get(url.replace(queryParameters: queryParams));
+    print(response.body.toString());
+    print(queryParams.toString());
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    ExtractRequest();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
