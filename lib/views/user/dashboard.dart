@@ -4,6 +4,7 @@ import 'dart:ffi';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rotm/models/service_calls.dart';
 import 'package:rotm/models/userdragablescroll.dart';
 import 'package:rotm/models/week_data.dart';
 // ignore: unused_import
@@ -29,6 +30,13 @@ class _UserDashBoardState extends State<UserDashBoard> {
   double frheigh = Platform.isAndroid ? 5.0 : 15;
   double ftheigh = Platform.isAndroid ? 5.0 : 15;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    const ServiceCalltoBackend();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
