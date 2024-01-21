@@ -74,7 +74,7 @@ class _UserBloodOxygenState extends State<UserBloodOxygen> {
               ),
               pointer: GaugePointer.circle(
                 radius: 8,
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: Color.fromARGB(255, 0, 255, 217),
                 border: GaugePointerBorder(color: Colors.black, width: 2),
               ),
               progressBar: GaugeProgressBar.rounded(

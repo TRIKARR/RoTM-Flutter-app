@@ -70,7 +70,7 @@ class _UserSleepCycleState extends State<UserSleepCycle> {
               ),
               pointer: GaugePointer.circle(
                 radius: 8,
-                color: Color.fromARGB(255, 157, 0, 255),
+                color: Color.fromARGB(255, 0, 225, 255),
                 border: GaugePointerBorder(color: Colors.black, width: 2),
               ),
               progressBar: GaugeProgressBar.basic(
