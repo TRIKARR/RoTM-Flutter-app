@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:rotm/assets/constants.dart';
+import 'package:rotm/models/userdata.dart';
 import 'package:rotm/views/auth/signup_page.dart';
 import 'package:http/http.dart' as http;
 import 'package:rotm/views/user/bottom_nav_bar.dart';
@@ -12,7 +13,6 @@ import 'package:rotm/views/user/bottom_nav_bar.dart';
 class UserAuthPage extends StatelessWidget {
   TextEditingController RegbrotmIdController = TextEditingController();
   TextEditingController RegbrotmPasswordController = TextEditingController();
-  var BRoTM_UserID = "";
   void getRequest() async {
     var url = Uri.parse('http://192.168.0.241:3000/login');
     var queryParams = {
