@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, avoid_print
+
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -14,9 +16,8 @@ class UserTemperatureGraph extends StatefulWidget {
 }
 
 class _UserTemperatureGraphState extends State<UserTemperatureGraph> {
-  var tempData;
-  var respData;
-
+  
+  // ignore: non_constant_identifier_names
   void ExtractRequest() async {
     var url = Uri.parse('http://192.168.0.241:3000/extract');
     var queryParams = {"id": "w2343UDZvl4zY49bV9rb"};
