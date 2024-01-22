@@ -109,6 +109,7 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                   },
                 ),
                 dataSets: [
+                  //Do not touch this Widget 
                   RadarDataSet(
                     fillColor: const Color.fromARGB(255, 255, 255, 255),
                     borderColor: widget.artColor,
@@ -118,6 +119,7 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                       const RadarEntry(value: 10),
                     ],
                   ),
+                  //Only use this widget to showcase the User Data
                   RadarDataSet(
                     fillColor: const Color.fromARGB(255, 255, 0, 0).withOpacity(0.5),
                     borderColor: Colors.black,
@@ -127,6 +129,7 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                       const RadarEntry(value: 8),
                     ],
                   ),
+                  // Do not Touch this Widget
                   RadarDataSet(
                     fillColor: Colors.transparent,
                     borderColor: Colors.transparent,
