@@ -18,7 +18,7 @@ class UserBrowseMenu extends StatefulWidget {
 
 class _UserBrowseMenuState extends State<UserBrowseMenu> {
   void ExtractUserRequest() async {
-    var url = Uri.parse('http://192.168.0.241:3000/extract');
+    var url = Uri.parse('${EndPoint}extract');
     var queryParams = {"id": BRoTM_UserID};
     var response = await http.get(url.replace(queryParameters: queryParams));
     var responseData =
@@ -76,7 +76,7 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: const Color.fromARGB(255, 255, 0, 0)),
-                            height: MediaQuery.of(context).size.height - 635,
+                            height: 250,
                             width: MediaQuery.of(context).size.width - 240,
                             child: Column(
                               children: [
@@ -255,7 +255,7 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                                 borderRadius: BorderRadius.circular(10),
                                 color:
                                     const Color.fromARGB(255, 255, 255, 255)),
-                            height: 290,
+                            height: 285,
                             width: 220,
                             child: RadarChartSample1(),
                           ),

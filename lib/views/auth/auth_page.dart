@@ -14,7 +14,7 @@ class UserAuthPage extends StatelessWidget {
   TextEditingController RegbrotmIdController = TextEditingController();
   TextEditingController RegbrotmPasswordController = TextEditingController();
   void getRequest() async {
-    var url = Uri.parse('http://192.168.0.241:3000/login');
+    var url = Uri.parse('${EndPoint}login');
     var queryParams = {
       "username": RegbrotmIdController.text,
       "password": RegbrotmPasswordController.text,

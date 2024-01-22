@@ -1,12 +1,14 @@
 // ignore_for_file: unused_import
+import 'dart:convert';
 import 'dart:io' show Platform;
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rotm/models/userdata.dart';
 import 'package:rotm/views/DashboardExtend/mental_Health_graph.dart';
 import 'package:rotm/views/dashboardSections/Section1Services/blood_oxygen.dart';
-
+import 'package:http/http.dart' as http;
 class SectionLevelFour extends StatefulWidget {
   const SectionLevelFour({super.key});
 
@@ -21,6 +23,28 @@ class _SectionLevelFourState extends State<SectionLevelFour> {
     const Color.fromARGB(255, 94, 15, 156),
     const Color.fromARGB(255, 221, 25, 25),
   ];
+  void ExtractUserRequest() async {
+    var url = Uri.parse('${EndPoint}extract');
+    var queryParams = {"id": BRoTM_UserID};
+    var response = await http.get(url.replace(queryParameters: queryParams));
+    var responseData =
+        jsonDecode(response.body); // Add this line to parse the JSON response
+    var repoData = responseData["report"];
+    var temp = responseData["temp"];
+    var resp = responseData["resp"];
+    // Store the "temp" array in a variable
+    UserRespData = resp;
+    UserTempData = temp;
+    UserRepoData = repoData;
+    // ignore: avoid_print
+    print(queryParams.toString());
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    ExtractUserRequest();
+  }
   @override
   Widget build(BuildContext context) {
     return Row(

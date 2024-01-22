@@ -1,5 +1,8 @@
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rotm/models/userdata.dart';
 
 class UserTemperature extends StatefulWidget {
   const UserTemperature({super.key});
@@ -9,6 +12,28 @@ class UserTemperature extends StatefulWidget {
 }
 
 class _UserTemperatureState extends State<UserTemperature> {
+  void ExtractUserRequest() async {
+    var url = Uri.parse('${EndPoint}extract');
+    var queryParams = {"id": BRoTM_UserID};
+    var response = await http.get(url.replace(queryParameters: queryParams));
+    var responseData =
+        jsonDecode(response.body); // Add this line to parse the JSON response
+    var repoData = responseData["report"];
+    var temp = responseData["temp"];
+    var resp = responseData["resp"];
+    // Store the "temp" array in a variable
+    UserRespData = resp;
+    UserTempData = temp;
+    UserRepoData = repoData;
+    // ignore: avoid_print
+    print(queryParams.toString());
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    ExtractUserRequest();
+  }
   @override
   Widget build(BuildContext context) {
     return Column(

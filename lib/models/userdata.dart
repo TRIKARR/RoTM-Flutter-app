@@ -6,3 +6,5 @@ var BRoTM_UserID = "";
 var UserTempData;
 var UserRespData;
 var UserRepoData;
+var EndPoint =
+    "https://892a-2401-4900-16a7-316d-c0b8-fe00-5cfe-2b6.ngrok-free.app/";

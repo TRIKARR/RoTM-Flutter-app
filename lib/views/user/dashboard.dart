@@ -1,10 +1,12 @@
 // ignore: unused_import
+import 'dart:convert';
 import 'dart:ffi';
 // ignore: unused_import
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rotm/models/service_calls.dart';
+import 'package:rotm/models/userdata.dart';
 import 'package:rotm/models/userdragablescroll.dart';
 import 'package:rotm/models/week_data.dart';
 // ignore: unused_import
@@ -30,11 +32,27 @@ class _UserDashBoardState extends State<UserDashBoard> {
   double frheigh = Platform.isAndroid ? 5.0 : 15;
   double ftheigh = Platform.isAndroid ? 5.0 : 15;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  void ExtractUserRequest() async {
+    var url = Uri.parse('${EndPoint}extract');
+    var queryParams = {"id": BRoTM_UserID};
+    var response = await http.get(url.replace(queryParameters: queryParams));
+    var responseData =
+        jsonDecode(response.body); // Add this line to parse the JSON response
+    var repoData = responseData["report"];
+    var temp = responseData["temp"];
+    var resp = responseData["resp"];
+    // Store the "temp" array in a variable
+    UserRespData = resp;
+    UserTempData = temp;
+    UserRepoData = repoData;
+    // ignore: avoid_print
+    print(queryParams.toString());
+  }
+
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    const ServiceCalltoBackend();
+    ExtractUserRequest();
   }
 
   @override

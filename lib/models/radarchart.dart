@@ -22,15 +22,18 @@ class RadarChartSample1 extends StatefulWidget {
 }
 
 class _RadarChartSample1State extends State<RadarChartSample1> {
-  // ignore: non_constant_identifier_names
-  void ExtractUserRequest() async {
-    var url = Uri.parse('http://192.168.0.241:3000/extract');
+ void ExtractUserRequest() async {
+    var url = Uri.parse('${EndPoint}extract');
     var queryParams = {"id": BRoTM_UserID};
     var response = await http.get(url.replace(queryParameters: queryParams));
     var responseData =
         jsonDecode(response.body); // Add this line to parse the JSON response
     var repoData = responseData["report"];
+    var temp = responseData["temp"];
+    var resp = responseData["resp"];
     // Store the "temp" array in a variable
+    UserRespData = resp;
+    UserTempData = temp;
     UserRepoData = repoData;
     // ignore: avoid_print
     print(queryParams.toString());
@@ -41,7 +44,6 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
     super.initState();
     ExtractUserRequest();
   }
-
   int selectedDataSetIndex = -1;
   double angleValue = 0;
   bool relativeAngleMode = true;
