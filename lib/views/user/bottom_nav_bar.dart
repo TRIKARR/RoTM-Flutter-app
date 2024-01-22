@@ -1,8 +1,8 @@
-import 'dart:convert';
+// ignore_for_file: unused_import, non_constant_identifier_names
 
+import 'dart:convert';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-// ignore: unused_import
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rotm/models/userdata.dart';
 import 'package:rotm/views/user/browse.dart';
@@ -19,6 +19,29 @@ class BottomNavComponent extends StatefulWidget {
 }
 
 class _BottomNavComponentState extends State<BottomNavComponent> {
+  void ExtractUserRequest() async {
+    var url = Uri.parse('${EndPoint}extract');
+    var queryParams = {"id": BRoTM_UserID};
+    var response = await http.get(url.replace(queryParameters: queryParams));
+    var responseData =
+        jsonDecode(response.body); // Add this line to parse the JSON response
+    var repoData = responseData["report"];
+    var temp = responseData["temp"];
+    var resp = responseData["resp"];
+    // Store the "temp" array in a variable
+    UserRespData = resp;
+    UserTempData = temp;
+    UserRepoData = repoData;
+    // ignore: avoid_print
+    print(queryParams.toString());
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    ExtractUserRequest();
+  }
+
   double height = Platform.isAndroid ? 50 : 70;
   int _page = 0;
   final List<Widget> _pages = [

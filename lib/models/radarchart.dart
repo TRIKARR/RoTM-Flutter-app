@@ -22,6 +22,7 @@ class RadarChartSample1 extends StatefulWidget {
 }
 
 class _RadarChartSample1State extends State<RadarChartSample1> {
+ // ignore: non_constant_identifier_names
  void ExtractUserRequest() async {
     var url = Uri.parse('${EndPoint}extract');
     var queryParams = {"id": BRoTM_UserID};

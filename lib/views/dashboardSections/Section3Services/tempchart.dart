@@ -1,4 +1,4 @@
-// ignore_for_file: unused_import, avoid_print
+// ignore_for_file: unused_import, avoid_print, non_constant_identifier_names
 
 import 'dart:convert';
 
@@ -29,7 +29,6 @@ class _UserTemperatureGraphState extends State<UserTemperatureGraph> {
     UserRespData = resp;
     UserTempData = temp;
     UserRepoData = repoData;
-    // ignore: avoid_print
     print(queryParams.toString());
   }
 

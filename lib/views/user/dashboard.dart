@@ -1,4 +1,7 @@
+// ignore: duplicate_ignore
 // ignore: unused_import
+// ignore_for_file: unused_import, duplicate_ignore
+
 import 'dart:convert';
 import 'dart:ffi';
 // ignore: unused_import
@@ -32,6 +35,7 @@ class _UserDashBoardState extends State<UserDashBoard> {
   double frheigh = Platform.isAndroid ? 5.0 : 15;
   double ftheigh = Platform.isAndroid ? 5.0 : 15;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  // ignore: non_constant_identifier_names
   void ExtractUserRequest() async {
     var url = Uri.parse('${EndPoint}extract');
     var queryParams = {"id": BRoTM_UserID};

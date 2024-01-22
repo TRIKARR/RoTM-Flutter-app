@@ -12,6 +12,7 @@ class UserTemperature extends StatefulWidget {
 }
 
 class _UserTemperatureState extends State<UserTemperature> {
+  // ignore: non_constant_identifier_names
   void ExtractUserRequest() async {
     var url = Uri.parse('${EndPoint}extract');
     var queryParams = {"id": BRoTM_UserID};
