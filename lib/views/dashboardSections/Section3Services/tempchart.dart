@@ -24,9 +24,12 @@ class _UserTemperatureGraphState extends State<UserTemperatureGraph> {
     var responseData =
         jsonDecode(response.body); // Add this line to parse the JSON response
     var tempData = responseData["temp"];
-    var respData = responseData["resp"]; // Store the "temp" array in a variable
+    var respData = responseData["resp"];
+    var repoData = responseData["report"];
+    // Store the "temp" array in a variable
     UserTempData = tempData;
     UserRespData = respData;
+    UserRepoData = repoData;
 
     print(queryParams.toString());
   }

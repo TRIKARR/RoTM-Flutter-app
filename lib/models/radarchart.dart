@@ -1,7 +1,10 @@
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:rotm/models/UI_Resources/app_colors.dart';
 import 'package:rotm/models/UI_Resources/color_extensions.dart';
+import 'package:rotm/models/userdata.dart';
 
 class RadarChartSample1 extends StatefulWidget {
   RadarChartSample1({super.key});
@@ -19,6 +22,26 @@ class RadarChartSample1 extends StatefulWidget {
 }
 
 class _RadarChartSample1State extends State<RadarChartSample1> {
+  // ignore: non_constant_identifier_names
+  void ExtractUserRequest() async {
+    var url = Uri.parse('http://192.168.0.241:3000/extract');
+    var queryParams = {"id": BRoTM_UserID};
+    var response = await http.get(url.replace(queryParameters: queryParams));
+    var responseData =
+        jsonDecode(response.body); // Add this line to parse the JSON response
+    var repoData = responseData["report"];
+    // Store the "temp" array in a variable
+    UserRepoData = repoData;
+    // ignore: avoid_print
+    print(queryParams.toString());
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    ExtractUserRequest();
+  }
+
   int selectedDataSetIndex = -1;
   double angleValue = 0;
   bool relativeAngleMode = true;
@@ -109,7 +132,7 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                   },
                 ),
                 dataSets: [
-                  //Do not touch this Widget 
+                  //Do not touch this Widget
                   RadarDataSet(
                     fillColor: const Color.fromARGB(255, 255, 255, 255),
                     borderColor: widget.artColor,
@@ -121,12 +144,13 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                   ),
                   //Only use this widget to showcase the User Data
                   RadarDataSet(
-                    fillColor: const Color.fromARGB(255, 255, 0, 0).withOpacity(0.5),
+                    fillColor:
+                        const Color.fromARGB(255, 255, 0, 0).withOpacity(0.5),
                     borderColor: Colors.black,
                     dataEntries: [
-                      const RadarEntry(value: 7),
-                      const RadarEntry(value: 9),
-                      const RadarEntry(value: 8),
+                      RadarEntry(value: UserRepoData[0].toDouble()),
+                      RadarEntry(value: UserRepoData[1].toDouble()),
+                      RadarEntry(value: UserRepoData[2].toDouble()),
                     ],
                   ),
                   // Do not Touch this Widget
@@ -147,6 +171,7 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                 titleTextStyle: const TextStyle(
                     color: Colors.black,
                     fontSize: 10,
+                    fontWeight: FontWeight.bold,
                     fontStyle: FontStyle.italic),
                 getTitle: (index, angle) {
                   final usedAngle =
@@ -169,7 +194,6 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                   }
                 },
                 gridBorderData: const BorderSide(color: Colors.grey, width: 1),
-                tickCount: 10,
                 ticksTextStyle:
                     const TextStyle(color: Color.fromARGB(0, 0, 0, 0)),
                 tickBorderData: const BorderSide(

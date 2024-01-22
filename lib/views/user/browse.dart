@@ -1,10 +1,13 @@
-// ignore_for_file: unused_import
+// ignore_for_file: unused_import, non_constant_identifier_names, avoid_print, prefer_const_constructors
+import 'dart:convert';
 
+import 'package:http/http.dart' as http;
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:rotm/models/radarchart.dart';
+import 'package:rotm/models/userdata.dart';
 
 class UserBrowseMenu extends StatefulWidget {
   const UserBrowseMenu({super.key});
@@ -14,6 +17,25 @@ class UserBrowseMenu extends StatefulWidget {
 }
 
 class _UserBrowseMenuState extends State<UserBrowseMenu> {
+  void ExtractUserRequest() async {
+    var url = Uri.parse('http://192.168.0.241:3000/extract');
+    var queryParams = {"id": BRoTM_UserID};
+    var response = await http.get(url.replace(queryParameters: queryParams));
+    var responseData =
+        jsonDecode(response.body); // Add this line to parse the JSON response
+    var repoData = responseData["report"];
+    // Store the "temp" array in a variable
+    UserRepoData = repoData;
+    print(response.body);
+    print(queryParams.toString());
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    ExtractUserRequest();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,6 +78,166 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                                 color: const Color.fromARGB(255, 255, 0, 0)),
                             height: MediaQuery.of(context).size.height - 635,
                             width: MediaQuery.of(context).size.width - 240,
+                            child: Column(
+                              children: [
+                                Container(
+                                  height: 50,
+                                  width:
+                                      MediaQuery.of(context).size.width - 240,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(
+                                          color: Color.fromARGB(255, 0, 0, 0)),
+                                      color: const Color.fromARGB(
+                                          255, 255, 255, 255)),
+                                  child: Row(
+                                    children: [
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text("PHYSICAL - 6/9",
+                                          style: GoogleFonts.getFont(
+                                            'Orbitron',
+                                            fontSize: 18,
+                                            color: const Color.fromARGB(
+                                                255, 0, 0, 0),
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  height: 50,
+                                  width:
+                                      MediaQuery.of(context).size.width - 240,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(
+                                          color: Color.fromARGB(255, 0, 0, 0)),
+                                      color: const Color.fromARGB(
+                                          255, 255, 255, 255)),
+                                  child: Row(
+                                    children: [
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text("PHYSICAL - 6/9",
+                                          style: GoogleFonts.getFont(
+                                            'Orbitron',
+                                            fontSize: 18,
+                                            color: const Color.fromARGB(
+                                                255, 0, 0, 0),
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  height: 50,
+                                  width:
+                                      MediaQuery.of(context).size.width - 240,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(
+                                          color: Color.fromARGB(255, 0, 0, 0)),
+                                      color: const Color.fromARGB(
+                                          255, 255, 255, 255)),
+                                  child: Row(
+                                    children: [
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text("PHYSICAL - 6/9",
+                                          style: GoogleFonts.getFont(
+                                            'Orbitron',
+                                            fontSize: 18,
+                                            color: const Color.fromARGB(
+                                                255, 0, 0, 0),
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  height: 50,
+                                  width:
+                                      MediaQuery.of(context).size.width - 240,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(
+                                          color: Color.fromARGB(255, 0, 0, 0)),
+                                      color: const Color.fromARGB(
+                                          255, 255, 255, 255)),
+                                  child: Row(
+                                    children: [
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text("MENTAL - 6/9",
+                                          style: GoogleFonts.getFont(
+                                            'Orbitron',
+                                            fontSize: 20,
+                                            color: const Color.fromARGB(
+                                                255, 0, 0, 0),
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  height: 50,
+                                  width:
+                                      MediaQuery.of(context).size.width - 240,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(
+                                          color: Color.fromARGB(255, 0, 0, 0)),
+                                      color: const Color.fromARGB(
+                                          255, 255, 255, 255)),
+                                  child: Row(
+                                    children: [
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text("SOCIAL - 6/9",
+                                          style: GoogleFonts.getFont(
+                                            'Orbitron',
+                                            fontSize: 20,
+                                            color: const Color.fromARGB(
+                                                255, 0, 0, 0),
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  height: 40,
+                                  width:
+                                      MediaQuery.of(context).size.width - 240,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(
+                                          color: Color.fromARGB(255, 0, 0, 0)),
+                                      color: const Color.fromARGB(
+                                          255, 255, 255, 255)),
+                                  child: Row(
+                                    children: [
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text("PHYSICAL - 6/9",
+                                          style: GoogleFonts.getFont(
+                                            'Orbitron',
+                                            fontSize: 18,
+                                            color: const Color.fromARGB(
+                                                255, 0, 0, 0),
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
