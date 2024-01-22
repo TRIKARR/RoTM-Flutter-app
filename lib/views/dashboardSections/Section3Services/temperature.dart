@@ -35,6 +35,7 @@ class _UserTemperatureState extends State<UserTemperature> {
     super.initState();
     ExtractUserRequest();
   }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -77,15 +78,22 @@ class _UserTemperatureState extends State<UserTemperature> {
             const SizedBox(
               width: 5,
             ),
-            const Column(
+            Column(
               children: [
                 Center(
-                    child: Text("32",
-                        style: TextStyle(
+                    child: Text(
+                        (((UserTempData[0].toDouble() +
+                                    UserTempData[1].toDouble() +
+                                    UserTempData[2].toDouble() +
+                                    UserTempData[3].toDouble()) /
+                                4))
+                            .toInt()
+                            .toString(),
+                        style: const TextStyle(
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
                             color: Color.fromARGB(255, 0, 0, 0)))),
-                Text("°C",
+                const Text("°C",
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,

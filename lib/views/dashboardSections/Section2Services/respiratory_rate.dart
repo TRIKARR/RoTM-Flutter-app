@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rotm/models/userdata.dart';
 
 class UserRespirationRateChart extends StatefulWidget {
   const UserRespirationRateChart({super.key});
 
   @override
-  State<UserRespirationRateChart> createState() => _UserRespirationRateChartState();
+  State<UserRespirationRateChart> createState() =>
+      _UserRespirationRateChartState();
 }
 
 class _UserRespirationRateChartState extends State<UserRespirationRateChart> {
@@ -56,7 +58,13 @@ class _UserRespirationRateChartState extends State<UserRespirationRateChart> {
               color: const Color.fromARGB(255, 0, 0, 0),
               fontWeight: FontWeight.bold,
             )),
-        Text("25",
+        Text(
+            ((UserRespData[0].toDouble() +
+                        UserRespData[1].toDouble() +
+                        UserRespData[2].toDouble() +
+                        UserRespData[3].toDouble()) /
+                    4)
+                .toString(),
             style: GoogleFonts.getFont(
               'Orbitron',
               fontSize: 25,
