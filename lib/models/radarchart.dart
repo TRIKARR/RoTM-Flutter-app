@@ -108,7 +108,35 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                     });
                   },
                 ),
-                dataSets: showingDataSets(),
+                dataSets: [
+                  RadarDataSet(
+                    fillColor: Color.fromARGB(255, 255, 255, 255),
+                    borderColor: widget.artColor,
+                    dataEntries: [
+                      RadarEntry(value: 10),
+                      RadarEntry(value: 10),
+                      RadarEntry(value: 10),
+                    ],
+                  ),
+                  RadarDataSet(
+                    fillColor: Color.fromARGB(255, 255, 0, 0).withOpacity(0.5),
+                    borderColor: Colors.black,
+                    dataEntries: [
+                      RadarEntry(value: 7),
+                      RadarEntry(value: 9),
+                      RadarEntry(value: 8),
+                    ],
+                  ),
+                  RadarDataSet(
+                    fillColor: Colors.transparent,
+                    borderColor: Colors.transparent,
+                    dataEntries: [
+                      RadarEntry(value: 10),
+                      RadarEntry(value: 2),
+                      RadarEntry(value: 5),
+                    ],
+                  ),
+                ],
                 radarBackgroundColor: const Color.fromARGB(0, 255, 255, 255),
                 borderData: FlBorderData(show: true),
                 radarBorderData: const BorderSide(
@@ -138,11 +166,12 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                   }
                 },
                 gridBorderData: const BorderSide(color: Colors.grey, width: 1),
-                tickCount: 100,
-                ticksTextStyle: const TextStyle(color: Colors.transparent),
+                tickCount: 10,
+                ticksTextStyle:
+                    const TextStyle(color: Color.fromARGB(0, 0, 0, 0)),
                 tickBorderData: const BorderSide(
                   style: BorderStyle.solid,
-                  color: Color.fromARGB(255, 255, 255, 255),
+                  color: Color.fromARGB(255, 0, 0, 0),
                 ),
               ),
               swapAnimationDuration: const Duration(milliseconds: 400),
@@ -185,9 +214,9 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
         color: widget.fashionColor,
         //Range - {100 to 900} - Relative based on the Max Value
         values: [
-          10,
+          0,
+          0,
           1,
-          5,
         ],
       ),
     ];
