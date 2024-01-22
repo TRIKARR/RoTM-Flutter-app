@@ -55,7 +55,7 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                             color: const Color.fromRGBO(255, 255, 255, 1)),
                         height: 340,
                         width: 220,
-                        child: RadarChartSample1(),
+                        child: const RadarChartExample(),
                       )
                     ],
                   ),
