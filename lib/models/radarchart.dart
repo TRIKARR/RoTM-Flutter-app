@@ -134,8 +134,8 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                 dataSets: [
                   //Do not touch this Widget
                   RadarDataSet(
-                    fillColor: const Color.fromARGB(255, 255, 255, 255),
-                    borderColor: widget.artColor,
+                    fillColor: Colors.transparent,
+                    borderColor: Colors.black,
                     dataEntries: [
                       const RadarEntry(value: 10),
                       const RadarEntry(value: 10),
@@ -167,7 +167,7 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                 radarBackgroundColor: const Color.fromARGB(0, 255, 255, 255),
                 borderData: FlBorderData(show: true),
                 radarBorderData: const BorderSide(
-                    color: Color.fromARGB(255, 0, 0, 0), width: 4),
+                    color: Color.fromARGB(255, 0, 0, 0), width: 2),
                 titleTextStyle: const TextStyle(
                     color: Colors.black,
                     fontSize: 10,
@@ -193,12 +193,13 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                       return const RadarChartTitle(text: '');
                   }
                 },
-                gridBorderData: const BorderSide(color: Colors.grey, width: 1),
+                gridBorderData: const BorderSide(color: Colors.grey, width: 2),
+                tickCount: 10,
                 ticksTextStyle:
                     const TextStyle(color: Color.fromARGB(0, 0, 0, 0)),
                 tickBorderData: const BorderSide(
                   style: BorderStyle.solid,
-                  color: Color.fromARGB(255, 0, 0, 0),
+                  color: Colors.transparent,
                 ),
               ),
               swapAnimationDuration: const Duration(milliseconds: 400),
