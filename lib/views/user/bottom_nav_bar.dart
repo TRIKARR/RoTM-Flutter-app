@@ -55,6 +55,7 @@ class _BottomNavComponentState extends State<BottomNavComponent> {
       body: _pages[_page],
       backgroundColor: Colors.deepPurple.shade900,
       bottomNavigationBar: CurvedNavigationBar(
+        index: 0,
         backgroundColor: Colors.deepPurple.shade900,
         color: const Color.fromARGB(255, 255, 255, 255),
         animationDuration: const Duration(milliseconds: 250),
