@@ -21,7 +21,7 @@ class RadarChartSample1 extends StatefulWidget {
 class _RadarChartSample1State extends State<RadarChartSample1> {
   int selectedDataSetIndex = -1;
   double angleValue = 0;
-  bool relativeAngleMode = false;
+  bool relativeAngleMode = true;
 
   @override
   Widget build(BuildContext context) {
@@ -48,11 +48,11 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                       child: AnimatedContainer(
                         duration: const Duration(milliseconds: 300),
                         margin: const EdgeInsets.symmetric(vertical: 2),
-                        height: 9,
+                        height: 0,
                         decoration: BoxDecoration(
                           color: isSelected
                               ? AppColors.pageBackground
-                              : Colors.transparent,
+                              : Colors.black,
                           borderRadius: BorderRadius.circular(46),
                         ),
                         padding: const EdgeInsets.symmetric(
@@ -90,9 +90,10 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                 .toList(),
           ),
           AspectRatio(
-            aspectRatio: 1.3,
+            aspectRatio: 1,
             child: RadarChart(
               RadarChartData(
+                radarShape: RadarShape.polygon,
                 radarTouchData: RadarTouchData(
                   touchCallback: (FlTouchEvent event, response) {
                     if (!event.isInterestedForInteractions) {
@@ -108,11 +109,14 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                   },
                 ),
                 dataSets: showingDataSets(),
-                radarBackgroundColor: Colors.transparent,
-                borderData: FlBorderData(show: false),
-                radarBorderData: const BorderSide(color: Colors.transparent),
-                titleTextStyle:
-                    const TextStyle(color: Colors.black, fontSize: 14),
+                radarBackgroundColor: const Color.fromARGB(0, 255, 255, 255),
+                borderData: FlBorderData(show: true),
+                radarBorderData: const BorderSide(
+                    color: Color.fromARGB(255, 0, 0, 0), width: 4),
+                titleTextStyle: const TextStyle(
+                    color: Colors.black,
+                    fontSize: 10,
+                    fontStyle: FontStyle.italic),
                 getTitle: (index, angle) {
                   final usedAngle =
                       relativeAngleMode ? angle + angleValue : angleValue;
@@ -133,11 +137,13 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                       return const RadarChartTitle(text: '');
                   }
                 },
-                tickCount: 1,
-                ticksTextStyle: const TextStyle(
-                    color: Color.fromARGB(0, 0, 0, 0), fontSize: 10),
-                tickBorderData: const BorderSide(color: Colors.transparent),
-                gridBorderData: BorderSide(color: widget.gridColor, width: 2),
+                gridBorderData: const BorderSide(color: Colors.grey, width: 1),
+                tickCount: 100,
+                ticksTextStyle: const TextStyle(color: Colors.transparent),
+                tickBorderData: const BorderSide(
+                  style: BorderStyle.solid,
+                  color: Color.fromARGB(255, 255, 255, 255),
+                ),
               ),
               swapAnimationDuration: const Duration(milliseconds: 400),
             ),
@@ -164,10 +170,10 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
             : rawDataSet.color.withOpacity(0.05),
         borderColor:
             isSelected ? rawDataSet.color : rawDataSet.color.withOpacity(0.25),
-        entryRadius: isSelected ? 3 : 2,
+        entryRadius: isSelected ? 5 : 2,
         dataEntries:
             rawDataSet.values.map((e) => RadarEntry(value: e)).toList(),
-        borderWidth: isSelected ? 2.3 : 2,
+        borderWidth: isSelected ? 3 : 2,
       );
     }).toList();
   }
@@ -175,48 +181,13 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
   List<RawDataSet> rawDataSets() {
     return [
       RawDataSet(
-        title: 'Fashion',
+        title: '',
         color: widget.fashionColor,
+        //Range - {100 to 900} - Relative based on the Max Value
         values: [
-          300,
-          50,
-          250,
-        ],
-      ),
-      RawDataSet(
-        title: 'Art & Tech',
-        color: widget.artColor,
-        values: [
-          250,
-          100,
-          200,
-        ],
-      ),
-      RawDataSet(
-        title: 'Entertainment',
-        color: widget.entertainmentColor,
-        values: [
-          200,
-          150,
-          50,
-        ],
-      ),
-      RawDataSet(
-        title: 'Off-road Vehicle',
-        color: widget.offRoadColor,
-        values: [
-          150,
-          200,
-          150,
-        ],
-      ),
-      RawDataSet(
-        title: 'Boxing',
-        color: widget.boxingColor,
-        values: [
-          100,
-          250,
-          100,
+          10,
+          1,
+          5,
         ],
       ),
     ];
