@@ -110,30 +110,30 @@ class _RadarChartSample1State extends State<RadarChartSample1> {
                 ),
                 dataSets: [
                   RadarDataSet(
-                    fillColor: Color.fromARGB(255, 255, 255, 255),
+                    fillColor: const Color.fromARGB(255, 255, 255, 255),
                     borderColor: widget.artColor,
                     dataEntries: [
-                      RadarEntry(value: 10),
-                      RadarEntry(value: 10),
-                      RadarEntry(value: 10),
+                      const RadarEntry(value: 10),
+                      const RadarEntry(value: 10),
+                      const RadarEntry(value: 10),
                     ],
                   ),
                   RadarDataSet(
-                    fillColor: Color.fromARGB(255, 255, 0, 0).withOpacity(0.5),
+                    fillColor: const Color.fromARGB(255, 255, 0, 0).withOpacity(0.5),
                     borderColor: Colors.black,
                     dataEntries: [
-                      RadarEntry(value: 7),
-                      RadarEntry(value: 9),
-                      RadarEntry(value: 8),
+                      const RadarEntry(value: 7),
+                      const RadarEntry(value: 9),
+                      const RadarEntry(value: 8),
                     ],
                   ),
                   RadarDataSet(
                     fillColor: Colors.transparent,
                     borderColor: Colors.transparent,
                     dataEntries: [
-                      RadarEntry(value: 10),
-                      RadarEntry(value: 2),
-                      RadarEntry(value: 5),
+                      const RadarEntry(value: 10),
+                      const RadarEntry(value: 2),
+                      const RadarEntry(value: 5),
                     ],
                   ),
                 ],
