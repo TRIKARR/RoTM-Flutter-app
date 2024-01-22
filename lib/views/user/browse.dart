@@ -41,21 +41,41 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                 child: SafeArea(
                   child: Row(
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: const Color.fromARGB(255, 255, 255, 255)),
-                        height: MediaQuery.of(context).size.height - 100,
-                        width: MediaQuery.of(context).size.width - 240,
+                      const SizedBox(
+                        width: 5,
                       ),
-                      Container(
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: const Color.fromRGBO(255, 255, 255, 1)),
-                        height: 340,
-                        width: 220,
-                        child: const RadarChartExample(),
+                      Column(
+                        children: [
+                          SizedBox(
+                            height: MediaQuery.of(context).size.height - 870,
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: const Color.fromARGB(255, 255, 0, 0)),
+                            height: MediaQuery.of(context).size.height - 635,
+                            width: MediaQuery.of(context).size.width - 240,
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Column(
+                        children: [
+                          SizedBox(
+                            height: MediaQuery.of(context).size.height - 870,
+                          ),
+                          Container(
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Color.fromARGB(255, 0, 213, 255)),
+                            height: 290,
+                            width: 220,
+                            child: RadarChartSample1(),
+                          ),
+                        ],
                       )
                     ],
                   ),
