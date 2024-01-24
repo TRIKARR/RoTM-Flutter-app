@@ -76,7 +76,7 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: const Color.fromARGB(255, 255, 0, 0)),
-                            height: 250,
+                            height: 290,
                             width: MediaQuery.of(context).size.width - 240,
                             child: Column(
                               children: [
@@ -95,7 +95,27 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                                       const SizedBox(
                                         width: 10,
                                       ),
-                                      Text("PHYSICAL - 6/9",
+                                      Text("  STAT SCORES",
+                                          style: GoogleFonts.getFont(
+                                            'Orbitron',
+                                            fontSize: 18,
+                                            color: const Color.fromARGB(
+                                                255, 0, 0, 0),
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  height: 10,
+                                  width:
+                                      MediaQuery.of(context).size.width - 240,
+                                  child: Row(
+                                    children: [
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text("",
                                           style: GoogleFonts.getFont(
                                             'Orbitron',
                                             fontSize: 18,
@@ -133,21 +153,15 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                                   ),
                                 ),
                                 Container(
-                                  height: 50,
+                                  height: 10,
                                   width:
                                       MediaQuery.of(context).size.width - 240,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      border: Border.all(
-                                          color: Color.fromARGB(255, 0, 0, 0)),
-                                      color: const Color.fromARGB(
-                                          255, 255, 255, 255)),
                                   child: Row(
                                     children: [
                                       const SizedBox(
                                         width: 10,
                                       ),
-                                      Text("PHYSICAL - 6/9",
+                                      Text("",
                                           style: GoogleFonts.getFont(
                                             'Orbitron',
                                             fontSize: 18,
@@ -185,6 +199,26 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                                   ),
                                 ),
                                 Container(
+                                  height: 10,
+                                  width:
+                                      MediaQuery.of(context).size.width - 240,
+                                  child: Row(
+                                    children: [
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text("",
+                                          style: GoogleFonts.getFont(
+                                            'Orbitron',
+                                            fontSize: 18,
+                                            color: const Color.fromARGB(
+                                                255, 0, 0, 0),
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                                Container(
                                   height: 50,
                                   width:
                                       MediaQuery.of(context).size.width - 240,
@@ -211,7 +245,27 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                                   ),
                                 ),
                                 Container(
-                                  height: 40,
+                                  height: 10,
+                                  width:
+                                      MediaQuery.of(context).size.width - 240,
+                                  child: Row(
+                                    children: [
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text("",
+                                          style: GoogleFonts.getFont(
+                                            'Orbitron',
+                                            fontSize: 18,
+                                            color: const Color.fromARGB(
+                                                255, 0, 0, 0),
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  height: 50,
                                   width:
                                       MediaQuery.of(context).size.width - 240,
                                   decoration: BoxDecoration(
@@ -225,7 +279,7 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                                       const SizedBox(
                                         width: 10,
                                       ),
-                                      Text("PHYSICAL - 6/9",
+                                      Text(" OVERALL - 69",
                                           style: GoogleFonts.getFont(
                                             'Orbitron',
                                             fontSize: 18,
