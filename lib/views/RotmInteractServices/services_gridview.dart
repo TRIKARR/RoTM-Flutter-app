@@ -1,4 +1,6 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:rotm/views/DashboardExtend/respiratory_extended.dart';
 import 'package:rotm/views/RotmInteractServices/analysisUserChartHEalth.dart';
 import 'package:rotm/views/RotmInteractServices/clinical.dart';
 import 'package:rotm/views/RotmInteractServices/healthinfo.dart';
@@ -16,11 +18,87 @@ class _InteractiveServicesState extends State<InteractiveServices> {
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 2,
-      children: const [
-        DiagnosisService(),
-        HealthInfo(),
-        UserChatBot(),
-        UserReportAnalysisBot(),
+      children: [
+        ClipRRect(
+          //Important Woidget
+          borderRadius: BorderRadius.circular(30),
+          child: OpenContainer(
+            closedColor: Colors.deepPurple.shade900,
+            closedBuilder: (context, action) {
+              return Container(
+                height: 130,
+                width: (130 * 2) + 10,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                ),
+                child: const DiagnosisService(),
+              );
+            },
+            openBuilder: (context, action) =>
+                const UserRespiratoryStatExtended(),
+          ),
+        ),
+        ClipRRect(
+          //Important Woidget
+          borderRadius: BorderRadius.circular(30),
+          child: OpenContainer(
+            closedColor: Colors.deepPurple.shade900,
+            closedBuilder: (context, action) {
+              return Container(
+                height: 130,
+                width: (130 * 2) + 10,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                ),
+                child: const HealthInfo(),
+              );
+            },
+            openBuilder: (context, action) =>
+                const UserRespiratoryStatExtended(),
+          ),
+        ),
+        ClipRRect(
+          //Important Woidget
+          borderRadius: BorderRadius.circular(30),
+          child: OpenContainer(
+            closedColor: Colors.deepPurple.shade900,
+            closedBuilder: (context, action) {
+              return Container(
+                height: 130,
+                width: (130 * 2) + 10,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                ),
+                child: const UserChatBot(),
+              );
+            },
+            openBuilder: (context, action) =>
+                const UserRespiratoryStatExtended(),
+          ),
+        ),
+        ClipRRect(
+          //Important Woidget
+          borderRadius: BorderRadius.circular(30),
+          child: OpenContainer(
+            closedColor: Colors.deepPurple.shade900,
+            closedBuilder: (context, action) {
+              return Container(
+                height: 130,
+                width: (130 * 2) + 10,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                ),
+                child: const UserReportAnalysisBot(),
+              );
+            },
+            openBuilder: (context, action) =>
+                const UserRespiratoryStatExtended(),
+          ),
+        ),
       ],
     );
   }
