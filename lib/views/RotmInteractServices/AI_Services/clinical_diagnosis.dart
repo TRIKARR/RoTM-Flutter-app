@@ -12,6 +12,7 @@ class UserClinicalDiagnosis extends StatefulWidget {
 }
 
 class _UserClinicalDiagnosisState extends State<UserClinicalDiagnosis> {
+  // ignore: non_constant_identifier_names
   void ExtractUserRequest() async {
     var url = Uri.parse('${EndPoint}extract');
     var queryParams = {"id": BRoTM_UserID};

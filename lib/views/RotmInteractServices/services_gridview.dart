@@ -39,44 +39,50 @@ class _InteractiveServicesState extends State<InteractiveServices> {
             openBuilder: (context, action) => const UserClinicalDiagnosis(),
           ),
         ),
-        ClipRRect(
-          //Important Woidget
-          borderRadius: BorderRadius.circular(30),
-          child: OpenContainer(
-            closedColor: Colors.deepPurple.shade900,
-            closedBuilder: (context, action) {
-              return Container(
-                height: 130,
-                width: (130 * 2) + 10,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: const Color.fromARGB(255, 255, 255, 255),
-                ),
-                child: const HealthInfo(),
-              );
-            },
-            openBuilder: (context, action) =>
-                const UserRespiratoryStatExtended(),
+        Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: ClipRRect(
+            //Important Woidget
+            borderRadius: BorderRadius.circular(30),
+            child: OpenContainer(
+              closedColor: Colors.deepPurple.shade900,
+              closedBuilder: (context, action) {
+                return Container(
+                  height: 130,
+                  width: (130 * 2) + 10,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                  ),
+                  child: const HealthInfo(),
+                );
+              },
+              openBuilder: (context, action) =>
+                  const UserRespiratoryStatExtended(),
+            ),
           ),
         ),
-        ClipRRect(
-          //Important Woidget
-          borderRadius: BorderRadius.circular(30),
-          child: OpenContainer(
-            closedColor: Colors.deepPurple.shade900,
-            closedBuilder: (context, action) {
-              return Container(
-                height: 130,
-                width: (130 * 2) + 10,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: const Color.fromARGB(255, 255, 255, 255),
-                ),
-                child: const UserChatBot(),
-              );
-            },
-            openBuilder: (context, action) =>
-                const UserRespiratoryStatExtended(),
+        Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: ClipRRect(
+            //Important Woidget
+            borderRadius: BorderRadius.circular(30),
+            child: OpenContainer(
+              closedColor: Colors.deepPurple.shade900,
+              closedBuilder: (context, action) {
+                return Container(
+                  height: 130,
+                  width: (130 * 2) + 10,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                  ),
+                  child: const UserChatBot(),
+                );
+              },
+              openBuilder: (context, action) =>
+                  const UserRespiratoryStatExtended(),
+            ),
           ),
         ),
         ClipRRect(
