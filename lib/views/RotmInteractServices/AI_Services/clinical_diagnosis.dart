@@ -22,7 +22,7 @@ class _UserClinicalDiagnosisState extends State<UserClinicalDiagnosis> {
         ),
       ),
       body: const Center(
-        child: Text('Your Scaffold Body'),
+        child: Text('Your Scaffold Body user'),
       ),
     );
   }
