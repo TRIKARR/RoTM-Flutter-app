@@ -6,4 +6,4 @@ var BRoTM_UserID = "";
 var UserTempData;
 var UserRespData;
 var UserRepoData;
-var EndPoint = "https://9bbf-103-83-155-164.ngrok-free.app/";
+var EndPoint = "https://5d36-103-83-155-164.ngrok-free.app/";

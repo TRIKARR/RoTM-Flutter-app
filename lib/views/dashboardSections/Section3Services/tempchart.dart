@@ -37,6 +37,9 @@ class _UserTemperatureGraphState extends State<UserTemperatureGraph> {
     super.initState();
     ExtractUserRequest();
   }
+
+  var x = (UserTempData[0]?.toDouble() ?? 0.0);
+
   @override
   Widget build(BuildContext context) {
     return Column(
