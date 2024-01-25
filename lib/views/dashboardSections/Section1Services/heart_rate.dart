@@ -1,4 +1,4 @@
-// ignore_for_file: unused_import
+// ignore_for_file: unused_import, non_constant_identifier_names
 import 'dart:convert';
 
 import "package:http/http.dart" as http;
@@ -35,6 +35,7 @@ class _UserHeartPulseState extends State<UserHeartPulse> {
     UserOxyData = oxy.toDouble();
     UserPulseData = pulse.toDouble();
     UserSleepData = sleep.toDouble();
+    // ignore: avoid_print
     print(queryParams.toString());
   }
 

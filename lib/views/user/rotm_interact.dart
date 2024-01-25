@@ -35,7 +35,7 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
     UserOxyData = oxy.toDouble();
     UserPulseData = pulse.toDouble();
     UserSleepData = sleep.toDouble();
-    print(queryParams.toString());
+
   }
 
   @override

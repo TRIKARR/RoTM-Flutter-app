@@ -38,7 +38,7 @@ class _BottomNavComponentState extends State<BottomNavComponent> {
     UserOxyData = oxy.toDouble();
     UserPulseData = pulse.toDouble();
     UserSleepData = sleep.toDouble();
-    print(queryParams.toString());
+
   }
 
   @override

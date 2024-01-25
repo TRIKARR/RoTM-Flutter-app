@@ -32,7 +32,7 @@ class _UserTemperatureState extends State<UserTemperature> {
     UserOxyData = oxy.toDouble();
     UserPulseData = pulse.toDouble();
     UserSleepData = sleep.toDouble();
-    print(queryParams.toString());
+
   }
 
   @override
