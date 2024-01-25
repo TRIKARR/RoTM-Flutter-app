@@ -3,7 +3,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rotm/models/userdata.dart';
+import 'package:rotm/userdata.dart';
 
 class UserRespirationRate extends StatefulWidget {
   const UserRespirationRate({super.key});

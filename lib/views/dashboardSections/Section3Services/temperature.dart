@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rotm/models/userdata.dart';
+import 'package:rotm/userdata.dart';
 
 class UserTemperature extends StatefulWidget {
   const UserTemperature({super.key});

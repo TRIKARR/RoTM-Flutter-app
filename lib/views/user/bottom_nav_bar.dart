@@ -4,7 +4,7 @@ import 'dart:convert';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rotm/models/userdata.dart';
+import 'package:rotm/userdata.dart';
 import 'package:rotm/views/user/browse.dart';
 import 'package:rotm/views/user/dashboard.dart';
 import 'package:rotm/views/user/rotm_interact.dart';

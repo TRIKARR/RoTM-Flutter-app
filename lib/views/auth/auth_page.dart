@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:rotm/assets/constants.dart';
-import 'package:rotm/models/userdata.dart';
+import 'package:rotm/userdata.dart';
 import 'package:rotm/views/auth/signup_page.dart';
 import 'package:http/http.dart' as http;
 import 'package:rotm/views/user/bottom_nav_bar.dart';

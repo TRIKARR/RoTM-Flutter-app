@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:rotm/models/radarchart.dart';
-import 'package:rotm/models/userdata.dart';
+import 'package:rotm/userdata.dart';
 
 class UserBrowseMenu extends StatefulWidget {
   const UserBrowseMenu({super.key});

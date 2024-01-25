@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rotm/models/rotmStatCard.dart';
-import 'package:rotm/models/userdata.dart';
+import 'package:rotm/userdata.dart';
 import 'package:rotm/views/RotmInteractServices/services_gridview.dart';
 
 class UserInteractionMenu extends StatefulWidget {

@@ -4,7 +4,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:rotm/models/UI_Resources/app_colors.dart';
 import 'package:rotm/models/UI_Resources/color_extensions.dart';
-import 'package:rotm/models/userdata.dart';
+import 'package:rotm/userdata.dart';
 
 class RadarChartSample1 extends StatefulWidget {
   RadarChartSample1({super.key});

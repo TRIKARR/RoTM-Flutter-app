@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rotm/userdata.dart';
 
 class UserHeartPulseStatExdended extends StatefulWidget {
   const UserHeartPulseStatExdended({super.key});
@@ -24,7 +25,7 @@ class _UserHeartPulseStatExdendedState
         ),
       ),
       body: const Center(
-        child: Text('Your Scaffold Body'),
+        child: Text("Random Testing"),
       ),
     );
   }

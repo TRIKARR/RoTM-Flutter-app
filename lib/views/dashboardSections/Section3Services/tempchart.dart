@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rotm/models/userdata.dart';
+import 'package:rotm/userdata.dart';
 import 'package:http/http.dart' as http;
 
 class UserTemperatureGraph extends StatefulWidget {
@@ -37,8 +37,6 @@ class _UserTemperatureGraphState extends State<UserTemperatureGraph> {
     super.initState();
     ExtractUserRequest();
   }
-
-  var x = (UserTempData[0]?.toDouble() ?? 0.0);
 
   @override
   Widget build(BuildContext context) {

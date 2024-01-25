@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rotm/models/userdata.dart';
+import 'package:rotm/userdata.dart';
 
 class UserRespirationRateChart extends StatefulWidget {
   const UserRespirationRateChart({super.key});

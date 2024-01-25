@@ -4,7 +4,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:rotm/models/userdata.dart';
+import 'package:rotm/userdata.dart';
 
 class UserDragScrollBottomSheet extends StatefulWidget {
   const UserDragScrollBottomSheet({Key? key}) : super(key: key);
