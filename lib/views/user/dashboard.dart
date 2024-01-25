@@ -45,11 +45,16 @@ class _UserDashBoardState extends State<UserDashBoard> {
     var repoData = responseData["report"];
     var temp = responseData["temp"];
     var resp = responseData["resp"];
+    var sleep = responseData["sleep"];
+    var pulse = responseData["pulse"];
+    var oxy = responseData["oxy"];
     // Store the "temp" array in a variable
     UserRespData = resp;
     UserTempData = temp;
     UserRepoData = repoData;
-    // ignore: avoid_print
+    UserOxyData = oxy.toDouble();
+    UserPulseData = pulse.toDouble();
+    UserSleepData = sleep.toDouble();
     print(queryParams.toString());
   }
 
