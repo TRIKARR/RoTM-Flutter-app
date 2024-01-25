@@ -1,4 +1,6 @@
 // ignore_for_file: unused_import
+import 'dart:convert';
+
 import "package:http/http.dart" as http;
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
@@ -14,17 +16,32 @@ class UserHeartPulse extends StatefulWidget {
 }
 
 class _UserHeartPulseState extends State<UserHeartPulse> {
-  void postRequest() async {
-    var url = Uri.parse('http://192.168.0.241:3000/data');
-    var response = await http.get(url);
-    // ignore: avoid_print
-    print(response.body.toString());
+  void ExtractUserRequest() async {
+    var url = Uri.parse('${EndPoint}extract');
+    var queryParams = {"id": BRoTM_UserID};
+    var response = await http.get(url.replace(queryParameters: queryParams));
+    var responseData =
+        jsonDecode(response.body); // Add this line to parse the JSON response
+    var repoData = responseData["report"];
+    var temp = responseData["temp"];
+    var resp = responseData["resp"];
+    var sleep = responseData["sleep"];
+    var pulse = responseData["pulse"];
+    var oxy = responseData["oxy"];
+    // Store the "temp" array in a variable
+    UserRespData = resp;
+    UserTempData = temp;
+    UserRepoData = repoData;
+    UserOxyData = oxy.toDouble();
+    UserPulseData = pulse.toDouble();
+    UserSleepData = sleep.toDouble();
+    print(queryParams.toString());
   }
 
   @override
   void initState() {
     super.initState();
-    postRequest();
+    ExtractUserRequest();
   }
 
   @override

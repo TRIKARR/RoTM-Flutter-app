@@ -1,3 +1,5 @@
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:gauge_indicator/gauge_indicator.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,6 +14,34 @@ class UserSleepCycle extends StatefulWidget {
 }
 
 class _UserSleepCycleState extends State<UserSleepCycle> {
+  void ExtractUserRequest() async {
+    var url = Uri.parse('${EndPoint}extract');
+    var queryParams = {"id": BRoTM_UserID};
+    var response = await http.get(url.replace(queryParameters: queryParams));
+    var responseData =
+        jsonDecode(response.body); // Add this line to parse the JSON response
+    var repoData = responseData["report"];
+    var temp = responseData["temp"];
+    var resp = responseData["resp"];
+    var sleep = responseData["sleep"];
+    var pulse = responseData["pulse"];
+    var oxy = responseData["oxy"];
+    // Store the "temp" array in a variable
+    UserRespData = resp;
+    UserTempData = temp;
+    UserRepoData = repoData;
+    UserOxyData = oxy.toDouble();
+    UserPulseData = pulse.toDouble();
+    UserSleepData = sleep.toDouble();
+    print(queryParams.toString());
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    ExtractUserRequest();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(

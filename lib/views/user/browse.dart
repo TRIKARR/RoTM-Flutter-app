@@ -24,9 +24,18 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
     var responseData =
         jsonDecode(response.body); // Add this line to parse the JSON response
     var repoData = responseData["report"];
+    var temp = responseData["temp"];
+    var resp = responseData["resp"];
+    var sleep = responseData["sleep"];
+    var pulse = responseData["pulse"];
+    var oxy = responseData["oxy"];
     // Store the "temp" array in a variable
+    UserRespData = resp;
+    UserTempData = temp;
     UserRepoData = repoData;
-    print(response.body);
+    UserOxyData = oxy.toDouble();
+    UserPulseData = pulse.toDouble();
+    UserSleepData = sleep.toDouble();
     print(queryParams.toString());
   }
 
