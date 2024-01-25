@@ -150,7 +150,8 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                                       const SizedBox(
                                         width: 10,
                                       ),
-                                      Text("PHYSICAL - 6/9",
+                                      Text(
+                                          "PHYSICAL - ${UserRepoData[0].toDouble()}",
                                           style: GoogleFonts.getFont(
                                             'Orbitron',
                                             fontSize: 18,
@@ -196,7 +197,8 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                                       const SizedBox(
                                         width: 10,
                                       ),
-                                      Text("MENTAL - 6/9",
+                                      Text(
+                                          "MENTAL - ${UserRepoData[1].toDouble()}",
                                           style: GoogleFonts.getFont(
                                             'Orbitron',
                                             fontSize: 20,
@@ -242,7 +244,8 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                                       const SizedBox(
                                         width: 10,
                                       ),
-                                      Text("SOCIAL - 6/9",
+                                      Text(
+                                          "SOCIAL - ${UserRepoData[2].toDouble()}",
                                           style: GoogleFonts.getFont(
                                             'Orbitron',
                                             fontSize: 20,
@@ -288,7 +291,8 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                                       const SizedBox(
                                         width: 10,
                                       ),
-                                      Text(" OVERALL - 69",
+                                      Text(
+                                          " OVERALL - ${((UserRepoData[0].toDouble() + UserRepoData[1].toDouble() + UserRepoData[2].toDouble()) / 3).toInt()}",
                                           style: GoogleFonts.getFont(
                                             'Orbitron',
                                             fontSize: 18,
