@@ -16,7 +16,7 @@ class Page3 extends StatelessWidget {
               height: 100,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 55),
+              padding: const EdgeInsets.only(left: 35),
               child: Row(
                 children: [
                   const Image(
@@ -25,7 +25,7 @@ class Page3 extends StatelessWidget {
                     width: 100,
                   ),
                   Text(
-                    'RoTM',
+                    'BRoTM',
                     style: GoogleFonts.getFont(
                       'Orbitron',
                       fontSize: 65,
