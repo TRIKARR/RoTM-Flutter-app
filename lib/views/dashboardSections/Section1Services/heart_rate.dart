@@ -4,6 +4,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:gauge_indicator/gauge_indicator.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rotm/userdata.dart';
 
 class UserHeartPulse extends StatefulWidget {
   const UserHeartPulse({super.key});
@@ -85,7 +86,7 @@ class _UserHeartPulseState extends State<UserHeartPulse> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 3.0),
-                  child: Text("87",
+                  child: Text(UserPulseData.toInt().toString(),
                       style: GoogleFonts.getFont(
                         'Orbitron',
                         fontSize: 20,

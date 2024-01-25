@@ -26,9 +26,9 @@ class _UserDragScrollBottomSheetState extends State<UserDragScrollBottomSheet> {
     var temp = responseData["temp"];
     var resp = responseData["resp"];
     // Store the "temp" array in a variable
-    UserRespData = resp;
-    UserTempData = temp;
-    UserRepoData = repoData;
+    UserRespData = resp.toDouble();
+    UserTempData = temp.toDouble();
+    UserRepoData = repoData.toDouble();
     // ignore: avoid_print
     print(queryParams.toString());
   }

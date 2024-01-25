@@ -25,10 +25,16 @@ class _UserTemperatureGraphState extends State<UserTemperatureGraph> {
     var repoData = responseData["report"];
     var temp = responseData["temp"];
     var resp = responseData["resp"];
+    var sleep = responseData["sleep"];
+    var pulse = responseData["pulse"];
+    var oxy = responseData["oxy"];
     // Store the "temp" array in a variable
     UserRespData = resp;
     UserTempData = temp;
     UserRepoData = repoData;
+    UserOxyData = oxy.toDouble();
+    UserPulseData = pulse.toDouble();
+    UserSleepData = sleep.toDouble();
     print(queryParams.toString());
   }
 

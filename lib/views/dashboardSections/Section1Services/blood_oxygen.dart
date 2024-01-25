@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:gauge_indicator/gauge_indicator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:rotm/userdata.dart';
 
 class UserBloodOxygen extends StatefulWidget {
   const UserBloodOxygen({super.key});
@@ -58,7 +59,7 @@ class _UserBloodOxygenState extends State<UserBloodOxygen> {
         ),
         Center(
           child: AnimatedRadialGauge(
-            value: 87,
+            value: UserOxyData.toDouble(),
             duration: const Duration(seconds: 2),
             curve: Curves.elasticOut,
             radius: 50,

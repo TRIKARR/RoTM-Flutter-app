@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rotm/userdata.dart';
-
 class UserHeartPulseStatExdended extends StatefulWidget {
   const UserHeartPulseStatExdended({super.key});
 

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gauge_indicator/gauge_indicator.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../userdata.dart';
+
 class UserSleepCycle extends StatefulWidget {
   const UserSleepCycle({super.key});
 
@@ -55,7 +57,7 @@ class _UserSleepCycleState extends State<UserSleepCycle> {
         ),
         Center(
           child: AnimatedRadialGauge(
-            value: 36,
+            value: UserSleepData.toDouble(),
             duration: const Duration(seconds: 2),
             curve: Curves.elasticOut,
             radius: 50,
