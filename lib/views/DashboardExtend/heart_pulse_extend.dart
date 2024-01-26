@@ -52,6 +52,8 @@ class _UserHeartPulseStatExdendedState
             child: Column(
               children: [
                 CupertinoSlidingSegmentedControl(
+                  backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                  padding: EdgeInsets.all(8),
                   children: {
                     0: Text(
                       'HOUR',
@@ -94,6 +96,7 @@ class _UserHeartPulseStatExdendedState
                   onValueChanged: (int? newValue) {
                     setState(() {
                       _sliding = newValue;
+                      
                     });
                   },
                 ),
