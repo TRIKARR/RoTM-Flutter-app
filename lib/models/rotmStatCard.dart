@@ -101,7 +101,7 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                               Padding(
                                 padding: const EdgeInsets.only(right: 30),
                                 child: Text(
-                                  "BOND LEVEL: X",
+                                  "BOND LEVEL: 4",
                                   style: GoogleFonts.getFont(
                                     'Orbitron',
                                     fontSize: 12,
@@ -128,7 +128,7 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                               Padding(
                                 padding: const EdgeInsets.only(right: 1),
                                 child: Text(
-                                  "INTERACT LEVEL: X",
+                                  "INTERACT LEVEL: 4",
                                   style: GoogleFonts.getFont(
                                     'Orbitron',
                                     fontSize: 12,
@@ -197,7 +197,8 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                       width: 1,
                                     ),
                                     borderRadius: BorderRadius.circular(0),
-                                    color: const Color.fromARGB(255, 168, 159, 159),
+                                    color: const Color.fromARGB(
+                                        255, 168, 159, 159),
                                   ),
                                   child: Column(
                                     children: [
@@ -219,8 +220,8 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                         style: GoogleFonts.getFont(
                                           'Orbitron',
                                           fontSize: 16,
-                                          color:
-                                              const Color.fromARGB(255, 166, 0, 255),
+                                          color: const Color.fromARGB(
+                                              255, 166, 0, 255),
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -239,7 +240,8 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                       width: 1,
                                     ),
                                     borderRadius: BorderRadius.circular(0),
-                                    color: const Color.fromARGB(255, 168, 159, 159),
+                                    color: const Color.fromARGB(
+                                        255, 168, 159, 159),
                                   ),
                                   child: Column(
                                     children: [
@@ -319,7 +321,8 @@ class _ROTMStatCardState extends State<ROTMStatCard> {
                                       width: 1,
                                     ),
                                     borderRadius: BorderRadius.circular(0),
-                                    color: const Color.fromARGB(255, 168, 159, 159),
+                                    color: const Color.fromARGB(
+                                        255, 168, 159, 159),
                                   ),
                                   child: Column(
                                     children: [
