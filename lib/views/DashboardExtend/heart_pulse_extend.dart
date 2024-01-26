@@ -51,7 +51,11 @@ class _UserHeartPulseStatExdendedState
             color: Colors.deepPurple.shade900,
             child: Column(
               children: [
+                SizedBox(
+                  height: 10,
+                ),
                 CupertinoSlidingSegmentedControl(
+                  thumbColor: const Color.fromARGB(255, 103, 90, 161),
                   backgroundColor: const Color.fromARGB(255, 255, 255, 255),
                   padding: EdgeInsets.all(8),
                   children: {
@@ -60,34 +64,34 @@ class _UserHeartPulseStatExdendedState
                       style: GoogleFonts.getFont(
                         'Orbitron',
                         fontSize: 15,
-                        color: const Color.fromARGB(255, 0, 0, 0),
+                        color: Color.fromARGB(255, 0, 0, 0),
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     1: Text(
-                      'HOUR',
-                      style: GoogleFonts.getFont(
-                        'Orbitron',
-                        fontSize: 15,
-                        color: const Color.fromARGB(255, 0, 0, 0),
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    2: Text(
                       'DAY',
                       style: GoogleFonts.getFont(
                         'Orbitron',
                         fontSize: 15,
-                        color: const Color.fromARGB(255, 0, 0, 0),
+                        color: Color.fromARGB(255, 0, 0, 0),
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    3: Text(
+                    2: Text(
                       'WEEK',
                       style: GoogleFonts.getFont(
                         'Orbitron',
                         fontSize: 15,
-                        color: const Color.fromARGB(255, 0, 0, 0),
+                        color: Color.fromARGB(255, 0, 0, 0),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    3: Text(
+                      'MONTH',
+                      style: GoogleFonts.getFont(
+                        'Orbitron',
+                        fontSize: 15,
+                        color: Color.fromARGB(255, 0, 0, 0),
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -96,7 +100,6 @@ class _UserHeartPulseStatExdendedState
                   onValueChanged: (int? newValue) {
                     setState(() {
                       _sliding = newValue;
-                      
                     });
                   },
                 ),
