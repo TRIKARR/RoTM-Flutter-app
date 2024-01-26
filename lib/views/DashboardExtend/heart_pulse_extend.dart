@@ -104,7 +104,7 @@ class _UserHeartPulseStatExdendedState
                     });
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Container(
@@ -112,7 +112,7 @@ class _UserHeartPulseStatExdendedState
                   width: MediaQuery.of(context).size.width - 20,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color.fromARGB(255, 255, 255, 255),
+                    color: const Color.fromARGB(255, 255, 255, 255),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(0.0),
