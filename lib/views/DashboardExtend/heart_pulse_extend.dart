@@ -51,20 +51,20 @@ class _UserHeartPulseStatExdendedState
             color: Colors.deepPurple.shade900,
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 CupertinoSlidingSegmentedControl(
                   thumbColor: const Color.fromARGB(255, 103, 90, 161),
                   backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-                  padding: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(8),
                   children: {
                     0: Text(
                       'HOUR',
                       style: GoogleFonts.getFont(
                         'Orbitron',
                         fontSize: 15,
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: const Color.fromARGB(255, 0, 0, 0),
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -73,7 +73,7 @@ class _UserHeartPulseStatExdendedState
                       style: GoogleFonts.getFont(
                         'Orbitron',
                         fontSize: 15,
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: const Color.fromARGB(255, 0, 0, 0),
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -82,7 +82,7 @@ class _UserHeartPulseStatExdendedState
                       style: GoogleFonts.getFont(
                         'Orbitron',
                         fontSize: 15,
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: const Color.fromARGB(255, 0, 0, 0),
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -91,7 +91,7 @@ class _UserHeartPulseStatExdendedState
                       style: GoogleFonts.getFont(
                         'Orbitron',
                         fontSize: 15,
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: const Color.fromARGB(255, 0, 0, 0),
                         fontWeight: FontWeight.bold,
                       ),
                     ),
