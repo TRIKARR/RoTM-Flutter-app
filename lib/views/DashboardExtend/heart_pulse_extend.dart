@@ -13,6 +13,7 @@ class UserHeartPulseStatExdended extends StatefulWidget {
 
 class _UserHeartPulseStatExdendedState
     extends State<UserHeartPulseStatExdended> {
+  bool _isExpanded = false;
   int? _sliding = 0;
   @override
   Widget build(BuildContext context) {
@@ -196,6 +197,7 @@ class _UserHeartPulseStatExdendedState
                   ),
                   height: 70,
                   width: MediaQuery.of(context).size.width - 20,
+                  child: ExpandIcon(onPressed: (value) {}),
                 ),
                 const SizedBox(
                   height: 20,
@@ -209,7 +211,32 @@ class _UserHeartPulseStatExdendedState
                   ),
                   height: 70,
                   width: MediaQuery.of(context).size.width - 20,
+                  child: ExpandIcon(
+                      isExpanded: _isExpanded,
+                      onPressed: (bool isExpanded) {
+                        setState(() {
+                          _isExpanded = !isExpanded;
+                        });
+                      }),
                 ),
+                if (_isExpanded)
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white,
+                      border: Border.all(
+                          color: const Color.fromARGB(255, 0, 0, 0), width: 2),
+                    ),
+                    height: 70,
+                    width: MediaQuery.of(context).size.width - 20,
+                    child: const Text(
+                      "This is the expanded widget",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
               ],
             ),
           ),
