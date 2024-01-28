@@ -15,7 +15,7 @@ class _UserTemperatureState extends State<UserTemperature> {
   // ignore: non_constant_identifier_names
   void ExtractUserRequest() async {
     var url = Uri.parse('${EndPoint}extract');
-    var queryParams = {"id": BRoTM_UserID};
+    var queryParams = {"id": BRoTM_UserID}; 
     var response = await http.get(url.replace(queryParameters: queryParams));
     var responseData =
         jsonDecode(response.body); // Add this line to parse the JSON response
