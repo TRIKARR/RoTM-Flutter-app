@@ -35,7 +35,6 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
     UserOxyData = oxy.toDouble();
     UserPulseData = pulse.toDouble();
     UserSleepData = sleep.toDouble();
-
   }
 
   @override
@@ -56,7 +55,7 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
               height: 10,
             ),
             Container(
-              height: MediaQuery.of(context).size.height - 480,
+              height: MediaQuery.of(context).size.height - 440,
               width: 400,
               color: Colors.deepPurple.shade900,
               child: const InteractiveServices(),

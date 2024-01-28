@@ -1,5 +1,5 @@
 // ignore_for_file: file_names
-
+//TODO: Add more points to the graph
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
