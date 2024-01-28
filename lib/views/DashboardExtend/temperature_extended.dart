@@ -20,7 +20,7 @@ class _UserTemperatureStatExtendedState
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            'HEART PULSE',
+            'TEMPERATURE',
             style: GoogleFonts.getFont(
               'Orbitron',
               fontSize: 25,
@@ -39,7 +39,7 @@ class _UserTemperatureStatExtendedState
             Padding(
               padding: const EdgeInsets.only(right: 8.0),
               child: Image.asset(
-                "lib/assets/animated/heartbeat.gif",
+                "lib/assets/animated/thermometer.gif",
                 height: 40,
                 width: 40,
               ),

@@ -87,7 +87,7 @@ class _SectionLevelThreeState extends State<SectionLevelThree> {
               );
             },
             openBuilder: (context, action) =>
-                const UserRespiratoryStatExtended(),
+                const UserTemperatureStatExtended(),
           ),
         ),
       ],
