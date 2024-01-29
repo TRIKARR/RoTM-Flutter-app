@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rotm/views/dashboardSections/Section2Services/respiratoryChart.dart';
 
 class UserRespiratoryStatExtended extends StatefulWidget {
   const UserRespiratoryStatExtended({super.key});
@@ -38,7 +39,7 @@ class _UserRespiratoryStatExtendedState
             Padding(
               padding: const EdgeInsets.only(right: 8.0),
               child: Image.asset(
-                "lib/assets/animated/sleep.gif",
+                "lib/assets/animated/lungs.gif",
                 height: 40,
                 width: 40,
               ),
@@ -131,6 +132,7 @@ class _UserRespiratoryStatExtendedState
                   ),
                   child: const Padding(
                     padding: EdgeInsets.all(0.0),
+                    child: UserRespirationRate(),
                   ),
                 ),
                 const SizedBox(

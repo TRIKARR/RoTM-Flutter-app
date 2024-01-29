@@ -118,8 +118,8 @@ class _UserTemperatureStatExtendedState
                     borderRadius: BorderRadius.circular(10),
                     color: const Color.fromARGB(255, 255, 255, 255),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(0.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(0.0),
                     child: UserTemperatureGraph(),
                   ),
                 ),
