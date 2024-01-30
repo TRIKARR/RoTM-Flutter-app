@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rotm/userdata.dart';
+// ignore: unused_import
 import 'package:rotm/views/dashboardSections/Section3Services/tempchart.dart';
 
 class UserTemperatureStatExtended extends StatefulWidget {
@@ -121,7 +122,7 @@ class _UserTemperatureStatExtendedState
                     color: const Color.fromARGB(255, 255, 255, 255),
                   ),
                   child: Padding(
-                      padding: EdgeInsets.all(0.0),
+                      padding: const EdgeInsets.all(0.0),
                       child: Column(
                         children: [
                           Row(
@@ -135,7 +136,7 @@ class _UserTemperatureStatExtendedState
                                 width: 5,
                               ),
                               Padding(
-                                padding: EdgeInsets.only(top: 0.0),
+                                padding: const EdgeInsets.only(top: 0.0),
                                 child: Column(
                                   children: [
                                     Text("TEMPERATURE TREND",
