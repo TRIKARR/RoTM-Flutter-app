@@ -333,7 +333,14 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                 ),
               ),
             ),
-          )
+          ),
+          SliverList(
+              delegate: SliverChildListDelegate([
+            Container(
+              height: 100,
+              width: MediaQuery.of(context).size.width,
+            )
+          ])),
         ],
       ),
     );

@@ -39,7 +39,7 @@ class _UserBloodOxygenStatExtendedState
             Padding(
               padding: const EdgeInsets.only(right: 8.0),
               child: Image.asset(
-                "lib/assets/animated/heartbeat.gif",
+                "lib/assets/animated/blood-vessel.gif",
                 height: 40,
                 width: 40,
               ),

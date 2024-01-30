@@ -201,16 +201,109 @@ class _UserTemperatureStatExtendedState
                   height: 20,
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,
-                    border: Border.all(
-                        color: const Color.fromARGB(255, 0, 0, 0), width: 2),
-                  ),
-                  height: 70,
-                  width: MediaQuery.of(context).size.width - 20,
-                  child: ExpandIcon(onPressed: (value) {}),
-                ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white,
+                      border: Border.all(
+                          color: const Color.fromARGB(255, 0, 0, 0), width: 2),
+                    ),
+                    height: 100,
+                    width: MediaQuery.of(context).size.width - 20,
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            const SizedBox(
+                              width: 30,
+                            ),
+                            Column(
+                              children: [
+                                Text(
+                                  "AVERAGE",
+                                  style: GoogleFonts.getFont(
+                                    'Orbitron',
+                                    fontSize: 18,
+                                    color: const Color.fromARGB(255, 0, 0, 0),
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  "35",
+                                  style: GoogleFonts.getFont(
+                                    'Orbitron',
+                                    fontSize: 18,
+                                    color: const Color.fromARGB(255, 0, 0, 0),
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
+                              ],
+                            ),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            Column(
+                              children: [
+                                Text(
+                                  "MINIMUM",
+                                  style: GoogleFonts.getFont(
+                                    'Orbitron',
+                                    fontSize: 18,
+                                    color: const Color.fromARGB(255, 0, 0, 0),
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  "30 ",
+                                  style: GoogleFonts.getFont(
+                                    'Orbitron',
+                                    fontSize: 18,
+                                    color: const Color.fromARGB(255, 0, 0, 0),
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
+                              ],
+                            ),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            Column(
+                              children: [
+                                Text(
+                                  "MAXIMUM",
+                                  style: GoogleFonts.getFont(
+                                    'Orbitron',
+                                    fontSize: 18,
+                                    color: const Color.fromARGB(255, 0, 0, 0),
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  "40",
+                                  style: GoogleFonts.getFont(
+                                    'Orbitron',
+                                    fontSize: 18,
+                                    color: const Color.fromARGB(255, 0, 0, 0),
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
+                              ],
+                            ),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                          ],
+                        ),
+                      ],
+                    )),
                 const SizedBox(
                   height: 20,
                 ),
