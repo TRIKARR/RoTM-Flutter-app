@@ -8,4 +8,4 @@ var UserRepoData;
 var UserSleepData;
 var UserPulseData;
 var UserOxyData;
-var EndPoint = "https://0ee9-103-83-155-164.ngrok-free.app/";
+var EndPoint = "https://9071-103-83-155-164.ngrok-free.app/";
