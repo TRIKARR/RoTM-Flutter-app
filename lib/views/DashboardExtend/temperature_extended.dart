@@ -18,7 +18,7 @@ class UserTemperatureStatExtended extends StatefulWidget {
 
 class _UserTemperatureStatExtendedState
     extends State<UserTemperatureStatExtended> {
-  bool _isExpanded = false;
+  bool _isExpanded = true;
   int? _sliding = 0;
   @override
   Widget build(BuildContext context) {
@@ -329,9 +329,10 @@ class _UserTemperatureStatExtendedState
                   Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Color.fromARGB(255, 178, 200, 200),
+                        color: const Color.fromARGB(255, 178, 200, 200),
                         border: Border.all(
-                            color: Color.fromARGB(255, 0, 0, 0), width: 2),
+                            color: const Color.fromARGB(255, 0, 0, 0),
+                            width: 2),
                       ),
                       height: 300,
                       width: MediaQuery.of(context).size.width - 20,

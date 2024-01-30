@@ -225,6 +225,50 @@ class _UserRespiratoryStatExtendedState
                                         ),
                                       ],
                                     ),
+                                    BarChartGroupData(
+                                      x: 4,
+                                      barsSpace: 4,
+                                      barRods: [
+                                        BarChartRodData(
+                                          toY: UserRespData[3].toDouble() + 5,
+                                          color:
+                                              const Color.fromARGB(255, 251, 255, 0),
+                                        ),
+                                      ],
+                                    ),
+                                    BarChartGroupData(
+                                      x: 5,
+                                      barsSpace: 4,
+                                      barRods: [
+                                        BarChartRodData(
+                                          toY: UserRespData[1].toDouble(),
+                                          color:
+                                              const Color.fromARGB(255, 0, 255, 170),
+                                        ),
+                                      ],
+                                    ),
+                                    BarChartGroupData(
+                                      x: 6,
+                                      barsSpace: 4,
+                                      barRods: [
+                                        BarChartRodData(
+                                          toY: UserRespData[3].toDouble(),
+                                          color:
+                                              const Color.fromARGB(255, 2, 23, 127),
+                                        ),
+                                      ],
+                                    ),
+                                    BarChartGroupData(
+                                      x: 7,
+                                      barsSpace: 4,
+                                      barRods: [
+                                        BarChartRodData(
+                                          toY: UserRespData[3].toDouble(),
+                                          color:
+                                              const Color.fromARGB(255, 0, 217, 255),
+                                        ),
+                                      ],
+                                    ),
                                   ],
                                   extraLinesData: ExtraLinesData(
                                     horizontalLines: [

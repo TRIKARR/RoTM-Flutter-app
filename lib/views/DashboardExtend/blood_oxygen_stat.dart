@@ -1,7 +1,9 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_heatmap_calendar/flutter_heatmap_calendar.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rotm/views/dashboardSections/Section1Services/blood_oxygen.dart';
 
 class UserBloodOxygenStatExtended extends StatefulWidget {
   const UserBloodOxygenStatExtended({super.key});
@@ -13,7 +15,7 @@ class UserBloodOxygenStatExtended extends StatefulWidget {
 
 class _UserBloodOxygenStatExtendedState
     extends State<UserBloodOxygenStatExtended> {
-  bool _isExpanded = false;
+  bool _isExpanded = true;
   int? _sliding = 0;
   @override
   Widget build(BuildContext context) {
@@ -209,6 +211,18 @@ class _UserBloodOxygenStatExtendedState
                   ),
                   height: 140,
                   width: MediaQuery.of(context).size.width - 20,
+                  child: const Row(
+                    children: [
+                      SizedBox(
+                        width: 30,
+                      ),
+                      UserBloodOxygen(),
+                      SizedBox(
+                        width: 100,
+                      ),
+                      UserBloodOxygen(),
+                    ],
+                  ),
                 ),
                 const SizedBox(
                   height: 20,
@@ -220,7 +234,7 @@ class _UserBloodOxygenStatExtendedState
                     border: Border.all(
                         color: const Color.fromARGB(255, 0, 0, 0), width: 2),
                   ),
-                  height: 70,
+                  height: 50,
                   width: MediaQuery.of(context).size.width - 20,
                   child: ExpandIcon(
                       isExpanded: _isExpanded,
@@ -232,22 +246,47 @@ class _UserBloodOxygenStatExtendedState
                 ),
                 if (_isExpanded)
                   Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.white,
-                      border: Border.all(
-                          color: const Color.fromARGB(255, 0, 0, 0), width: 2),
-                    ),
-                    height: 70,
-                    width: MediaQuery.of(context).size.width - 20,
-                    child: const Text(
-                      "This is the expanded widget",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color.fromARGB(255, 178, 200, 200),
+                        border: Border.all(
+                            color: const Color.fromARGB(255, 0, 0, 0),
+                            width: 2),
                       ),
-                    ),
-                  ),
+                      height: 270,
+                      width: MediaQuery.of(context).size.width - 20,
+                      child: HeatMapCalendar(
+                        defaultColor: Colors.white,
+                        flexible: false,
+                        size: 25,
+                        weekTextColor: Colors.black,
+                        colorMode: ColorMode.color,
+                        datasets: {
+                          DateTime(2024, 1, 20): 10,
+                          DateTime(2024, 1, 7): 9,
+                          DateTime(2024, 1, 8): 10,
+                          DateTime(2024, 1, 31): 13,
+                          DateTime(2024, 1, 13): 6,
+                          DateTime(2024, 1, 15): 10,
+                          DateTime(2024, 1, 4): 9,
+                          DateTime(2024, 1, 3): 10,
+                          DateTime(2024, 1, 2): 13,
+                          DateTime(2024, 1, 1): 6,
+                        },
+                        colorsets: const {
+                          1: Color.fromARGB(255, 255, 255, 255),
+                          3: Color.fromARGB(255, 225, 135, 135),
+                          5: Color.fromARGB(159, 234, 140, 140),
+                          7: Color.fromARGB(255, 223, 119, 119),
+                          9: Color.fromARGB(255, 237, 79, 79),
+                          11: Color.fromARGB(255, 226, 60, 60),
+                          13: Color.fromARGB(255, 255, 0, 0),
+                        },
+                        onClick: (value) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text(value.toString())));
+                        },
+                      )),
               ],
             ),
           ),
