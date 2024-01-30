@@ -3,6 +3,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rotm/userdata.dart';
 import 'package:rotm/views/dashboardSections/Section3Services/tempchart.dart';
 
 class UserTemperatureStatExtended extends StatefulWidget {
@@ -119,10 +120,81 @@ class _UserTemperatureStatExtendedState
                     borderRadius: BorderRadius.circular(10),
                     color: const Color.fromARGB(255, 255, 255, 255),
                   ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(0.0),
-                    child: UserTemperatureGraph(),
-                  ),
+                  child: Padding(
+                      padding: EdgeInsets.all(0.0),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 5, top: 0),
+                                child: Image.asset("lib/assets/images/rate.gif",
+                                    height: 40, width: 40),
+                              ),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(top: 0.0),
+                                child: Column(
+                                  children: [
+                                    Text("TEMPERATURE TREND",
+                                        style: GoogleFonts.getFont(
+                                          'Orbitron',
+                                          fontSize: 15,
+                                          color: const Color.fromARGB(
+                                              255, 0, 0, 0),
+                                          fontWeight: FontWeight.bold,
+                                        )),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 5),
+                          Row(
+                            children: [
+                              // Add the ScatterChart inside a Container with constraints
+                              SizedBox(
+                                width: 410, // Set the desired width
+                                height: 151, // Set the desired height
+                                child: ScatterChart(
+                                  ScatterChartData(
+                                    minX: 0,
+                                    minY: 0,
+                                    maxX: 10,
+                                    maxY: 40,
+                                    backgroundColor: Colors.black,
+                                    scatterSpots: [
+                                      ScatterSpot(
+                                          1, UserTempData[0].toDouble()),
+                                      ScatterSpot(
+                                          2, UserTempData[1].toDouble()),
+                                      ScatterSpot(
+                                          3, UserTempData[2].toDouble()),
+                                      ScatterSpot(
+                                          4, UserTempData[3].toDouble()),
+                                      ScatterSpot(
+                                          5, UserTempData[0].toDouble()),
+                                      ScatterSpot(
+                                          6, UserTempData[2].toDouble()),
+                                      ScatterSpot(
+                                          7, UserTempData[2].toDouble()),
+                                      ScatterSpot(
+                                          8, UserTempData[0].toDouble()),
+                                      ScatterSpot(
+                                          9, UserTempData[2].toDouble()),
+                                    ],
+                                    titlesData: const FlTitlesData(show: false),
+                                    borderData: FlBorderData(show: true),
+                                    gridData: const FlGridData(show: true),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      )),
                 ),
                 const SizedBox(
                   height: 20,
