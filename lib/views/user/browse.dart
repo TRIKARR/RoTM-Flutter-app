@@ -336,20 +336,31 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
           ),
           SliverList(
               delegate: SliverChildListDelegate([
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: const Color.fromARGB(255, 0, 0, 0),
-                  width: 4,
+            Card(
+              child: Align(
+                alignment: Alignment.center,
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color.fromARGB(255, 0, 0, 0),
+                      width: 4,
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.deepPurple.shade300,
+                  ),
+                  height: 70,
+                  width: MediaQuery.of(context).size.width,
+                  child: Text("GENERATE REPORT",
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.getFont(
+                        'Orbitron',
+                        fontSize: 30,
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                        fontWeight: FontWeight.bold,
+                      )),
                 ),
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.deepPurple.shade300,
               ),
-              height: 100,
-              width: MediaQuery.of(context).size.width,
             ),
-            
-
           ])),
         ],
       ),
