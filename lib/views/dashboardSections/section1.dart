@@ -43,7 +43,7 @@ class _LevelOneSectionState extends State<LevelOneSection> {
               );
             },
             openBuilder: (context, action) =>
-                const UserHeartPulseStatExdended(),
+                const UserBloodOxygenStatExtended(),
           ),
         ),
         const SizedBox(
@@ -75,29 +75,18 @@ class _LevelOneSectionState extends State<LevelOneSection> {
         const SizedBox(
           width: 10,
         ),
-        ClipRRect(
-          //Important Woidget
-          borderRadius: BorderRadius.circular(20),
-          child: OpenContainer(
-            closedColor: const Color.fromARGB(255, 142, 47, 47),
-            closedBuilder: (context, action) {
-              return Container(
-                height: 130,
-                width: 130,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: const Color.fromARGB(255, 0, 0, 0),
-                    width: 1,
-                  ),
-                  borderRadius: BorderRadius.circular(20),
-                  color: const Color.fromARGB(255, 255, 255, 255),
-                ),
-                child: const UserBloodOxygen(),
-              );
-            },
-            openBuilder: (context, action) =>
-                const UserBloodOxygenStatExtended(),
+        Container(
+          height: 130,
+          width: 130,
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: const Color.fromARGB(255, 0, 0, 0),
+              width: 1,
+            ),
+            borderRadius: BorderRadius.circular(20),
+            color: const Color.fromARGB(255, 255, 255, 255),
           ),
+          child: const UserBloodOxygen(),
         ),
       ],
     );

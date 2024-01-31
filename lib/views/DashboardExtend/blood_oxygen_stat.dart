@@ -22,7 +22,7 @@ class _UserBloodOxygenStatExtendedState
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            'BLOOD OXYGEN',
+            'HEART PULSE',
             style: GoogleFonts.getFont(
               'Orbitron',
               fontSize: 25,
