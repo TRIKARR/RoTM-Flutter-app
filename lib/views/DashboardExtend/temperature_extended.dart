@@ -1,4 +1,6 @@
 // ignore: unused_import
+import 'dart:io';
+
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -315,7 +317,7 @@ class _UserTemperatureStatExtendedState
                     border: Border.all(
                         color: const Color.fromARGB(255, 0, 0, 0), width: 2),
                   ),
-                  height: 70,
+                  height: Platform.isAndroid ? 30 : 70,
                   width: MediaQuery.of(context).size.width - 20,
                   child: ExpandIcon(
                       isExpanded: _isExpanded,
