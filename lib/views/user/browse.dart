@@ -8,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:rotm/models/radarchart.dart';
 import 'package:rotm/userdata.dart';
+import 'package:rotm/views/user/Reportlist.dart';
 
 class UserBrowseMenu extends StatefulWidget {
   const UserBrowseMenu({super.key});
@@ -361,6 +362,7 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                 ),
               ),
             ),
+            UserReportSection(),
           ])),
         ],
       ),
