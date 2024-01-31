@@ -32,6 +32,10 @@ class _LevelOneSectionState extends State<LevelOneSection> {
                 height: 130,
                 width: 130,
                 decoration: BoxDecoration(
+                  border: Border.all(
+                    color: const Color.fromARGB(255, 0, 0, 0),
+                    width: 1,
+                  ),
                   borderRadius: BorderRadius.circular(20),
                   color: const Color.fromARGB(255, 255, 255, 255),
                 ),
@@ -55,6 +59,10 @@ class _LevelOneSectionState extends State<LevelOneSection> {
                 height: 130,
                 width: 130,
                 decoration: BoxDecoration(
+                  border: Border.all(
+                    color: const Color.fromARGB(255, 0, 0, 0),
+                    width: 1,
+                  ),
                   borderRadius: BorderRadius.circular(20),
                   color: const Color.fromARGB(255, 255, 255, 255),
                 ),
@@ -77,6 +85,10 @@ class _LevelOneSectionState extends State<LevelOneSection> {
                 height: 130,
                 width: 130,
                 decoration: BoxDecoration(
+                  border: Border.all(
+                    color: const Color.fromARGB(255, 0, 0, 0),
+                    width: 1,
+                  ),
                   borderRadius: BorderRadius.circular(20),
                   color: const Color.fromARGB(255, 255, 255, 255),
                 ),
