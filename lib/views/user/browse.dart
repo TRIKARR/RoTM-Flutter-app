@@ -337,9 +337,19 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
           SliverList(
               delegate: SliverChildListDelegate([
             Container(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: const Color.fromARGB(255, 0, 0, 0),
+                  width: 4,
+                ),
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.deepPurple.shade300,
+              ),
               height: 100,
               width: MediaQuery.of(context).size.width,
-            )
+            ),
+            
+
           ])),
         ],
       ),
