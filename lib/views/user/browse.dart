@@ -1,5 +1,6 @@
 // ignore_for_file: unused_import, non_constant_identifier_names, avoid_print, prefer_const_constructors, sized_box_for_whitespace
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:http/http.dart' as http;
 import 'package:fl_chart/fl_chart.dart';
@@ -80,7 +81,9 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                       Column(
                         children: [
                           SizedBox(
-                            height: MediaQuery.of(context).size.height - 870,
+                            height: Platform.isAndroid
+                                ? (MediaQuery.of(context).size.height / 12)
+                                : MediaQuery.of(context).size.height - 870,
                           ),
                           Container(
                             decoration: BoxDecoration(
@@ -315,7 +318,9 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                       Column(
                         children: [
                           SizedBox(
-                            height: MediaQuery.of(context).size.height - 870,
+                            height: Platform.isAndroid
+                                ? 40
+                                : (MediaQuery.of(context).size.height - 870),
                           ),
                           Container(
                             alignment: Alignment.center,
