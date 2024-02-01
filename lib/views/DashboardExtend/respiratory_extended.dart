@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_heatmap_calendar/flutter_heatmap_calendar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rotm/userdata.dart';
 // ignore: unused_import
@@ -231,8 +232,8 @@ class _UserRespiratoryStatExtendedState
                                       barRods: [
                                         BarChartRodData(
                                           toY: UserRespData[3].toDouble() + 5,
-                                          color:
-                                              const Color.fromARGB(255, 251, 255, 0),
+                                          color: const Color.fromARGB(
+                                              255, 251, 255, 0),
                                         ),
                                       ],
                                     ),
@@ -242,8 +243,8 @@ class _UserRespiratoryStatExtendedState
                                       barRods: [
                                         BarChartRodData(
                                           toY: UserRespData[1].toDouble(),
-                                          color:
-                                              const Color.fromARGB(255, 0, 255, 170),
+                                          color: const Color.fromARGB(
+                                              255, 0, 255, 170),
                                         ),
                                       ],
                                     ),
@@ -253,8 +254,8 @@ class _UserRespiratoryStatExtendedState
                                       barRods: [
                                         BarChartRodData(
                                           toY: UserRespData[3].toDouble(),
-                                          color:
-                                              const Color.fromARGB(255, 2, 23, 127),
+                                          color: const Color.fromARGB(
+                                              255, 2, 23, 127),
                                         ),
                                       ],
                                     ),
@@ -264,8 +265,8 @@ class _UserRespiratoryStatExtendedState
                                       barRods: [
                                         BarChartRodData(
                                           toY: UserRespData[3].toDouble(),
-                                          color:
-                                              const Color.fromARGB(255, 0, 217, 255),
+                                          color: const Color.fromARGB(
+                                              255, 0, 217, 255),
                                         ),
                                       ],
                                     ),
@@ -306,36 +307,6 @@ class _UserRespiratoryStatExtendedState
                   height: 20,
                 ),
                 Container(
-                  height: 140,
-                  width: MediaQuery.of(context).size.width - 20,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                        color: const Color.fromARGB(255, 0, 0, 0), width: 2),
-                    borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(0.0),
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,
-                    border: Border.all(
-                        color: const Color.fromARGB(255, 0, 0, 0), width: 2),
-                  ),
-                  height: 70,
-                  width: MediaQuery.of(context).size.width - 20,
-                  child: ExpandIcon(onPressed: (value) {}),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.white,
@@ -354,22 +325,42 @@ class _UserRespiratoryStatExtendedState
                 ),
                 if (_isExpanded)
                   Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.white,
-                      border: Border.all(
-                          color: const Color.fromARGB(255, 0, 0, 0), width: 2),
-                    ),
-                    height: 70,
-                    width: MediaQuery.of(context).size.width - 20,
-                    child: const Text(
-                      "This is the expanded widget",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color.fromARGB(255, 178, 200, 200),
+                        border: Border.all(
+                            color: const Color.fromARGB(255, 0, 0, 0),
+                            width: 2),
                       ),
-                    ),
-                  ),
+                      height: 300,
+                      width: MediaQuery.of(context).size.width - 20,
+                      child: HeatMapCalendar(
+                        defaultColor: Colors.white,
+                        flexible: false,
+                        size: 30,
+                        weekTextColor: Colors.black,
+                        colorMode: ColorMode.color,
+                        datasets: {
+                          DateTime(2024, 1, 20): 3,
+                          DateTime(2024, 1, 7): 7,
+                          DateTime(2024, 1, 8): 10,
+                          DateTime(2024, 1, 9): 13,
+                          DateTime(2024, 1, 13): 6,
+                        },
+                        colorsets: const {
+                          1: Color.fromARGB(255, 255, 255, 255),
+                          3: Color.fromARGB(255, 190, 236, 189),
+                          5: Color.fromARGB(159, 146, 255, 142),
+                          7: Color.fromARGB(255, 124, 235, 120),
+                          9: Color.fromARGB(255, 43, 204, 38),
+                          11: Color.fromARGB(184, 26, 181, 21),
+                          13: Color.fromARGB(118, 15, 161, 10),
+                        },
+                        onClick: (value) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text(value.toString())));
+                        },
+                      )),
               ],
             ),
           ),
