@@ -55,7 +55,6 @@ class _UserDashBoardState extends State<UserDashBoard> {
     UserOxyData = oxy.toDouble();
     UserPulseData = pulse.toDouble();
     UserSleepData = sleep.toDouble();
-
   }
 
   @override
@@ -117,7 +116,113 @@ class _UserDashBoardState extends State<UserDashBoard> {
                     showModalBottomSheet(
                       context: context,
                       builder: (BuildContext context) {
-                        return const UserDragScrollBottomSheet();
+                        return SizedBox(
+                          height: 500,
+                          width: MediaQuery.of(context).size.width,
+                          child: Column(
+                            children: [
+                              Column(
+                                children: [
+                                  Stack(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                              color:
+                                                  Color.fromARGB(255, 0, 0, 0),
+                                              width: 4,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(25),
+                                            color:
+                                                Color.fromARGB(255, 255, 0, 0),
+                                          ),
+                                          height: 170,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width -
+                                              15,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 18.0, left: 18),
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                              color:
+                                                  Color.fromARGB(255, 0, 0, 0),
+                                              width: 4,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(105),
+                                            color:
+                                                Color.fromARGB(255, 255, 0, 0),
+                                          ),
+                                          height: 150,
+                                          width: 150,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Column(
+                                children: [
+                                  Stack(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                              color:
+                                                  Color.fromARGB(255, 0, 0, 0),
+                                              width: 4,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(25),
+                                            color:
+                                                Color.fromARGB(255, 255, 0, 0),
+                                          ),
+                                          height: 250,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width -
+                                              15,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 30.0, left: 115),
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                              color:
+                                                  Color.fromARGB(255, 0, 0, 0),
+                                              width: 4,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                            color:
+                                                Color.fromARGB(255, 255, 0, 0),
+                                          ),
+                                          height: 210,
+                                          width: 210,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+                        );
                       },
                     );
                   },

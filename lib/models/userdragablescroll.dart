@@ -41,12 +41,10 @@ class _UserDragScrollBottomSheetState extends State<UserDragScrollBottomSheet> {
 
   @override
   Widget build(BuildContext context) {
-    return DraggableScrollableSheet(
-      builder: (context, scrollController) {
-        return SingleChildScrollView(
-          child: Text(BRoTM_UserID),
-        );
-      },
+    return SizedBox(
+      height: 200,
+      width: 200,
+      child: Text("wow sdjvbkshjxzbcxzlkcbzckbjczxbczjklx"),
     );
   }
 }
