@@ -136,8 +136,7 @@ class _UserDashBoardState extends State<UserDashBoard> {
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(25),
-                                            color:
-                                                Color.fromARGB(255, 255, 0, 0),
+                                            color: Colors.deepPurple.shade900,
                                           ),
                                           height: 170,
                                           width: MediaQuery.of(context)
@@ -187,8 +186,7 @@ class _UserDashBoardState extends State<UserDashBoard> {
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(25),
-                                            color:
-                                                Color.fromARGB(255, 255, 0, 0),
+                                            color: Colors.deepPurple.shade900,
                                           ),
                                           height: 250,
                                           width: MediaQuery.of(context)
@@ -209,8 +207,8 @@ class _UserDashBoardState extends State<UserDashBoard> {
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(10),
-                                            color:
-                                                Color.fromARGB(255, 255, 0, 0),
+                                            color: Color.fromARGB(
+                                                255, 0, 255, 247),
                                           ),
                                           height: 210,
                                           width: 210,
