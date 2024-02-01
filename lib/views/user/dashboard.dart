@@ -131,7 +131,7 @@ class _UserDashBoardState extends State<UserDashBoard> {
                                           decoration: BoxDecoration(
                                             border: Border.all(
                                               color:
-                                                  Color.fromARGB(255, 0, 0, 0),
+                                                  const Color.fromARGB(255, 0, 0, 0),
                                               width: 4,
                                             ),
                                             borderRadius:
@@ -152,13 +152,13 @@ class _UserDashBoardState extends State<UserDashBoard> {
                                           decoration: BoxDecoration(
                                             border: Border.all(
                                               color:
-                                                  Color.fromARGB(255, 0, 0, 0),
+                                                  const Color.fromARGB(255, 0, 0, 0),
                                               width: 4,
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(105),
                                             color:
-                                                Color.fromARGB(255, 255, 0, 0),
+                                                const Color.fromARGB(255, 255, 0, 0),
                                           ),
                                           height: 150,
                                           width: 150,
@@ -168,7 +168,7 @@ class _UserDashBoardState extends State<UserDashBoard> {
                                   ),
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 5,
                               ),
                               Column(
@@ -181,7 +181,7 @@ class _UserDashBoardState extends State<UserDashBoard> {
                                           decoration: BoxDecoration(
                                             border: Border.all(
                                               color:
-                                                  Color.fromARGB(255, 0, 0, 0),
+                                                  const Color.fromARGB(255, 0, 0, 0),
                                               width: 4,
                                             ),
                                             borderRadius:
@@ -202,12 +202,12 @@ class _UserDashBoardState extends State<UserDashBoard> {
                                           decoration: BoxDecoration(
                                             border: Border.all(
                                               color:
-                                                  Color.fromARGB(255, 0, 0, 0),
+                                                  const Color.fromARGB(255, 0, 0, 0),
                                               width: 4,
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(10),
-                                            color: Color.fromARGB(
+                                            color: const Color.fromARGB(
                                                 255, 0, 255, 247),
                                           ),
                                           height: 210,

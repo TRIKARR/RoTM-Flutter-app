@@ -41,7 +41,7 @@ class _UserDragScrollBottomSheetState extends State<UserDragScrollBottomSheet> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return const SizedBox(
       height: 200,
       width: 200,
       child: Text("wow sdjvbkshjxzbcxzlkcbzckbjczxbczjklx"),
