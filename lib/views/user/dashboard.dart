@@ -8,6 +8,7 @@ import 'dart:ffi';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 import 'package:rotm/models/service_calls.dart';
 import 'package:rotm/userdata.dart';
 import 'package:rotm/models/userdragablescroll.dart';
@@ -130,8 +131,8 @@ class _UserDashBoardState extends State<UserDashBoard> {
                                         child: Container(
                                           decoration: BoxDecoration(
                                             border: Border.all(
-                                              color:
-                                                  const Color.fromARGB(255, 0, 0, 0),
+                                              color: const Color.fromARGB(
+                                                  255, 0, 0, 0),
                                               width: 4,
                                             ),
                                             borderRadius:
@@ -151,14 +152,14 @@ class _UserDashBoardState extends State<UserDashBoard> {
                                         child: Container(
                                           decoration: BoxDecoration(
                                             border: Border.all(
-                                              color:
-                                                  const Color.fromARGB(255, 0, 0, 0),
+                                              color: const Color.fromARGB(
+                                                  255, 0, 0, 0),
                                               width: 4,
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(105),
-                                            color:
-                                                const Color.fromARGB(255, 255, 0, 0),
+                                            color: const Color.fromARGB(
+                                                255, 255, 0, 0),
                                           ),
                                           height: 150,
                                           width: 150,
@@ -180,8 +181,8 @@ class _UserDashBoardState extends State<UserDashBoard> {
                                         child: Container(
                                           decoration: BoxDecoration(
                                             border: Border.all(
-                                              color:
-                                                  const Color.fromARGB(255, 0, 0, 0),
+                                              color: const Color.fromARGB(
+                                                  255, 0, 0, 0),
                                               width: 4,
                                             ),
                                             borderRadius:
@@ -201,8 +202,8 @@ class _UserDashBoardState extends State<UserDashBoard> {
                                         child: Container(
                                           decoration: BoxDecoration(
                                             border: Border.all(
-                                              color:
-                                                  const Color.fromARGB(255, 0, 0, 0),
+                                              color: const Color.fromARGB(
+                                                  255, 0, 0, 0),
                                               width: 4,
                                             ),
                                             borderRadius:
@@ -212,6 +213,12 @@ class _UserDashBoardState extends State<UserDashBoard> {
                                           ),
                                           height: 210,
                                           width: 210,
+                                          child: QrImageView(
+                                            data: 'This is a simple QR code',
+                                            version: QrVersions.auto,
+                                            size: 350,
+                                            gapless: false,
+                                          ),
                                         ),
                                       ),
                                     ],
