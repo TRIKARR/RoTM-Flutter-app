@@ -4,6 +4,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:qr_flutter/qr_flutter.dart';
 import 'package:rotm/userdata.dart';
 
 class UserDragScrollBottomSheet extends StatefulWidget {
@@ -41,10 +42,98 @@ class _UserDragScrollBottomSheetState extends State<UserDragScrollBottomSheet> {
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
-      height: 200,
-      width: 200,
-      child: Text("wow sdjvbkshjxzbcxzlkcbzckbjczxbczjklx"),
+    return SizedBox(
+      height: 500,
+      width: MediaQuery.of(context).size.width,
+      child: Column(
+        children: [
+          Column(
+            children: [
+              Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: const Color.fromARGB(255, 0, 0, 0),
+                          width: 4,
+                        ),
+                        borderRadius: BorderRadius.circular(25),
+                        color: Colors.deepPurple.shade900,
+                      ),
+                      height: 170,
+                      width: MediaQuery.of(context).size.width - 15,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 18.0, left: 18),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: const Color.fromARGB(255, 0, 0, 0),
+                          width: 4,
+                        ),
+                        borderRadius: BorderRadius.circular(105),
+                        color: const Color.fromARGB(255, 255, 0, 0),
+                      ),
+                      height: 150,
+                      width: 150,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          const SizedBox(
+            width: 5,
+          ),
+          Column(
+            children: [
+              Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: const Color.fromARGB(255, 0, 0, 0),
+                          width: 4,
+                        ),
+                        borderRadius: BorderRadius.circular(25),
+                        color: Colors.deepPurple.shade900,
+                      ),
+                      height: 250,
+                      width: MediaQuery.of(context).size.width - 15,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 30.0, left: 115),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: const Color.fromARGB(255, 0, 0, 0),
+                          width: 4,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color.fromARGB(255, 0, 255, 247),
+                      ),
+                      height: 210,
+                      width: 210,
+                      child: QrImageView(
+                        data: BRoTM_UserID,
+                        version: QrVersions.auto,
+                        size: 350,
+                        gapless: false,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          )
+        ],
+      ),
     );
   }
 }
