@@ -134,7 +134,7 @@ class _HomePageState extends State<HomePage> {
                   decoration: BoxDecoration(
                     color: Pallete.firstSuggestionBoxColor,
                     border: Border.all(
-                      color: Color.fromARGB(255, 0, 0, 0),
+                      color: const Color.fromARGB(255, 0, 0, 0),
                     ),
                     borderRadius: BorderRadius.circular(20).copyWith(
                       topLeft: Radius.zero,
