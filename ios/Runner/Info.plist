@@ -47,5 +47,9 @@
 		<true/>
 		<key>UIStatusBarHidden</key>
 		<false/>
+		<key>NSSpeechRecognitionUsageDescription</key>
+		<string>Chatbot</string>
+		<key>NSMicrophoneUsageDescription</key>
+		<string>Chatbot</string>
 	</dict>
 </plist>
