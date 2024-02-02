@@ -144,7 +144,7 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.symmetric(vertical: 10.0),
                     child: Text(
                       generatedContent == null
-                          ? 'GREETINGS BRoTM , HOW MAY I ASSIST YOU TODAY?'
+                          ? 'GREETINGS BRoTM USER , HOW MAY I ASSIST YOU TODAY?'
                           : generatedContent!,
                       style: GoogleFonts.getFont(
                         'Orbitron',
