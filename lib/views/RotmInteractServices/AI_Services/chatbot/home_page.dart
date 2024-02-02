@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
@@ -18,6 +20,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final speechToText = SpeechToText();
   final flutterTts = FlutterTts();
+  TextEditingController UserPromptToAIModel = TextEditingController();
   String lastWords = '';
   final OpenAIService openAIService = OpenAIService();
   String? generatedContent;
@@ -216,6 +219,29 @@ class _HomePageState extends State<HomePage> {
                           'Get the best of both worlds with a voice assistant',
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10, right: 10),
+                    child: TextField(
+                      style: GoogleFonts.getFont(
+                        'Orbitron',
+                        fontSize: 18,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      decoration: const InputDecoration(
+                        fillColor: Color.fromARGB(255, 157, 240, 230),
+                        filled: true,
+                        hintText: "Start Chatting",
+                        prefixIcon: Icon(Icons.key),
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(30),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             )
@@ -246,6 +272,7 @@ class _HomePageState extends State<HomePage> {
             } else {
               initSpeechToText();
             }
+            print("Wow");
           },
           child: Icon(
             speechToText.isListening ? Icons.stop : Icons.mic,
