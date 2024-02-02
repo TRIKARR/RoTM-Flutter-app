@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:rotm/views/RotmInteractServices/AI_Services/chatbot/feature_box.dart';
 import 'package:rotm/views/RotmInteractServices/AI_Services/chatbot/openai_service.dart';
 import 'package:rotm/views/RotmInteractServices/AI_Services/chatbot/pallete.dart';
@@ -73,9 +74,21 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: BounceInDown(
-          child: const Text('Allen'),
+          child: Text(
+            'RoTM',
+            style: GoogleFonts.getFont(
+              'Orbitron',
+              fontSize: 25,
+              color: const Color.fromARGB(255, 0, 0, 0),
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
-        leading: const Icon(Icons.menu),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back)),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -93,6 +106,21 @@ class _HomePageState extends State<HomePage> {
                       decoration: const BoxDecoration(
                         color: Pallete.assistantCircleColor,
                         shape: BoxShape.circle,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 60.0),
+                    child: Container(
+                      height: 70,
+                      child: Text(
+                        'VIRTUAL ASSISTANT',
+                        style: GoogleFonts.getFont(
+                          'Orbitron',
+                          fontSize: 25,
+                          color: const Color.fromARGB(255, 0, 0, 0),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
