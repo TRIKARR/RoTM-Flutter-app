@@ -72,6 +72,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepPurple.shade900,
       appBar: AppBar(
         title: BounceInDown(
           child: Text(
@@ -98,39 +99,19 @@ class _HomePageState extends State<HomePage> {
             ZoomIn(
               child: Stack(
                 children: [
-                  Center(
-                    child: Container(
-                      height: 120,
-                      width: 120,
-                      margin: const EdgeInsets.only(top: 4),
-                      decoration: const BoxDecoration(
-                        color: Pallete.assistantCircleColor,
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                  ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 60.0),
+                    padding: const EdgeInsets.only(left: 0.0),
                     child: Container(
                       height: 70,
+                      width: MediaQuery.of(context).size.width,
+                      color: Colors.white,
                       child: Text(
-                        'VIRTUAL ASSISTANT',
+                        '       VIRTUAL ASSISTANT',
                         style: GoogleFonts.getFont(
                           'Orbitron',
                           fontSize: 25,
                           color: const Color.fromARGB(255, 0, 0, 0),
                           fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    height: 123,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/images/virtualAssistant.png',
                         ),
                       ),
                     ),
@@ -151,8 +132,9 @@ class _HomePageState extends State<HomePage> {
                     top: 30,
                   ),
                   decoration: BoxDecoration(
+                    color: Pallete.firstSuggestionBoxColor,
                     border: Border.all(
-                      color: Pallete.borderColor,
+                      color: Color.fromARGB(255, 0, 0, 0),
                     ),
                     borderRadius: BorderRadius.circular(20).copyWith(
                       topLeft: Radius.zero,
@@ -162,12 +144,13 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.symmetric(vertical: 10.0),
                     child: Text(
                       generatedContent == null
-                          ? 'Good Morning, what task can I do for you?'
+                          ? 'GREETINGS BRoTM , HOW MAY I ASSIST YOU TODAY?'
                           : generatedContent!,
-                      style: TextStyle(
-                        fontFamily: 'Cera Pro',
-                        color: Pallete.mainFontColor,
-                        fontSize: generatedContent == null ? 25 : 18,
+                      style: GoogleFonts.getFont(
+                        'Orbitron',
+                        fontSize: 25,
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
@@ -190,7 +173,7 @@ class _HomePageState extends State<HomePage> {
                   alignment: Alignment.centerLeft,
                   margin: const EdgeInsets.only(top: 10, left: 22),
                   child: const Text(
-                    'Here are a few features',
+                    '             ',
                     style: TextStyle(
                       fontFamily: 'Cera Pro',
                       color: Pallete.mainFontColor,
@@ -210,27 +193,27 @@ class _HomePageState extends State<HomePage> {
                     delay: Duration(milliseconds: start),
                     child: const FeatureBox(
                       color: Pallete.firstSuggestionBoxColor,
-                      headerText: 'ChatGPT',
+                      headerText: 'Text Assistance',
                       descriptionText:
-                          'A smarter way to stay organized and informed with ChatGPT',
+                          'A smarter way to stay organized and informed',
                     ),
                   ),
                   SlideInLeft(
                     delay: Duration(milliseconds: start + delay),
                     child: const FeatureBox(
                       color: Pallete.secondSuggestionBoxColor,
-                      headerText: 'Dall-E',
+                      headerText: 'Image Assistance',
                       descriptionText:
-                          'Get inspired and stay creative with your personal assistant powered by Dall-E',
+                          'Get inspired and stay creative with your personal assistant',
                     ),
                   ),
                   SlideInLeft(
                     delay: Duration(milliseconds: start + 2 * delay),
                     child: const FeatureBox(
                       color: Pallete.thirdSuggestionBoxColor,
-                      headerText: 'Smart Voice Assistant',
+                      headerText: 'Voice Assistance',
                       descriptionText:
-                          'Get the best of both worlds with a voice assistant powered by Dall-E and ChatGPT',
+                          'Get the best of both worlds with a voice assistant',
                     ),
                   ),
                 ],
