@@ -228,6 +228,9 @@ class _HomePageState extends State<HomePage> {
                             .chatGPTAPI(UserPromptToAIModel.text);
                         // ignore: avoid_print
                         print(result);
+                        generatedContent = result;
+                        // ignore: avoid_print
+                        print(generatedContent);
                       },
                       controller: UserPromptToAIModel,
                       style: GoogleFonts.getFont(
