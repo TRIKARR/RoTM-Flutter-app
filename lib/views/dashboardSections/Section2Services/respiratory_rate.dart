@@ -75,20 +75,20 @@ class _UserRespirationRateChartState extends State<UserRespirationRateChart> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 8.0),
-              child: Text("MIN:X",
+              child: Text("MIN:21",
                   style: GoogleFonts.getFont(
                     'Orbitron',
-                    fontSize: 15,
+                    fontSize: 12,
                     color: const Color.fromARGB(255, 0, 0, 0),
                     fontWeight: FontWeight.bold,
                   )),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 15.0),
-              child: Text("MAX:X",
+              child: Text("MAX:27",
                   style: GoogleFonts.getFont(
                     'Orbitron',
-                    fontSize: 15,
+                    fontSize: 12,
                     color: const Color.fromARGB(255, 0, 0, 0),
                     fontWeight: FontWeight.bold,
                   )),

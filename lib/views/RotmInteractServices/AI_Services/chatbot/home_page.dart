@@ -220,7 +220,9 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                     padding: const EdgeInsets.only(left: 10, right: 10),
                     child: TextField(
-                      onTap: () {},
+                      onTap: () {
+                        print("wow");
+                      },
                       controller: UserPromptToAIModel,
                       style: GoogleFonts.getFont(
                         'Orbitron',
@@ -247,35 +249,6 @@ class _HomePageState extends State<HomePage> {
               ),
             )
           ],
-        ),
-      ),
-      floatingActionButton: ZoomIn(
-        delay: Duration(milliseconds: start + 3 * delay),
-        child: FloatingActionButton(
-          backgroundColor: Pallete.firstSuggestionBoxColor,
-          onPressed: () async {
-            if (UserPromptToAIModel.text.isNotEmpty) {
-              lastWords = UserPromptToAIModel.text;
-            } else if (UserPromptToAIModel.text.isNotEmpty) {
-              final speech = await openAIService.isArtPromptAPI(lastWords);
-              if (speech.contains('https')) {
-                generatedImageUrl = speech;
-                generatedContent = null;
-                setState(() {});
-              } else {
-                generatedImageUrl = null;
-                generatedContent = speech;
-                setState(() {});
-                await systemSpeak(speech);
-              }
-              await stopListening();
-            } else {
-              initSpeechToText();
-            }
-          },
-          child: Icon(
-            speechToText.isListening ? Icons.stop : Icons.send,
-          ),
         ),
       ),
     );

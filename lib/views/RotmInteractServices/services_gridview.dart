@@ -37,7 +37,7 @@ class _InteractiveServicesState extends State<InteractiveServices> {
                 child: const DiagnosisService(),
               );
             },
-            openBuilder: (context, action) => const UserClinicalDiagnosis(),
+            openBuilder: (context, action) => const HomePage(),
           ),
         ),
         Padding(
@@ -58,8 +58,7 @@ class _InteractiveServicesState extends State<InteractiveServices> {
                   child: const HealthInfo(),
                 );
               },
-              openBuilder: (context, action) =>
-                  const UserRespiratoryStatExtended(),
+              openBuilder: (context, action) => const HomePage(),
             ),
           ),
         ),
@@ -101,8 +100,7 @@ class _InteractiveServicesState extends State<InteractiveServices> {
                 child: const UserReportAnalysisBot(),
               );
             },
-            openBuilder: (context, action) =>
-                const UserRespiratoryStatExtended(),
+            openBuilder: (context, action) => const HomePage(),
           ),
         ),
       ],

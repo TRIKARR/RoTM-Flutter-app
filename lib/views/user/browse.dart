@@ -6,10 +6,12 @@ import 'package:http/http.dart' as http;
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:path_provider/path_provider.dart';
 
 import 'package:rotm/models/radarchart.dart';
 import 'package:rotm/userdata.dart';
 import 'package:rotm/views/user/Reportlist.dart';
+import 'package:screenshot/screenshot.dart';
 
 class UserBrowseMenu extends StatefulWidget {
   const UserBrowseMenu({super.key});
@@ -345,25 +347,35 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
             Card(
               child: Align(
                 alignment: Alignment.center,
-                child: Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: const Color.fromARGB(255, 0, 0, 0),
-                      width: 4,
-                    ),
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.deepPurple.shade300,
-                  ),
-                  height: 70,
-                  width: MediaQuery.of(context).size.width,
-                  child: Text("GENERATE REPORT",
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.getFont(
-                        'Orbitron',
-                        fontSize: 30,
+                child: GestureDetector(
+                  onTap: () async {
+                    final ScreenshotController screenshotController =
+                        ScreenshotController();
+                    final RepoImage = await screenshotController
+                        .captureFromWidget(Material(child: Container()));
+                    final AppStorage = await getApplicationDocumentsDirectory();
+                    print(AppStorage.path);
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(
                         color: const Color.fromARGB(255, 0, 0, 0),
-                        fontWeight: FontWeight.bold,
-                      )),
+                        width: 4,
+                      ),
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.deepPurple.shade300,
+                    ),
+                    height: 70,
+                    width: MediaQuery.of(context).size.width,
+                    child: Text("GENERATE REPORT",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.getFont(
+                          'Orbitron',
+                          fontSize: 30,
+                          color: const Color.fromARGB(255, 0, 0, 0),
+                          fontWeight: FontWeight.bold,
+                        )),
+                  ),
                 ),
               ),
             ),
