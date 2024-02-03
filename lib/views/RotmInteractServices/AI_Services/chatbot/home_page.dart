@@ -226,6 +226,7 @@ class _HomePageState extends State<HomePage> {
                             .chatGPTAPI(UserPromptToAIModel.text));
                         String result = await OpenAIService()
                             .chatGPTAPI(UserPromptToAIModel.text);
+                        // ignore: avoid_print
                         print(result);
                       },
                       controller: UserPromptToAIModel,
