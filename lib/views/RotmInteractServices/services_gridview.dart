@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:rotm/views/DashboardExtend/respiratory_extended.dart';
 import 'package:rotm/views/RotmInteractServices/AI_Services/chatbot/home_page.dart';
 import 'package:rotm/views/RotmInteractServices/AI_Services/clinical_diagnosis.dart';
+import 'package:rotm/views/RotmInteractServices/AI_Services/read_report.dart';
 import 'package:rotm/views/RotmInteractServices/analysisUserChartHEalth.dart';
 import 'package:rotm/views/RotmInteractServices/clinical.dart';
 import 'package:rotm/views/RotmInteractServices/healthinfo.dart';
@@ -103,7 +104,7 @@ class _InteractiveServicesState extends State<InteractiveServices> {
                 child: const UserReportAnalysisBot(),
               );
             },
-            openBuilder: (context, action) => const HomePage(),
+            openBuilder: (context, action) => const ReportAnalysisAIService(),
           ),
         ),
       ],
