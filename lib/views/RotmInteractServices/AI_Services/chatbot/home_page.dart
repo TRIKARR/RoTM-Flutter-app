@@ -221,16 +221,21 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.only(left: 10, right: 10),
                     child: TextField(
                       onTap: () async {
-                        // ignore: avoid_print
-                        print(OpenAIService()
-                            .chatGPTAPI(UserPromptToAIModel.text));
-                        String result = await OpenAIService()
-                            .chatGPTAPI(UserPromptToAIModel.text);
-                        // ignore: avoid_print
-                        print(result);
-                        generatedContent = result;
-                        // ignore: avoid_print
-                        print(generatedContent);
+                        if (UserPromptToAIModel.text.isNotEmpty) {
+                          // ignore: avoid_print
+                          print(OpenAIService()
+                              .chatGPTAPI(UserPromptToAIModel.text));
+                          String result = await OpenAIService()
+                              .chatGPTAPI(UserPromptToAIModel.text);
+                          // ignore: avoid_print
+                          print(result);
+                          generatedContent = result;
+                          // ignore: avoid_print
+                          print(generatedContent);
+                        } else {
+                          // ignore: avoid_print
+                          print('Empty');
+                        }
                       },
                       controller: UserPromptToAIModel,
                       style: GoogleFonts.getFont(
