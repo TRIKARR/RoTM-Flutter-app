@@ -219,9 +219,14 @@ class _HomePageState extends State<HomePage> {
                           'Get the best of both worlds with a voice assistant',
                     ),
                   ),
+                  SizedBox(
+                    height: 30,
+                  ),
                   Padding(
                     padding: const EdgeInsets.only(left: 10, right: 10),
                     child: TextField(
+                      onTap: () {},
+                      controller: UserPromptToAIModel,
                       style: GoogleFonts.getFont(
                         'Orbitron',
                         fontSize: 18,
@@ -232,6 +237,7 @@ class _HomePageState extends State<HomePage> {
                         fillColor: Color.fromARGB(255, 157, 240, 230),
                         filled: true,
                         hintText: "Start Chatting",
+                        suffixIcon: Icon(Icons.send),
                         prefixIcon: Icon(Icons.key),
                         border: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black),
@@ -253,11 +259,14 @@ class _HomePageState extends State<HomePage> {
         child: FloatingActionButton(
           backgroundColor: Pallete.firstSuggestionBoxColor,
           onPressed: () async {
-            if (await speechToText.hasPermission &&
-                speechToText.isNotListening) {
-              await startListening();
-            } else if (speechToText.isListening) {
+            // (await speechToText.hasPermission &&
+            //         speechToText.isNotListening) ||
+            if (UserPromptToAIModel.text.isNotEmpty) {
+              // await startListening();
+              lastWords = UserPromptToAIModel.text;
+            } else if (UserPromptToAIModel.text.isNotEmpty) {
               final speech = await openAIService.isArtPromptAPI(lastWords);
+              print(speech);
               if (speech.contains('https')) {
                 generatedImageUrl = speech;
                 generatedContent = null;
@@ -272,10 +281,9 @@ class _HomePageState extends State<HomePage> {
             } else {
               initSpeechToText();
             }
-            print("Wow");
           },
           child: Icon(
-            speechToText.isListening ? Icons.stop : Icons.mic,
+            speechToText.isListening ? Icons.stop : Icons.send,
           ),
         ),
       ),
