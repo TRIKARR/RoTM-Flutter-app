@@ -43,7 +43,7 @@ class _ReportAnalysisAIServiceState extends State<ReportAnalysisAIService> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
@@ -56,7 +56,108 @@ class _ReportAnalysisAIServiceState extends State<ReportAnalysisAIService> {
                 ),
                 height: 240,
                 width: MediaQuery.of(context).size.width - 60,
-                child: Image.asset("lib/assets/animated/upload.gif"),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          const SizedBox(
+                            width: 15,
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 255, 255, 255),
+                              borderRadius: BorderRadius.circular(20),
+                              border: Border.all(color: Colors.black, width: 4),
+                            ),
+                            height: 100,
+                            width: 100,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image.asset(
+                                "lib/assets/animated/upload-2.gif",
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 255, 255, 255),
+                              borderRadius: BorderRadius.circular(20),
+                              border: Border.all(color: Colors.black, width: 4),
+                            ),
+                            height: 100,
+                            width: 100,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image.asset(
+                                "lib/assets/animated/database-table.gif",
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 255, 255, 255),
+                              borderRadius: BorderRadius.circular(20),
+                              border: Border.all(color: Colors.black, width: 4),
+                            ),
+                            height: 100,
+                            width: 100,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image.asset(
+                                "lib/assets/animated/question.gif",
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        const SizedBox(
+                          width: 50,
+                        ),
+                        Container(
+                          height: 80,
+                          width: 80,
+                          color: const Color.fromARGB(255, 255, 255, 255),
+                          child: Image.asset(
+                            "lib/assets/animated/right-arrow.gif",
+                          ),
+                        ),
+                        Container(
+                          decoration: BoxDecoration(
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(color: Colors.black, width: 4),
+                          ),
+                          height: 110,
+                          width: 110,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Image.asset(
+                              "lib/assets/animated/upload.gif",
+                            ),
+                          ),
+                        ),
+                        Container(
+                            height: 80,
+                            width: 80,
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            child: Image.asset(
+                              "lib/assets/animated/left-arrow.gif",
+                            )),
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
             // chat bubble
@@ -70,7 +171,7 @@ class _ReportAnalysisAIServiceState extends State<ReportAnalysisAIService> {
               ),
 
             // features list
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Visibility(
@@ -78,21 +179,20 @@ class _ReportAnalysisAIServiceState extends State<ReportAnalysisAIService> {
               child: Column(
                 children: [
                   SlideInLeft(
-                    delay: Duration(milliseconds: start),
-                    child: const FeatureBox(
-                      color: Pallete.firstSuggestionBoxColor,
-                      headerText: 'UPLOAD REPORT',
-                      descriptionText:
-                          'Upload your Medical Report to get it Analyzed',
-                    ),
-                  ),
+                      delay: Duration(milliseconds: start),
+                      child: const FeatureBox(
+                        color: Pallete.firstSuggestionBoxColor,
+                        headerText: 'UPLOAD REPORT',
+                        descriptionText:
+                            'Upload your Medical Report to get it Analyzed',
+                      )),
                   SlideInLeft(
                     delay: Duration(milliseconds: start + delay),
                     child: const FeatureBox(
                       color: Pallete.secondSuggestionBoxColor,
                       headerText: 'DATA EXTRACTION',
                       descriptionText:
-                          ' Save time and resources by letting our AI automatically identify and extract relevant data points',
+                          'Save time and resources by letting our AI automatically identify and extract relevant data points',
                     ),
                   ),
                   SlideInLeft(
