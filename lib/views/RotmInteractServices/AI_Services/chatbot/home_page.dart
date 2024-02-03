@@ -2,7 +2,7 @@
 
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_tts/flutter_tts.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rotm/views/RotmInteractServices/AI_Services/chatbot/feature_box.dart';
 import 'package:rotm/views/RotmInteractServices/AI_Services/chatbot/openai_service.dart';
@@ -19,7 +19,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final speechToText = SpeechToText();
-  final flutterTts = FlutterTts();
   TextEditingController UserPromptToAIModel = TextEditingController();
   String lastWords = '';
   final OpenAIService openAIService = OpenAIService();
@@ -36,7 +35,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> initTextToSpeech() async {
-    await flutterTts.setSharedInstance(true);
     setState(() {});
   }
 
@@ -61,15 +59,12 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  Future<void> systemSpeak(String content) async {
-    await flutterTts.speak(content);
-  }
+  Future<void> systemSpeak(String content) async {}
 
   @override
   void dispose() {
     super.dispose();
     speechToText.stop();
-    flutterTts.stop();
   }
 
   @override
@@ -151,7 +146,7 @@ class _HomePageState extends State<HomePage> {
                           : generatedContent!,
                       style: GoogleFonts.getFont(
                         'Orbitron',
-                        fontSize: 25,
+                        fontSize: generatedContent == null ? 25 : 15,
                         color: const Color.fromARGB(255, 0, 0, 0),
                         fontWeight: FontWeight.bold,
                       ),
@@ -219,7 +214,7 @@ class _HomePageState extends State<HomePage> {
                           'Get the best of both worlds with a voice assistant',
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Padding(
@@ -259,14 +254,10 @@ class _HomePageState extends State<HomePage> {
         child: FloatingActionButton(
           backgroundColor: Pallete.firstSuggestionBoxColor,
           onPressed: () async {
-            // (await speechToText.hasPermission &&
-            //         speechToText.isNotListening) ||
             if (UserPromptToAIModel.text.isNotEmpty) {
-              // await startListening();
               lastWords = UserPromptToAIModel.text;
             } else if (UserPromptToAIModel.text.isNotEmpty) {
               final speech = await openAIService.isArtPromptAPI(lastWords);
-              print(speech);
               if (speech.contains('https')) {
                 generatedImageUrl = speech;
                 generatedContent = null;
