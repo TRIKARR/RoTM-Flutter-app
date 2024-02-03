@@ -1,5 +1,8 @@
+// ignore_for_file: unused_import, duplicate_ignore
+
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:rotm/views/DashboardExtend/respiratory_extended.dart';
 import 'package:rotm/views/RotmInteractServices/AI_Services/chatbot/home_page.dart';
 import 'package:rotm/views/RotmInteractServices/AI_Services/clinical_diagnosis.dart';

@@ -221,6 +221,7 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.only(left: 10, right: 10),
                     child: TextField(
                       onTap: () {
+                        // ignore: avoid_print
                         print("wow");
                       },
                       controller: UserPromptToAIModel,
