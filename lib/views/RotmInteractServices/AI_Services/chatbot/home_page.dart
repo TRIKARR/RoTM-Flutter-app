@@ -220,9 +220,13 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                     padding: const EdgeInsets.only(left: 10, right: 10),
                     child: TextField(
-                      onTap: () {
+                      onTap: () async {
                         // ignore: avoid_print
-                        print("wow");
+                        print(OpenAIService()
+                            .chatGPTAPI(UserPromptToAIModel.text));
+                        String result = await OpenAIService()
+                            .chatGPTAPI(UserPromptToAIModel.text);
+                        print(result);
                       },
                       controller: UserPromptToAIModel,
                       style: GoogleFonts.getFont(
