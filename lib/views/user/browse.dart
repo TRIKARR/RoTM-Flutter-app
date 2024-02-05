@@ -11,7 +11,10 @@ import 'package:path_provider/path_provider.dart';
 import 'package:rotm/models/radarchart.dart';
 import 'package:rotm/userdata.dart';
 import 'package:rotm/views/user/Reportlist.dart';
+import 'package:rotm/views/user/pdf.dart';
 import 'package:screenshot/screenshot.dart';
+import 'package:pdf/pdf.dart';
+import 'package:pdf/widgets.dart' as pw;
 
 class UserBrowseMenu extends StatefulWidget {
   const UserBrowseMenu({super.key});
@@ -349,12 +352,9 @@ class _UserBrowseMenuState extends State<UserBrowseMenu> {
                 alignment: Alignment.center,
                 child: GestureDetector(
                   onTap: () async {
-                    final ScreenshotController screenshotController =
-                        ScreenshotController();
-                    final RepoImage = await screenshotController
-                        .captureFromWidget(Material(child: Container()));
-                    final AppStorage = await getApplicationDocumentsDirectory();
-                    print(AppStorage.path);
+                    final pdfile =
+                        await PdfApi.generateCenteredText('BRoTM REPORT');
+                    PdfApi.openFile(pdfile);
                   },
                   child: Container(
                     decoration: BoxDecoration(
