@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Greatest Startup ever to Exist ',
+      title: 'Greatest Startup ever to Exist in Robotics Space',
       home: Scaffold(
         body: LandingPage(),
       ),
