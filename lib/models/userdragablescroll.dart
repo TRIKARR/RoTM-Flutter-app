@@ -74,11 +74,20 @@ class _UserDragScrollBottomSheetState extends State<UserDragScrollBottomSheet> {
                           color: const Color.fromARGB(255, 0, 0, 0),
                           width: 4,
                         ),
-                        borderRadius: BorderRadius.circular(105),
-                        color: const Color.fromARGB(255, 255, 0, 0),
+                        borderRadius: BorderRadius.circular(60),
+                        color: Color.fromARGB(255, 255, 255, 255),
                       ),
                       height: 150,
                       width: 150,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(100),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Image.asset(
+                            "lib/assets/images/baymax.jpeg",
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ],
