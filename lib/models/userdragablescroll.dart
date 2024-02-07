@@ -67,7 +67,7 @@ class _UserDragScrollBottomSheetState extends State<UserDragScrollBottomSheet> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 18.0, left: 18),
+                    padding: const EdgeInsets.only(top: 18.0, left: 140),
                     child: Container(
                       decoration: BoxDecoration(
                         border: Border.all(
