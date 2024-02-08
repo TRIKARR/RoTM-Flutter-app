@@ -51,15 +51,11 @@ class _UserInteractionMenuState extends State<UserInteractionMenu> {
         child: Column(
           children: [
             const ROTMStatCard(),
-            const SizedBox(
-              height: 10,
-            ),
             Container(
-              height: MediaQuery.of(context).size.height - 440,
+              height: MediaQuery.of(context).size.height - 480,
               width: 400,
               color: Colors.deepPurple.shade900,
               child: const InteractiveServices(),
-              
             ),
           ],
         ),
