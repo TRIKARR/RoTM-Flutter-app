@@ -75,7 +75,7 @@ class _UserDragScrollBottomSheetState extends State<UserDragScrollBottomSheet> {
                           width: 4,
                         ),
                         borderRadius: BorderRadius.circular(60),
-                        color: Color.fromARGB(255, 255, 255, 255),
+                        color: const Color.fromARGB(255, 255, 255, 255),
                       ),
                       height: 150,
                       width: 150,
