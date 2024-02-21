@@ -1,5 +1,5 @@
 [![temp-Image-Zh-VHDk.jpg](https://i.postimg.cc/vTnyx026/temp-Image-Zh-VHDk.jpg)](https://postimg.cc/dZJpzjYq)
-# RUTURO - RoTM
+# RUTURO - BRoTM
 RoTM by Team RUTURO – An Interactive Desktop Health Companion meticulously crafted for precise health monitoring and offering engaging mental health support in an affectionate manner.
 
 - RoTM - A Desktop Companion, crafted through advanced 3D technology, seamlessly integrates an array of electrical components, including motors,sensors and Microcontroller . This Companion is designed to intuitively comprehend user interactions across a spectrum of activities.
@@ -8,7 +8,8 @@ RoTM by Team RUTURO – An Interactive Desktop Health Companion meticulously cra
 
 |**RoTM-3D Model**| BRoTM-Application|                                          
 |-----------|---------------|
-[![temp-Image3-JRwuc.jpg](https://i.postimg.cc/9FWDRdFD/temp-Image3-JRwuc.jpg)](https://postimg.cc/14jmbNFS)    | [![temp-Imageza-Rk5-N.jpg](https://i.postimg.cc/d3sRLfV5/temp-Imageza-Rk5-N.jpg)](https://postimg.cc/TLs5sCmb)|
+[![temp-Image3-JRwuc.jpg](https://i.postimg.cc/9FWDRdFD/temp-Image3-JRwuc.jpg)](https://postimg.cc/14jmbNFS)    | [![temp-Imageza-Rk5-N.jpg](https://i.postimg.cc/d3sRLfV5/temp-Imageza-Rk5-N.jpg)](https://postimg.cc/TLs5sCmb)| 
+| [![image.png](https://i.postimg.cc/15w71SBj/image.png)](https://postimg.cc/GH3xvZZF)| [![image.png](https://i.postimg.cc/c1m69ty9/image.png)](https://postimg.cc/5jXxj0tL)|
 
 
 
@@ -39,7 +40,7 @@ RoTM by Team RUTURO – An Interactive Desktop Health Companion meticulously cra
 | Provider | Usage      | Logo                                          |
 |-----------|---------------|-----------------------------------------------|
 | Google Cloud   | Virtual machines , DataBase (NoSQL)  |[![Google Cloud](https://img.shields.io/badge/-Google%20Cloud-4285F4?style=flat&logo=google-cloud&logoColor=4285F4&labelColor=black)](https://cloud.google.com/)|
-| Microsoft Azure | Azure Functions , DataBase (SQL)| [![Azure Logo](https://img.shields.io/badge/-Azure-0089D6?style=flat&logo=microsoft-azure&logoColor=indigo)](https://azure.microsoft.com/)
+| Google Cloud | Azure Functions , DataBase (SQL)| [![Azure Logo](https://img.shields.io/badge/-Azure-0089D6?style=flat&logo=microsoft-azure&logoColor=indigo)](https://azure.microsoft.com/)
 
 
 
@@ -50,15 +51,20 @@ The images offer a clear glimpse into our thoughtfully designed system, all revo
 [![temp-Image4-FXKgq.jpg](https://i.postimg.cc/7hJHMHhh/temp-Image4-FXKgq.jpg)](https://postimg.cc/wRHY9dhY)
 
 ## OVERALL FEATURES 
-
+*Easy Onboarding and Multiple Login:
+  * RoTM provides Multiple Login options
+  * Provides users a Safe Code when they Register
+[![image.png](https://i.postimg.cc/PJP5BPh0/image.png)](https://postimg.cc/sGCzWfMJ)
 
 * Comprehensive Health Monitoring:
-  * RoTM provides detailed health metrics
-  * Enable users to track and understand their overall well-being.
+  * RoTM provides detailed health metrics Recorded by RoTM
+  * Enable users to track and understand their overall well-being using Interactive Graphs
+[![image.png](https://i.postimg.cc/9fQ0GxKW/image.png)](https://postimg.cc/gx1GpKG5)
 
 * Interactive User Engagement:
   * Through voice and camera inputs, RoTM ensures real-time interaction with users
   *  Fostering a unique bond with the health companion, enhancing user motivation and involvement.
+[![image.png](https://i.postimg.cc/zG4jPcZk/image.png)](https://postimg.cc/LJBLJvsq)
 
 ## STATUS
 
