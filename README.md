@@ -4,7 +4,7 @@ RoTM by Team RUTURO – An Interactive Desktop Health Companion meticulously cra
 
 - RoTM - A Desktop Companion, crafted through advanced 3D technology, seamlessly integrates an array of electrical components, including motors,sensors and Microcontroller . This Companion is designed to intuitively comprehend user interactions across a spectrum of activities.
 
-- BRoTM, an Android / iOS app seamlessly connecting with RoTM . BRoTM lets you keep tabs on various health metrics throughout the day , Additionally, it furnishes you with weekly reports meticulously crafted around these key health metrics, offering a comprehensive and insightful snapshot of your well-being.
+- BRoTM, an Android / iOS app seamlessly connecting with RoTM . BRoTM lets you keep tabs on various health metrics throughout the day , Additionally, it furnishes you with weekly reports meticulously crafted around these key health metrics, offering a comprehensive and insightful snapshot of your well-being. (ross platform app)
 
 |**RoTM-3D Model**| BRoTM-Application|                                          
 |-----------|---------------|
