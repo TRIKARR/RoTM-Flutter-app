@@ -15,7 +15,7 @@ class SignUpPage extends StatelessWidget {
   TextEditingController confirmBrotmPasswordController =
       TextEditingController();
   void postRequest() async {
-    var url = Uri.parse('http://192.168.0.241:3000/signup');
+    var url = Uri.parse('/signup'); // Security changes - {Removed revealing tunnel}
     var data = {
       "Email": emailController.text,
       "Username": brotmIdController.text,
