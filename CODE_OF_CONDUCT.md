@@ -1,5 +1,5 @@
 [![temp-Image-Zh-VHDk.jpg](https://i.postimg.cc/vTnyx026/temp-Image-Zh-VHDk.jpg)](https://postimg.cc/dZJpzjYq)
-# Contributor Covenant Code of Conduct
+# Contributor Code of Conduct
 
 ## Our Pledge
 
