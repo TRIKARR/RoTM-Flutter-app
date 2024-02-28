@@ -40,7 +40,7 @@ RoTM by Team RUTURO – An Interactive Desktop Health Companion meticulously cra
 | Provider | Usage      | Logo                                          |
 |-----------|---------------|-----------------------------------------------|
 | Google Cloud   | Virtual machines , DataBase (NoSQL)  |[![Google Cloud](https://img.shields.io/badge/-Google%20Cloud-4285F4?style=flat&logo=google-cloud&logoColor=4285F4&labelColor=black)](https://cloud.google.com/)|
-| Google Cloud | Azure Functions , DataBase (SQL)| [![Azure Logo](https://img.shields.io/badge/-Azure-0089D6?style=flat&logo=microsoft-azure&logoColor=indigo)](https://azure.microsoft.com/)
+| Google Cloud | Edge Functions , DataBase (SQL)| [![Google Cloud](https://img.shields.io/badge/-Google%20Cloud-4285F4?style=flat&logo=google-cloud&logoColor=4285F4&labelColor=black)](https://cloud.google.com/)
 
 
 
