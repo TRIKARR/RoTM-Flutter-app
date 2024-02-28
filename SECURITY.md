@@ -6,7 +6,7 @@ Our team has decided to keep the Backend separate from Frontend
 
 ## Supported Platforms
 
-| Version | Supported          |
+| Platform | Supported          |
 | ------- | ------------------ |
 | Androis   | :white_check_mark: |
 | iOS  | :white_check_mark:|
